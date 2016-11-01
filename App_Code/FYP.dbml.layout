@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="FYP">
+  <DataContextMoniker Name="/FYPDataContext" />
+  <nestedChildShapes>
+    <classShape Id="44437916-f63e-41dc-9c5d-e296d40c5f5d" absoluteBounds="0.5, 1, 2, 1.9631982421875">
+      <DataClassMoniker Name="/FYPDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="25784c21-e3ad-49f5-86c0-9f909c9d4152" absoluteBounds="0.515, 1.46, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4c7a8e2d-9b63-43d4-9f29-773dc2e2b3ac" absoluteBounds="3.625, 1, 2, 2.5401025390625">
+      <DataClassMoniker Name="/FYPDataContext/LawnOwner" />
+      <nestedChildShapes>
+        <elementListCompartment Id="23625014-44d2-4950-a0b5-84a0ddda9f04" absoluteBounds="3.64, 1.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1659402c-21cd-489e-8d17-c0e80696de9a" absoluteBounds="3.75, 3.875, 2, 1.3862939453125">
+      <DataClassMoniker Name="/FYPDataContext/Image" />
+      <nestedChildShapes>
+        <elementListCompartment Id="95164a1f-3d6f-40bc-be75-63aaeb1c1967" absoluteBounds="3.7649999999999997, 4.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

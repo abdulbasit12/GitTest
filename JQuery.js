@@ -1,13 +1,4 @@
 ﻿$(document).ready(function () {
-    $(".header").mouseover(function () {
-        $(this).css("font-size", "85%")
-        $(this).css("transition-duration", "0.2s")
-
-    })
-    $(".header").mouseout(function () {
-        $(this).css("font-size", "14px")
-        $(this).css("color", "white")
-    })
     $(".button").mouseover(function () {
         $(this).css("background-color", "white")
         $(this).css("color", "orange")
@@ -23,11 +14,5 @@
     })
     $(".textbox").mouseout(function () {
         $(this).css("border-color", "lightgray")
-    })
-    $("#ddd").mouseover(function () {
-        $("#registerdropdown").slideDown("slow")
-    })
-    $("#main").mouseover(function () {
-        $("#registerdropdown").slideUp("slow")
     })
 })

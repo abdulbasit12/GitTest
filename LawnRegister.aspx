@@ -72,7 +72,6 @@
                         </td>
                     </tr>
                 </table>
-                <div class="text"><a href="UserSignin.aspx">Already Registered! Please SIGNIN</a></div>
             </div>
         </div>
     </div>

@@ -39,7 +39,6 @@
                             <asp:Button class="button" runat="server" Text="REGISTER" OnClick="Unnamed6_Click" /></td>
                     </tr>
                 </table>
-                <div class="text"><a href="UserSignin.aspx">Already Registered! Please SIGNIN</a></div>
             </div>
         </div>
     </div>

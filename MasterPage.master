@@ -11,9 +11,8 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <style>
-
-        #menubar{
-            position:relative;
+        #menubar {
+            position: relative;
             top: 30%;
             left: 23%;
         }
@@ -51,7 +50,7 @@
             display: none;
             position: absolute;
             background-color: white;
-            width:19.6%
+            width: 19.6%;a
         }
 
             .dropdown-content a {
@@ -76,21 +75,21 @@
     <div id="header">
         <img id="logo" src="logo.png" />
         <div id="menubar">
-        <ul id="ul">
-            <li><a href="index.aspx">Home</a></li>
-            <li><a href="ImageUpload.aspx">Lawn/Banquet</a></li>
-            <li><a href="Services.aspx">Services</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li class="dropdown">
-                <a href="#" class="dropbtn">Get Registered</a>
-                <div class="dropdown-content">
-                    <a href="User.aspx">User</a>
-                    <a href="LawnRegister.aspx">Owner</a>
-                    <a href="UserSignin.aspx">SignIn</a>
-                </div>
-            </li>
-        </ul>
-            </div>
+            <ul id="ul">
+                <li><a href="index.aspx">Home</a></li>
+                <li><a href="ImageUpload.aspx">Lawn/Banquet</a></li>
+                <li><a href="Services.aspx">Services</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Get Registered</a>
+                    <div class="dropdown-content">
+                        <a href="User.aspx">User</a>
+                        <a href="LawnRegister.aspx">Owner</a>
+                        <a href="UserSignin.aspx">SignIn</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
     <form id="form1" runat="server">
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">

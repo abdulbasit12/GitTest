@@ -7,75 +7,15 @@
     <title></title>
     <script src="jquery-3.1.1.min.js"></script>
     <script src="JQuery.js"></script>
-    <link href="StyleSheet.css" rel="stylesheet" />
+    <link href="cssstyle.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-    <style>
-        #menubar {
-            position: relative;
-            top: 30%;
-            left: 23%;
-        }
-
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-
-        li {
-            float: left;
-            color: #ff8625;
-        }
-
-            li a, .dropbtn {
-                display: inline-block;
-                color: white;
-                text-align: center;
-                padding: 14px 16px;
-                text-decoration: none;
-            }
-
-                li a:hover, .dropdown:hover .dropbtn {
-                    background-color: #ff8625;
-                    color: white;
-                }
-
-            li.dropdown {
-                display: inline-block;
-            }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: white;
-            width: 19.6%;a
-        }
-
-            .dropdown-content a {
-                color: black;
-                padding: 12px 16px;
-                text-decoration: none;
-                display: block;
-                text-align: left;
-            }
-
-                .dropdown-content a:hover {
-                    background-color: #ff8625;
-                    color: white;
-                }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-    </style>
 </head>
 <body>
     <div id="header">
         <img id="logo" src="logo.png" />
         <div id="menubar">
-            <ul id="ul">
+            <ul>
                 <li><a href="index.aspx">Home</a></li>
                 <li><a href="ImageUpload.aspx">Lawn/Banquet</a></li>
                 <li><a href="Services.aspx">Services</a></li>

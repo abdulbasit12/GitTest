@@ -8,10 +8,13 @@
             <li class="drop">Welcome!
             <div class="drop-content">
                 <a href="#">Profile</a>
-                <a href="#">SIGNOUT</a>
+                <asp:Button runat="server" Text="SIGNOUT" />
             </div>
             </li>
         </ul>
+    </div>
+    <div id="divbtn">
+    <asp:Button CssClass="buttonvender" runat="server" Text="Upload Images"/>
     </div>
 </asp:Content>
 

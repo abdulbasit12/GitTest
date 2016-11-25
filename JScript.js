@@ -15,4 +15,10 @@
     $(".textbox").mouseout(function () {
         $(this).css("border-color", "lightgray")
     })
+    $("#search-area").click(function () {
+        $("#drop-search-area").slideDown()
+    })
+    $("#search-capacity").click(function () {
+        $("#drop-search-capacity").slideDown()
+    })
 })

@@ -76,7 +76,7 @@ li {
     width: 100%;
     border-bottom: double mediumslateblue;
     background-color:black;
-    display: block;
+    display: none;
     z-index: 1;
     top: 0px;
     left: 0px;
@@ -388,7 +388,7 @@ li.drop {
     left:37.2%;
     border:1px solid gray;
     overflow-y:scroll;
-    display:none;
+    display:inline-block;
 }
 
 #search-button{
@@ -398,4 +398,10 @@ li.drop {
     width:30%;
     height:40px;
     
+}
+
+#datagrid{
+    position:absolute;
+    top:49%;
+    left:2%;
 }

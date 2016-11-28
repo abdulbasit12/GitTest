@@ -35,6 +35,8 @@ public partial class _Default : System.Web.UI.Page
                 db.SubmitChanges();
                 Response.Write("Registration Scuessfully Complete");
                 txtPhoneNumber.Text = txtEmail.Text = txtName.Text = "";
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('Registration Completed');", true);
+                Response.Redirect("Index.aspx");
             }
 
             else {

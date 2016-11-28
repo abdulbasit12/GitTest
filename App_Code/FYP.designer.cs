@@ -301,6 +301,10 @@ public partial class LawnOwner : INotifyPropertyChanging, INotifyPropertyChanged
 	
 	private string _ConfirmPassword;
 	
+	private string _Area;
+	
+	private EntitySet<Image> _Images;
+	
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -323,10 +327,13 @@ public partial class LawnOwner : INotifyPropertyChanging, INotifyPropertyChanged
     partial void OnPasswordChanged();
     partial void OnConfirmPasswordChanging(string value);
     partial void OnConfirmPasswordChanged();
+    partial void OnAreaChanging(string value);
+    partial void OnAreaChanged();
     #endregion
 	
 	public LawnOwner()
 	{
+		this._Images = new EntitySet<Image>(new Action<Image>(this.attach_Images), new Action<Image>(this.detach_Images));
 		OnCreated();
 	}
 	
@@ -510,6 +517,39 @@ public partial class LawnOwner : INotifyPropertyChanging, INotifyPropertyChanged
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Area", DbType="NVarChar(50)")]
+	public string Area
+	{
+		get
+		{
+			return this._Area;
+		}
+		set
+		{
+			if ((this._Area != value))
+			{
+				this.OnAreaChanging(value);
+				this.SendPropertyChanging();
+				this._Area = value;
+				this.SendPropertyChanged("Area");
+				this.OnAreaChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.AssociationAttribute(Name="LawnOwner_Image", Storage="_Images", ThisKey="Id", OtherKey="LawnID")]
+	public EntitySet<Image> Images
+	{
+		get
+		{
+			return this._Images;
+		}
+		set
+		{
+			this._Images.Assign(value);
+		}
+	}
+	
 	public event PropertyChangingEventHandler PropertyChanging;
 	
 	public event PropertyChangedEventHandler PropertyChanged;
@@ -529,6 +569,18 @@ public partial class LawnOwner : INotifyPropertyChanging, INotifyPropertyChanged
 			this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 		}
 	}
+	
+	private void attach_Images(Image entity)
+	{
+		this.SendPropertyChanging();
+		entity.LawnOwner = this;
+	}
+	
+	private void detach_Images(Image entity)
+	{
+		this.SendPropertyChanging();
+		entity.LawnOwner = null;
+	}
 }
 
 [global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Images")]
@@ -543,6 +595,12 @@ public partial class Image : INotifyPropertyChanging, INotifyPropertyChanged
 	
 	private string _Uimg;
 	
+	private System.Nullable<int> _LawnID;
+	
+	private System.Nullable<int> _LID;
+	
+	private EntityRef<LawnOwner> _LawnOwner;
+	
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -553,10 +611,15 @@ public partial class Image : INotifyPropertyChanging, INotifyPropertyChanged
     partial void OnNameChanged();
     partial void OnUimgChanging(string value);
     partial void OnUimgChanged();
+    partial void OnLawnIDChanging(System.Nullable<int> value);
+    partial void OnLawnIDChanged();
+    partial void OnLIDChanging(System.Nullable<int> value);
+    partial void OnLIDChanged();
     #endregion
 	
 	public Image()
 	{
+		this._LawnOwner = default(EntityRef<LawnOwner>);
 		OnCreated();
 	}
 	
@@ -616,6 +679,84 @@ public partial class Image : INotifyPropertyChanging, INotifyPropertyChanged
 				this._Uimg = value;
 				this.SendPropertyChanged("Uimg");
 				this.OnUimgChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LawnID", DbType="Int")]
+	public System.Nullable<int> LawnID
+	{
+		get
+		{
+			return this._LawnID;
+		}
+		set
+		{
+			if ((this._LawnID != value))
+			{
+				if (this._LawnOwner.HasLoadedOrAssignedValue)
+				{
+					throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+				}
+				this.OnLawnIDChanging(value);
+				this.SendPropertyChanging();
+				this._LawnID = value;
+				this.SendPropertyChanged("LawnID");
+				this.OnLawnIDChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LID", DbType="Int")]
+	public System.Nullable<int> LID
+	{
+		get
+		{
+			return this._LID;
+		}
+		set
+		{
+			if ((this._LID != value))
+			{
+				this.OnLIDChanging(value);
+				this.SendPropertyChanging();
+				this._LID = value;
+				this.SendPropertyChanged("LID");
+				this.OnLIDChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.AssociationAttribute(Name="LawnOwner_Image", Storage="_LawnOwner", ThisKey="LawnID", OtherKey="Id", IsForeignKey=true)]
+	public LawnOwner LawnOwner
+	{
+		get
+		{
+			return this._LawnOwner.Entity;
+		}
+		set
+		{
+			LawnOwner previousValue = this._LawnOwner.Entity;
+			if (((previousValue != value) 
+						|| (this._LawnOwner.HasLoadedOrAssignedValue == false)))
+			{
+				this.SendPropertyChanging();
+				if ((previousValue != null))
+				{
+					this._LawnOwner.Entity = null;
+					previousValue.Images.Remove(this);
+				}
+				this._LawnOwner.Entity = value;
+				if ((value != null))
+				{
+					value.Images.Add(this);
+					this._LawnID = value.Id;
+				}
+				else
+				{
+					this._LawnID = default(Nullable<int>);
+				}
+				this.SendPropertyChanged("LawnOwner");
 			}
 		}
 	}

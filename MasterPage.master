@@ -7,7 +7,7 @@
     <title></title>
     <script src="jquery-3.1.1.min.js"></script>
     <script src="JScript.js"></script>
-    <link href="StyleSheet1.css" rel="stylesheet" />
+    <link href="StyleSheet1.css" rel="stylesheet"/>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -17,7 +17,7 @@
         <div id="menubar">
             <ul>
                 <li><a href="index.aspx">Home</a></li>
-                <li><a href="ImageUpload.aspx">Lawn/Banquet</a></li>
+                <li><a href="ImageShow.aspx">Lawn/Banquet</a></li>
                 <li><a href="Services.aspx">Services</a></li>
                 <li><a href="#">Contact Us</a></li>
                 <li class="dropdown">

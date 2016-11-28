@@ -32,16 +32,20 @@ public partial class LawnRegister : System.Web.UI.Page
                 L.Email = txtEmailL.Text;
                 L.Password = txtPass.Text;
                 L.ConfirmPassword = txtConfirmPass.Text;
+                L.Area = txtArea.Text;
 
                 db.LawnOwners.InsertOnSubmit(L);
                 db.SubmitChanges();
+                Session["Address"] = txtAddress.Text;
+                Session["Name"] = txtLawnName.Text;
+                Response.Redirect("ImageUpload.aspx");
                             }
             else {
 
                 Address_Error.Visible = true;
                             
             }
-            txtEmailL.Text = txtphone.Text = txtAcc.Text = txtAddress.Text = txtSeating.Text = txtLawnName.Text = "";
+            txtArea.Text=txtEmailL.Text = txtphone.Text = txtAcc.Text = txtAddress.Text = txtSeating.Text = txtLawnName.Text = "";
         }
     }
 }

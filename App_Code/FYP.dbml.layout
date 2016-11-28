@@ -8,17 +8,24 @@
         <elementListCompartment Id="25784c21-e3ad-49f5-86c0-9f909c9d4152" absoluteBounds="0.515, 1.46, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="4c7a8e2d-9b63-43d4-9f29-773dc2e2b3ac" absoluteBounds="3.625, 1, 2, 2.5401025390625">
+    <classShape Id="ede99d18-da46-4a49-8f51-dba3d6a22450" absoluteBounds="5, 1.625, 2, 2.7324039713541666">
       <DataClassMoniker Name="/FYPDataContext/LawnOwner" />
       <nestedChildShapes>
-        <elementListCompartment Id="23625014-44d2-4950-a0b5-84a0ddda9f04" absoluteBounds="3.64, 1.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="628086ea-060f-4ebe-8686-1b2b98e80274" absoluteBounds="5.015, 2.085, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="1659402c-21cd-489e-8d17-c0e80696de9a" absoluteBounds="3.75, 3.875, 2, 1.3862939453125">
+    <classShape Id="6d22661b-1879-455c-b1f2-5499c0d9d532" absoluteBounds="2.75, 0.625, 2, 1.7708968098958331">
       <DataClassMoniker Name="/FYPDataContext/Image" />
       <nestedChildShapes>
-        <elementListCompartment Id="95164a1f-3d6f-40bc-be75-63aaeb1c1967" absoluteBounds="3.7649999999999997, 4.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="2e04e348-057d-49d4-b7de-e803e00ccc31" absoluteBounds="2.7649999999999997, 1.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
+    <associationConnector edgePoints="[(5 : 2.01044840494792); (4.75 : 2.01044840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FYPDataContext/LawnOwner/LawnOwner_Image" />
+      <nodes>
+        <classShapeMoniker Id="ede99d18-da46-4a49-8f51-dba3d6a22450" />
+        <classShapeMoniker Id="6d22661b-1879-455c-b1f2-5499c0d9d532" />
+      </nodes>
+    </associationConnector>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

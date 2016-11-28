@@ -17,49 +17,58 @@ public partial class ImageUpload : System.Web.UI.Page
     {
 
         FYPDataContext db = new FYPDataContext();
-        Image upload = new Image();
+       
 
+        var ID = (from a in db.LawnOwners
+                 where a.Address.Equals(Session["Address"].ToString())
+                 select a.Id).FirstOrDefault();
+        HttpFileCollection imagecollection = Request.Files;
 
-
-        if (FileUpload1.HasFile)
+        if (FileUpload1.HasFiles)
         {
-
-            string Extension = System.IO.Path.GetExtension(FileUpload1.FileName);
-            if (Extension.ToLower() != ".png" && Extension.ToLower() != ".gif" && Extension.ToLower() != ".jpg" && Extension.ToLower() != ".jpeg")
+            for (int i = 0; i < imagecollection.Count; i++)
             {
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('Invalid Image Format');", true);
-            }
-            else
-            {
-
-                int File = FileUpload1.PostedFile.ContentLength;
-                if (File > 1048576)
+                Image upload = new Image();
+                string Extension = System.IO.Path.GetExtension(FileUpload1.FileName);
+                if (Extension.ToLower() != ".png" && Extension.ToLower() != ".gif" && Extension.ToLower() != ".jpg" && Extension.ToLower() != ".jpeg")
                 {
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('Maximam File size is 1 MB');", true);
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('Invalid Image Format');", true);
                 }
-
                 else
                 {
-                    string path = "uploadimages/" + Path.GetFileName(FileUpload1.PostedFile.FileName);
 
-                    upload.Uimg = path;
-                    db.Images.InsertOnSubmit(upload);
-                    db.SubmitChanges();
-                    FileUpload1.SaveAs(Server.MapPath("~/uploadimages/" + FileUpload1.FileName));
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('File Uploaded Sucessfully!! :)');", true);
-                    PicSuccess.Visible = true;
+                    int File = FileUpload1.PostedFile.ContentLength;
+                    if (File > 1048576)
+                    {
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('Maximam File size is 1 MB');", true);
+                    }
+
+                    else
+                    {
+                        string path = "uploadimages/" + Path.GetFileName(FileUpload1.PostedFile.FileName);
+
+                        upload.Uimg = path;
+                        upload.LID = upload.LawnID = Convert.ToInt32(ID);
+                        db.Images.InsertOnSubmit(upload);
+                        db.SubmitChanges();
+                        FileUpload1.SaveAs(Server.MapPath("~/uploadimages/" + FileUpload1.FileName));
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('File Uploaded Sucessfully!! :)');", true);
+                        PicSuccess.Visible = true;
+                        Response.Redirect("VenderHome.aspx");
+                    }
+
                 }
 
+
             }
-
-
         }
 
-        else {
+        else
+        {
 
 
             ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('Please Select Image First');", true);
-        
+
         }
     }
 }

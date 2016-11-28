@@ -62,13 +62,16 @@
                                 runat="server" TextMode="Password" placeholder="Confirm Password"
                                 ID="txtConfirmPass"></asp:TextBox>
                         </td>
+                        <td><asp:TextBox required="required" CssClass="textbox"
+                                runat="server" placeholder="Area"
+                                ID="txtArea"></asp:TextBox></td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>&nbsp;</td>
                         <td>
                             <asp:Button class="button"
-                                runat="server" Text="REGISTER" OnClick="Unnamed1_Click" />
+                                runat="server" Text="Next" OnClick="Unnamed1_Click" />
                         </td>
                     </tr>
                 </table>

@@ -9,36 +9,10 @@
             <h1 class="heading">Manage Your Place</h1>
             <div id="imageform">
                 <table>
+                    
                     <tr>
                         <td>
-                            <asp:TextBox ID="TextBox3" required="required" CssClass="textbox" runat="server" placeholder="Lawn/Banquet Full Name"></asp:TextBox></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <asp:TextBox ID="TextBox2" required="required" CssClass="textbox" runat="server" placeholder="Maximum Seating Capacity" TextMode="Number"></asp:TextBox></td>
-                        </tr>
-                    <tr>
-                        <td>
-                            <asp:TextBox ID="TextBox4" required="required" CssClass="textbox" runat="server" placeholder="Complete Address"></asp:TextBox></td>
-                        </tr>
-                    <tr>
-                        <td>
-                            <asp:TextBox ID="TextBox1" required="required" CssClass="textbox" runat="server" placeholder="Image Name"></asp:TextBox></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <asp:TextBox ID="TextBox5" required="required" CssClass="textbox" runat="server" placeholder="Account #"></asp:TextBox></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <asp:DropDownList ID="DropDownList1" runat="server">
-                                <asp:ListItem>Lawn</asp:ListItem>
-                                <asp:ListItem>Banquet</asp:ListItem>
-                            </asp:DropDownList></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <asp:FileUpload ID="FileUpload1" runat="server" /></td>
+                            <asp:FileUpload ID="FileUpload1" runat="server" AllowMultiple="True" /></td>
                     </tr>
                     <tr>
                         <td>

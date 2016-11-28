@@ -14,6 +14,10 @@
                     <li>All Areas</li>
                 </ul>
                 <h4 style="padding-top: 10px; padding-left: 5px;">Popular Areas</h4>
+                <ul>
+                    <li>Johar</li>
+                    <li>J</li>
+                </ul>
             </div>
             <div id="search-capacity">All Capacities &emsp; &emsp; &emsp; &emsp; ▼</div>
             <div id="drop-search-capactiy">

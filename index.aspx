@@ -14,10 +14,6 @@
                     <li>All Areas</li>
                 </ul>
                 <h4 style="padding-top: 10px; padding-left: 5px;">Popular Areas</h4>
-                <ul>
-                    <li>Johar</li>
-                    <li>J</li>
-                </ul>
             </div>
             <div id="search-capacity">All Capacities &emsp; &emsp; &emsp; &emsp; ▼</div>
             <div id="drop-search-capactiy">
@@ -29,10 +25,11 @@
                 </ul>
             </div>
             <div id="search-button">
-                <asp:Button runat="server" Text="Search" Style="height: 50px; line-height: 30px; border-radius: 0px;" CssClass="button" OnClick="Unnamed2_Click" /></div>
+                <asp:Button runat="server" Text="Search" Style="height: 50px; line-height: 30px; border-radius: 0px;" CssClass="button" OnClick="Unnamed2_Click" />
+            </div>
         </div>
         <div id="datagrid">
-            <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" style="margin-right: 122px">
+            <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" Style="margin-right: 122px">
                 <Columns>
                     <asp:ImageField DataImageUrlField="uimg" HeaderText="Images">
                     </asp:ImageField>

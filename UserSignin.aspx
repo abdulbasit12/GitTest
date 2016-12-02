@@ -7,7 +7,7 @@
     <div id="main">
         <div id="signindiv">
             <h1 class="heading">User Sign In To Manage Your Event</h1>
-            <div id="signform">
+            <div id="signinform">
                 <table>
                     <tr>
                         <td>

@@ -186,7 +186,7 @@ li {
     border-radius: 10px 10px;
 }
 
-#signform {
+#signinform {
     position: relative;
     top: 0%;
     left: 33%;
@@ -219,6 +219,30 @@ li {
     font-size: 100%;
     line-height: 20px;
 }
+
+#bookingdiv{
+    position: absolute;
+    height: 40%;
+    width: 95%;
+    left: 2%;
+    top: 32%;
+    background-color: white;
+    margin: 0px 0px;
+    padding: 0px;
+    border: 3px solid orange;
+    border-radius: 10px 10px;
+}
+
+#bookingform{
+    position: relative;
+    top: 0%;
+    left:1%;
+    font-size: 150%;
+    color: #4819af;
+    font-size: 100%;
+    line-height: 20px;
+}
+
 /*logout css*/
 #welcomeVender {
     position: absolute;
@@ -407,4 +431,9 @@ li.drop {
     top:49%;
     left:2%;
     z-index:-1;
+}
+
+#Grid{
+    position:absolute;
+    top:30%;
 }

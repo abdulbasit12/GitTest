@@ -76,7 +76,7 @@ li {
     width: 100%;
     border-bottom: double mediumslateblue;
     background-color:black;
-    display: none;
+    display: block;
     z-index: 1;
     top: 0px;
     left: 0px;
@@ -433,14 +433,10 @@ li.drop {
     z-index:-1;
 }
 
-#Grid{
+#DataView{
     position:absolute;
     top:30%;
-}
-
-#listBox{
-    position:absolute;
-    left:5%;
-    width:85%;
-    height:500px;
+    width:100%;
+    border:1px solid white;
+    left:0%;
 }

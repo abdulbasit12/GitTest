@@ -76,7 +76,7 @@ li {
     width: 100%;
     border-bottom: double mediumslateblue;
     background-color:black;
-    display: block;
+    display: none;
     z-index: 1;
     top: 0px;
     left: 0px;
@@ -436,4 +436,11 @@ li.drop {
 #Grid{
     position:absolute;
     top:30%;
+}
+
+#listBox{
+    position:absolute;
+    left:5%;
+    width:85%;
+    height:500px;
 }

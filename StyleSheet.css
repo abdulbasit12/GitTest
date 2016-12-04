@@ -425,7 +425,7 @@ li.drop {
     height:40px;
     
 }
-
+/*Lawn Data CSS*/
 #datagrid{
     position:absolute;
     top:49%;
@@ -437,6 +437,70 @@ li.drop {
     position:absolute;
     top:30%;
     width:100%;
-    border:1px solid white;
     left:0%;
+    height:auto;
+}
+
+#lawnData{
+    position:absolute;
+    width:65%;
+    height:150px;
+    border:1px solid lightgray;
+    left:5%;
+    background-color:white;
+}
+
+#dataimg{
+    position:absolute;
+    top:5%;
+    border:1px solid lightgray;
+    height:80px;
+    width:20%;
+    left:5%;
+}
+
+#Namediv{
+    position:absolute;
+    top:3%;
+    left:30%;
+    font-size:30px;
+    font-weight:700;
+    color:gray;
+}
+
+#Addressdiv{
+    position:absolute;
+    top:25%;
+    left:30%;
+    font-family:aril;
+    font-size:20px;
+    font-weight:200;
+    color:gray;
+}
+
+#Capacitydiv{
+    position:absolute;
+    top:38%;
+    left:30%;
+    font-family:aril;
+    font-size:20px;
+    font-weight:200;
+    color:gray;
+}
+
+#Rentdiv{
+    position:absolute;
+    top:51%;
+    left:30%;
+    font-family:aril;
+    font-size:20px;
+    font-weight:200;
+    color:gray;
+}
+
+#Buttondiv{
+    position:absolute;
+    top:25%;
+    left:70%;
+    width:28%;
 }

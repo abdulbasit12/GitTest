@@ -36,6 +36,7 @@ public partial class Test : System.Web.UI.Page
         }
         reader1.Close();
         con.Close();
+
         con.Open();
         SqlDataReader reader2 = comm.ExecuteReader();
 
@@ -45,6 +46,16 @@ public partial class Test : System.Web.UI.Page
             Capacitylbl.Text = reader2["SeatingCapacity"].ToString();
         }
         reader2.Close();
+        con.Close();
+
+        con.Open();
+        SqlDataReader reader3 = comm.ExecuteReader();
+        while (reader3.Read())
+        {
+            reader3.Read();
+            Rentlbl.Text = reader3["Rent"].ToString();
+        }
+        reader3.Close();
         con.Close();
     }
 }

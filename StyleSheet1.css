@@ -473,8 +473,8 @@ li.drop {
     top:25%;
     left:30%;
     font-family:aril;
-    font-size:20px;
-    font-weight:200;
+    font-size:16px;
+    font-weight:100;
     color:gray;
 }
 
@@ -483,8 +483,8 @@ li.drop {
     top:38%;
     left:30%;
     font-family:aril;
-    font-size:20px;
-    font-weight:200;
+    font-size:16px;
+    font-weight:100;
     color:gray;
 }
 
@@ -493,14 +493,23 @@ li.drop {
     top:51%;
     left:30%;
     font-family:aril;
-    font-size:20px;
-    font-weight:200;
+    font-size:16px;
+    font-weight:100;
     color:gray;
 }
 
 #Buttondiv{
     position:absolute;
-    top:25%;
-    left:70%;
+    top:40%;
+    left:78%;
     width:28%;
+}
+
+.btn{
+    position:relative;
+    height:35px;
+    width:75%;
+    background-color:darkorange;
+    border:none;
+    color:white;
 }

@@ -5,6 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
+using System.Data;
+using System.Text;
+using System.Configuration;
 
 public partial class Test : System.Web.UI.Page
 {
@@ -50,6 +53,7 @@ public partial class Test : System.Web.UI.Page
 
         con.Open();
         SqlDataReader reader3 = comm.ExecuteReader();
+
         while (reader3.Read())
         {
             reader3.Read();

@@ -15,6 +15,7 @@ public partial class Test : System.Web.UI.Page
     SqlCommand comm;
     protected void Page_Load(object sender, EventArgs e)
     {
+
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True");
         con.Open();
         str = "Select * From LawnOwners";

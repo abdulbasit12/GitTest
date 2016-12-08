@@ -38,6 +38,7 @@ public partial class LawnRegister : System.Web.UI.Page
                 db.SubmitChanges();
                 Session["Address"] = txtAddress.Text;
                 Session["Name"] = txtLawnName.Text;
+                
                 Response.Redirect("ImageUpload.aspx");
                             }
             else {

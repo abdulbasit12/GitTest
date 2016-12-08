@@ -14,18 +14,17 @@
         <elementListCompartment Id="628086ea-060f-4ebe-8686-1b2b98e80274" absoluteBounds="5.015, 2.085, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="6d22661b-1879-455c-b1f2-5499c0d9d532" absoluteBounds="2.75, 0.625, 2, 1.7708968098958331">
+    <classShape Id="eaadc2cd-7e58-4d1c-997c-4143926104f1" absoluteBounds="2.75, 0.5, 2, 1.5785953776041666">
       <DataClassMoniker Name="/FYPDataContext/Image" />
       <nestedChildShapes>
-        <elementListCompartment Id="2e04e348-057d-49d4-b7de-e803e00ccc31" absoluteBounds="2.7649999999999997, 1.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="6eb51f16-c982-4e2a-bb5f-312ba200e871" absoluteBounds="2.7649999999999997, 0.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(5 : 2.01044840494792); (4.75 : 2.01044840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <AssociationMoniker Name="/FYPDataContext/LawnOwner/LawnOwner_Image" />
-      <nodes>
-        <classShapeMoniker Id="ede99d18-da46-4a49-8f51-dba3d6a22450" />
-        <classShapeMoniker Id="6d22661b-1879-455c-b1f2-5499c0d9d532" />
-      </nodes>
-    </associationConnector>
+    <classShape Id="1a975ae5-9cce-46ec-89e4-e592bcd8ae18" absoluteBounds="2.875, 2.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/FYPDataContext/BookingInformation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f5ea6cc4-d68d-4fe0-ab6d-17580f113c91" absoluteBounds="2.89, 2.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

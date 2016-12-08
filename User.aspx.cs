@@ -20,7 +20,7 @@ public partial class _Default : System.Web.UI.Page
             var checkuser = (from x in db.Users
                               where x.Email.Equals(txtEmail.Text) 
                               select x).FirstOrDefault();
-
+            
 
             if (checkuser == null)
             {
@@ -37,6 +37,7 @@ public partial class _Default : System.Web.UI.Page
                 txtPhoneNumber.Text = txtEmail.Text = txtName.Text = "";
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('Registration Completed');", true);
                 Response.Redirect("Index.aspx");
+                Session["BookingUser"] = txtName.Text;
             }
 
             else {

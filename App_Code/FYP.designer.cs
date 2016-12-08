@@ -38,6 +38,9 @@ public partial class FYPDataContext : System.Data.Linq.DataContext
   partial void InsertImage(Image instance);
   partial void UpdateImage(Image instance);
   partial void DeleteImage(Image instance);
+  partial void InsertBookingInformation(BookingInformation instance);
+  partial void UpdateBookingInformation(BookingInformation instance);
+  partial void DeleteBookingInformation(BookingInformation instance);
   #endregion
 	
 	public FYPDataContext() : 
@@ -91,6 +94,14 @@ public partial class FYPDataContext : System.Data.Linq.DataContext
 		get
 		{
 			return this.GetTable<Image>();
+		}
+	}
+	
+	public System.Data.Linq.Table<BookingInformation> BookingInformations
+	{
+		get
+		{
+			return this.GetTable<BookingInformation>();
 		}
 	}
 }
@@ -303,8 +314,6 @@ public partial class LawnOwner : INotifyPropertyChanging, INotifyPropertyChanged
 	
 	private string _Area;
 	
-	private EntitySet<Image> _Images;
-	
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -333,7 +342,6 @@ public partial class LawnOwner : INotifyPropertyChanging, INotifyPropertyChanged
 	
 	public LawnOwner()
 	{
-		this._Images = new EntitySet<Image>(new Action<Image>(this.attach_Images), new Action<Image>(this.detach_Images));
 		OnCreated();
 	}
 	
@@ -537,19 +545,6 @@ public partial class LawnOwner : INotifyPropertyChanging, INotifyPropertyChanged
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.AssociationAttribute(Name="LawnOwner_Image", Storage="_Images", ThisKey="Id", OtherKey="LawnID")]
-	public EntitySet<Image> Images
-	{
-		get
-		{
-			return this._Images;
-		}
-		set
-		{
-			this._Images.Assign(value);
-		}
-	}
-	
 	public event PropertyChangingEventHandler PropertyChanging;
 	
 	public event PropertyChangedEventHandler PropertyChanged;
@@ -569,18 +564,6 @@ public partial class LawnOwner : INotifyPropertyChanging, INotifyPropertyChanged
 			this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 		}
 	}
-	
-	private void attach_Images(Image entity)
-	{
-		this.SendPropertyChanging();
-		entity.LawnOwner = this;
-	}
-	
-	private void detach_Images(Image entity)
-	{
-		this.SendPropertyChanging();
-		entity.LawnOwner = null;
-	}
 }
 
 [global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Images")]
@@ -597,10 +580,6 @@ public partial class Image : INotifyPropertyChanging, INotifyPropertyChanged
 	
 	private System.Nullable<int> _LawnID;
 	
-	private System.Nullable<int> _LID;
-	
-	private EntityRef<LawnOwner> _LawnOwner;
-	
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -613,13 +592,10 @@ public partial class Image : INotifyPropertyChanging, INotifyPropertyChanged
     partial void OnUimgChanged();
     partial void OnLawnIDChanging(System.Nullable<int> value);
     partial void OnLawnIDChanged();
-    partial void OnLIDChanging(System.Nullable<int> value);
-    partial void OnLIDChanged();
     #endregion
 	
 	public Image()
 	{
-		this._LawnOwner = default(EntityRef<LawnOwner>);
 		OnCreated();
 	}
 	
@@ -694,10 +670,6 @@ public partial class Image : INotifyPropertyChanging, INotifyPropertyChanged
 		{
 			if ((this._LawnID != value))
 			{
-				if (this._LawnOwner.HasLoadedOrAssignedValue)
-				{
-					throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-				}
 				this.OnLawnIDChanging(value);
 				this.SendPropertyChanging();
 				this._LawnID = value;
@@ -707,56 +679,208 @@ public partial class Image : INotifyPropertyChanging, INotifyPropertyChanged
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LID", DbType="Int")]
-	public System.Nullable<int> LID
+	public event PropertyChangingEventHandler PropertyChanging;
+	
+	public event PropertyChangedEventHandler PropertyChanged;
+	
+	protected virtual void SendPropertyChanging()
+	{
+		if ((this.PropertyChanging != null))
+		{
+			this.PropertyChanging(this, emptyChangingEventArgs);
+		}
+	}
+	
+	protected virtual void SendPropertyChanged(String propertyName)
+	{
+		if ((this.PropertyChanged != null))
+		{
+			this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+		}
+	}
+}
+
+[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.BookingInformation")]
+public partial class BookingInformation : INotifyPropertyChanging, INotifyPropertyChanged
+{
+	
+	private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+	
+	private int _Id;
+	
+	private string _LawnName;
+	
+	private string _UserName;
+	
+	private System.Nullable<int> _Capcaity;
+	
+	private System.Nullable<System.DateTime> _Date;
+	
+	private string _CNIC;
+	
+	private string _Contact_No;
+	
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(int value);
+    partial void OnIdChanged();
+    partial void OnLawnNameChanging(string value);
+    partial void OnLawnNameChanged();
+    partial void OnUserNameChanging(string value);
+    partial void OnUserNameChanged();
+    partial void OnCapcaityChanging(System.Nullable<int> value);
+    partial void OnCapcaityChanged();
+    partial void OnDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnDateChanged();
+    partial void OnCNICChanging(string value);
+    partial void OnCNICChanged();
+    partial void OnContact_NoChanging(string value);
+    partial void OnContact_NoChanged();
+    #endregion
+	
+	public BookingInformation()
+	{
+		OnCreated();
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+	public int Id
 	{
 		get
 		{
-			return this._LID;
+			return this._Id;
 		}
 		set
 		{
-			if ((this._LID != value))
+			if ((this._Id != value))
 			{
-				this.OnLIDChanging(value);
+				this.OnIdChanging(value);
 				this.SendPropertyChanging();
-				this._LID = value;
-				this.SendPropertyChanged("LID");
-				this.OnLIDChanged();
+				this._Id = value;
+				this.SendPropertyChanged("Id");
+				this.OnIdChanged();
 			}
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.AssociationAttribute(Name="LawnOwner_Image", Storage="_LawnOwner", ThisKey="LawnID", OtherKey="Id", IsForeignKey=true)]
-	public LawnOwner LawnOwner
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LawnName", DbType="NVarChar(50)")]
+	public string LawnName
 	{
 		get
 		{
-			return this._LawnOwner.Entity;
+			return this._LawnName;
 		}
 		set
 		{
-			LawnOwner previousValue = this._LawnOwner.Entity;
-			if (((previousValue != value) 
-						|| (this._LawnOwner.HasLoadedOrAssignedValue == false)))
+			if ((this._LawnName != value))
 			{
+				this.OnLawnNameChanging(value);
 				this.SendPropertyChanging();
-				if ((previousValue != null))
-				{
-					this._LawnOwner.Entity = null;
-					previousValue.Images.Remove(this);
-				}
-				this._LawnOwner.Entity = value;
-				if ((value != null))
-				{
-					value.Images.Add(this);
-					this._LawnID = value.Id;
-				}
-				else
-				{
-					this._LawnID = default(Nullable<int>);
-				}
-				this.SendPropertyChanged("LawnOwner");
+				this._LawnName = value;
+				this.SendPropertyChanged("LawnName");
+				this.OnLawnNameChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserName", DbType="NVarChar(50)")]
+	public string UserName
+	{
+		get
+		{
+			return this._UserName;
+		}
+		set
+		{
+			if ((this._UserName != value))
+			{
+				this.OnUserNameChanging(value);
+				this.SendPropertyChanging();
+				this._UserName = value;
+				this.SendPropertyChanged("UserName");
+				this.OnUserNameChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Capcaity", DbType="Int")]
+	public System.Nullable<int> Capcaity
+	{
+		get
+		{
+			return this._Capcaity;
+		}
+		set
+		{
+			if ((this._Capcaity != value))
+			{
+				this.OnCapcaityChanging(value);
+				this.SendPropertyChanging();
+				this._Capcaity = value;
+				this.SendPropertyChanged("Capcaity");
+				this.OnCapcaityChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Date", DbType="Date")]
+	public System.Nullable<System.DateTime> Date
+	{
+		get
+		{
+			return this._Date;
+		}
+		set
+		{
+			if ((this._Date != value))
+			{
+				this.OnDateChanging(value);
+				this.SendPropertyChanging();
+				this._Date = value;
+				this.SendPropertyChanged("Date");
+				this.OnDateChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CNIC", DbType="NVarChar(50)")]
+	public string CNIC
+	{
+		get
+		{
+			return this._CNIC;
+		}
+		set
+		{
+			if ((this._CNIC != value))
+			{
+				this.OnCNICChanging(value);
+				this.SendPropertyChanging();
+				this._CNIC = value;
+				this.SendPropertyChanged("CNIC");
+				this.OnCNICChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Contact No]", Storage="_Contact_No", DbType="NVarChar(50)")]
+	public string Contact_No
+	{
+		get
+		{
+			return this._Contact_No;
+		}
+		set
+		{
+			if ((this._Contact_No != value))
+			{
+				this.OnContact_NoChanging(value);
+				this.SendPropertyChanging();
+				this._Contact_No = value;
+				this.SendPropertyChanged("Contact_No");
+				this.OnContact_NoChanged();
 			}
 		}
 	}

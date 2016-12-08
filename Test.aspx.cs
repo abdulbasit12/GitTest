@@ -22,6 +22,8 @@ public partial class Test : System.Web.UI.Page
         comm = new SqlCommand(str, con);
         SqlDataReader reader = comm.ExecuteReader();
 
+        StringBuilder html = new StringBuilder();
+
         while (reader.Read())
         {
             reader.Read();

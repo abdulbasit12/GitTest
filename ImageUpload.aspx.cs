@@ -21,15 +21,18 @@ public partial class ImageUpload : System.Web.UI.Page
 
         var ID = (from a in db.LawnOwners
                  where a.Address.Equals(Session["Address"].ToString())
-                 select a.Id).FirstOrDefault();
+                 select a).FirstOrDefault();
+        Session["VVID"] = Convert.ToInt32(ID.Id);
         HttpFileCollection imagecollection = Request.Files;
 
         if (FileUpload1.HasFiles)
         {
             for (int i = 0; i < imagecollection.Count; i++)
             {
+                String path="";
                 Image upload = new Image();
-                string Extension = System.IO.Path.GetExtension(FileUpload1.FileName);
+                HttpPostedFile uploadIma = imagecollection[i];
+                string Extension = System.IO.Path.GetExtension(uploadIma.FileName);
                 if (Extension.ToLower() != ".png" && Extension.ToLower() != ".gif" && Extension.ToLower() != ".jpg" && Extension.ToLower() != ".jpeg")
                 {
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('Invalid Image Format');", true);
@@ -37,7 +40,7 @@ public partial class ImageUpload : System.Web.UI.Page
                 else
                 {
 
-                    int File = FileUpload1.PostedFile.ContentLength;
+                    int File = uploadIma.ContentLength;
                     if (File > 1048576)
                     {
                         ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('Maximam File size is 1 MB');", true);
@@ -45,22 +48,34 @@ public partial class ImageUpload : System.Web.UI.Page
 
                     else
                     {
-                        string path = "uploadimages/" + Path.GetFileName(FileUpload1.PostedFile.FileName);
+                       
+                        path = "uploadimages/" + Path.GetFileName("" + uploadIma.FileName);
+
+                        if (i == 0) {
+                            upload.Name = "Cover";
+                            
+                        }
+                        else {
+                            upload.Name = ID.LawnName;
+                        }
+                        
 
                         upload.Uimg = path;
-                        upload.LID = upload.LawnID = Convert.ToInt32(ID);
+                        upload.LawnID = Convert.ToInt32(ID.Id);
                         db.Images.InsertOnSubmit(upload);
                         db.SubmitChanges();
-                        FileUpload1.SaveAs(Server.MapPath("~/uploadimages/" + FileUpload1.FileName));
+                        uploadIma.SaveAs(Server.MapPath("~/uploadimages/" + uploadIma.FileName));
                         ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('File Uploaded Sucessfully!! :)');", true);
                         PicSuccess.Visible = true;
-                        Response.Redirect("VenderHome.aspx");
+                       
                     }
 
                 }
 
 
             }
+           
+            Response.Redirect("VenderHome.aspx");
         }
 
         else

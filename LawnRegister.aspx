@@ -48,9 +48,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><asp:TextBox required="required" CssClass="textbox"
-                                runat="server" placeholder="Lawn Rent" TextMode="Number"
-                                ID="TextRent"></asp:TextBox></td>
+                        <td></td>
                         <td>
                             <asp:TextBox required="required" CssClass="textbox"
                                 runat="server" placeholder="Email"

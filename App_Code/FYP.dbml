@@ -22,7 +22,6 @@
       <Column Name="Password" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="ConfirmPassword" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="Area" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Association Name="LawnOwner_Image" Member="Images" ThisKey="Id" OtherKey="LawnID" Type="Image" />
     </Type>
   </Table>
   <Table Name="dbo.Images" Member="Images">
@@ -31,8 +30,17 @@
       <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="Uimg" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
       <Column Name="LawnID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="LID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="LawnOwner_Image" Member="LawnOwner" ThisKey="LawnID" OtherKey="Id" Type="LawnOwner" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BookingInformation" Member="BookingInformations">
+    <Type Name="BookingInformation">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LawnName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Capcaity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="CNIC" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Contact No]" Member="Contact_No" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

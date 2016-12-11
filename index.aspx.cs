@@ -5,7 +5,6 @@ using System.Data;
 using System.Data.Linq;
 using System.Data.SqlClient;
 using System.Linq;
-using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -46,22 +45,22 @@ public partial class index : System.Web.UI.Page
 
      
 
-       GridView2.DataSource=Imggg;
-       GridView2.DataBind();
+    //   GridView2.DataSource=Imggg;
+    //   GridView2.DataBind();
 
        
         
-    }
-    protected void GridView2_RowCommand(object sender, GridViewCommandEventArgs e)
-    {
-        if (e.CommandName == "Select") {
+    //}
+    //protected void GridView2_RowCommand(object sender, GridViewCommandEventArgs e)
+    //{
+    //    if (e.CommandName == "Select") {
 
-            int r = Convert.ToInt32(e.CommandArgument);
-            Session["Booking"] = GridView2.Rows[r].Cells[3].Text;
-            Session["Delete"] = GridView2.Rows[r].Cells[5].Text;
+    //        int r = Convert.ToInt32(e.CommandArgument);
+    //        Session["Booking"] = GridView2.Rows[r].Cells[3].Text;
+    //        Session["Delete"] = GridView2.Rows[r].Cells[5].Text;
 
-            Response.Redirect("Booking.aspx"); 
-        }
+    //        Response.Redirect("Booking.aspx"); 
+    //    }
     
     
     }

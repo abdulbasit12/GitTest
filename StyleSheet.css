@@ -75,7 +75,7 @@ li {
     height: 120px;
     width: 100%;
     border-bottom: double mediumslateblue;
-    background-color:black;
+    background-color: black;
     display: block;
     z-index: 1;
     top: 0px;
@@ -220,7 +220,7 @@ li {
     line-height: 20px;
 }
 
-#bookingdiv{
+#bookingdiv {
     position: absolute;
     height: 40%;
     width: 95%;
@@ -233,10 +233,10 @@ li {
     border-radius: 10px 10px;
 }
 
-#bookingform{
+#bookingform {
     position: relative;
     top: 0%;
-    left:1%;
+    left: 1%;
     font-size: 150%;
     color: #4819af;
     font-size: 100%;
@@ -280,13 +280,13 @@ li.drop {
     width: 100%;
 }
 
-.drop-content a {
+    .drop-content a {
         color: black;
         padding: 12px 16px;
         text-decoration: none;
         display: block;
         text-align: left;
-}
+    }
 
 .drop-contet a:hover {
     background-color: #ff8625;
@@ -308,7 +308,7 @@ li.drop {
     position: absolute;
     left: 85%;
     top: 22%;
-    font-size:small;
+    font-size: small;
 }
 
 #welcome1 {
@@ -318,198 +318,212 @@ li.drop {
     overflow: hidden;
 }
 
-#divbtn{
-    position:absolute;
-    top:45%;
-    width:70%;
-    left:33%;
+#divbtn {
+    position: absolute;
+    top: 45%;
+    width: 70%;
+    left: 33%;
 }
 
-.buttonvender{
-    height:80px;
-    width:40%;
-    left:30%;
+.buttonvender {
+    height: 80px;
+    width: 40%;
+    left: 30%;
     border: 2px dashed gray;
-    background:none;
-    font-size:large;
+    background: none;
+    font-size: large;
 }
 /*Search Filter CSS*/
-#searchfilter{
-    font-family:Arial;
-    color:dimgray;
+#searchfilter {
+    font-family: Arial;
+    color: dimgray;
 }
 
 #search-area {
-    position:absolute;
-    top:30%;
-    left:14.8%;
-    height:50px;
-    width:20%;
-    background-color:white;
-    padding-left:2%;
-    line-height:50px;
-    font-family:Arial;
-    border:1px solid gray;
+    position: absolute;
+    top: 30%;
+    left: 14.8%;
+    height: 50px;
+    width: 20%;
+    background-color: white;
+    padding-left: 2%;
+    line-height: 50px;
+    font-family: Arial;
+    border: 1px solid gray;
 }
 
-#drop-search-area{
-    position:absolute;
-    width:22%;
-    height:300px;
-    top:38%;
-    background-color:white;
-    left:14.8%;
-    border:1px solid gray;
-    overflow-y:scroll;
-    display:none;
-    z-index:1;
+#drop-search-area {
+    position: absolute;
+    width: 20%;
+    height: 300px;
+    top: 38%;
+    background-color: white;
+    left: 14.8%;
+    border: 1px solid gray;
+    overflow-y: scroll;
+    display: none;
+    z-index: 1;
 }
 
-.searchbar{
-    position:relative;
-    background-color:aliceblue;
-    width:100%;
-    height:55px;
+.searchbar {
+    position: relative;
+    background-color: aliceblue;
+    width: 100%;
+    height: 55px;
 }
 
-.searchtext{
-    position:absolute;
-    top:17%;
-    left:7%;
-    height:27px;
-    width:85%;
+.searchtext {
+    position: absolute;
+    top: 17%;
+    left: 7%;
+    height: 27px;
+    width: 85%;
 }
 
-.allarea{
-    position:absolute;
-    padding-top:8px;
-    padding-left:5px;
+.allarea {
+    position: absolute;
+    padding-top: 8px;
+    padding-left: 5px;
 }
 
-.populararea{
-    padding-top:0px;
-    padding-left:15px;
+.populararea {
+    padding-top: 0px;
+    padding-left: 15px;
 }
 
-#search-capacity{
-    position:absolute;
-    top:30%;
-    left:37.2%;
-    height:50px;
-    width:20%;
-    background-color:white;
-    padding-left:2%;
-    line-height:50px;
-    font-family:Arial;
-    border:1px solid gray;
+#search-capacity {
+    position: absolute;
+    top: 30%;
+    left: 37.2%;
+    height: 50px;
+    width: 20%;
+    background-color: white;
+    padding-left: 2%;
+    line-height: 50px;
+    font-family: Arial;
+    border: 1px solid gray;
 }
 
-#drop-search-capactiy{
-    position:absolute;
-    width:22%;
-    height:300px;
-    top:38%;
-    background-color:white;
-    left:37.2%;
-    border:1px solid gray;
-    overflow-y:scroll;
-    display:none;
-    z-index:1;
+#drop-search-capactiy {
+    position: absolute;
+    width: 20%;
+    height: 300px;
+    top: 38%;
+    background-color: white;
+    left: 37.2%;
+    border: 1px solid gray;
+    overflow-y: scroll;
+    display: none;
+    z-index: 1;
 }
 
-#search-button{
-    position:absolute;
-    top:30.1%;
-    left:59.6%;
-    width:30%;
-    height:40px;
-    
+#search-button {
+    position: absolute;
+    top: 30.1%;
+    left: 59.6%;
+    width: 30%;
+    height: 40px;
 }
 /*Lawn Data CSS*/
-#datagrid{
-    position:absolute;
-    top:49%;
-    left:2%;
-    z-index:-1;
+#datagrid {
+    position: absolute;
+    top: 49%;
+    left: 2%;
+    z-index: -1;
 }
 
-#DataView{
-    position:absolute;
-    top:30%;
+#DataView {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    left: 0%;
+    height: auto;
+}
+
+#lawnData {
+    position: absolute;
+    width: 65%;
+    height: 150px;
+    border: 1px solid lightgray;
+    left: 5%;
+    background-color: white;
+}
+
+#dataimg {
+    position: absolute;
+    top: 5%;
+    border: 1px solid lightgray;
+    height: 80px;
+    width: 20%;
+    left: 5%;
+}
+
+#Namediv {
+    position: absolute;
+    top: 3%;
+    left: 30%;
+    font-size: 30px;
+    font-weight: 700;
+    color: gray;
+}
+
+#Addressdiv {
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    font-family: aril;
+    font-size: 16px;
+    font-weight: 100;
+    color: gray;
+}
+
+#Capacitydiv {
+    position: absolute;
+    top: 38%;
+    left: 30%;
+    font-family: aril;
+    font-size: 16px;
+    font-weight: 100;
+    color: gray;
+}
+
+#Rentdiv {
+    position: absolute;
+    top: 51%;
+    left: 30%;
+    font-family: aril;
+    font-size: 16px;
+    font-weight: 100;
+    color: gray;
+}
+
+#Buttondiv {
+    position: absolute;
+    top: 40%;
+    left: 78%;
+    width: 28%;
+}
+
+.btn {
+    position: relative;
+    height: 35px;
+    width: 75%;
+    background-color: darkorange;
+    border: none;
+    color: white;
+}
+
+/*Slider CSS*/
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
     width:100%;
+    margin:auto;
+}
+
+#slider {
+    position: absolute;
+    top: 17%;
     left:0%;
-    height:auto;
-}
-
-#lawnData{
-    position:absolute;
-    width:65%;
-    height:150px;
-    border:1px solid lightgray;
-    left:5%;
-    background-color:white;
-}
-
-#dataimg{
-    position:absolute;
-    top:5%;
-    border:1px solid lightgray;
-    height:80px;
-    width:20%;
-    left:5%;
-}
-
-#Namediv{
-    position:absolute;
-    top:3%;
-    left:30%;
-    font-size:30px;
-    font-weight:700;
-    color:gray;
-}
-
-#Addressdiv{
-    position:absolute;
-    top:25%;
-    left:30%;
-    font-family:aril;
-    font-size:16px;
-    font-weight:100;
-    color:gray;
-}
-
-#Capacitydiv{
-    position:absolute;
-    top:38%;
-    left:30%;
-    font-family:aril;
-    font-size:16px;
-    font-weight:100;
-    color:gray;
-}
-
-#Rentdiv{
-    position:absolute;
-    top:51%;
-    left:30%;
-    font-family:aril;
-    font-size:16px;
-    font-weight:100;
-    color:gray;
-}
-
-#Buttondiv{
-    position:absolute;
-    top:40%;
-    left:78%;
-    width:28%;
-}
-
-.btn{
-    position:relative;
-    height:35px;
-    width:75%;
-    background-color:darkorange;
-    border:none;
-    color:white;
+    width:100%;
+    z-index: -1;
 }

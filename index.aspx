@@ -1,13 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="MasterPage.master" AutoEventWireup="true" CodeFile="index.aspx.cs" Inherits="index" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-     <script src="Scripts/jquery-1.4.1.min.js" type="text/javascript"></script>
-    <link href="Styles/nivo-slider.css" rel="stylesheet" type="text/css" />
-    <link href="Styles/Default.css" rel="stylesheet" type="text/css" />
-    <link href="Styles/nivo-slider.css" rel="stylesheet" type="text/css" />
-    <script src="Scripts/Demo.js" type="text/javascript"></script>
     <div id="main">
         <div id="searchfilter">
             <div id="search-area">All Areas &emsp; &emsp; &emsp; &emsp; &emsp; ▼</div>
@@ -30,37 +30,42 @@
                 </ul>
             </div>
             <div id="search-button">
-                <asp:Button runat="server" Text="Search" Style="height: 50px; line-height: 30px; border-radius: 0px; " CssClass="button" OnClick="Unnamed2_Click" /></div>
+                <asp:Button runat="server" Text="Search" Style="height: 50px; line-height: 30px; border-radius: 0px;" CssClass="button" OnClick="Unnamed2_Click" />
+            </div>
         </div>
-        <div id="datagrid">
-            <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" CellPadding="4" style="margin-right: 122px; margin-top: 2px;" Width="174px" OnRowCommand="GridView2_RowCommand" BackColor="White" BorderColor="#CC9966" BorderStyle="None" BorderWidth="1px">
-                <Columns>
-                    <asp:ImageField DataImageUrlField="uimg" HeaderText="Images">
-                   <ControlStyle Height="300px" Width="600px" />
-                         </asp:ImageField>
-                    <asp:BoundField DataField="LawnName" HeaderText="Lawn Name" />
-                    
-                    <asp:BoundField DataField="SeatingCapacity" HeaderText="Capacity" />
-                    <asp:BoundField DataField="Address" HeaderText="Address" />
-                    <asp:BoundField DataField="ID" Visible="False" />
-                    <asp:CommandField ShowSelectButton="True" />
-                    
-                </Columns>
-                <FooterStyle BackColor="#FFFFCC" ForeColor="#330099" />
-                <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="#FFFFCC" />
-                <PagerStyle BackColor="#FFFFCC" ForeColor="#330099" HorizontalAlign="Center" />
-                <RowStyle BackColor="White" ForeColor="#330099" />
-                <SelectedRowStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="#663399" />
-                <SortedAscendingCellStyle BackColor="#FEFCEB" />
-                <SortedAscendingHeaderStyle BackColor="#AF0101" />
-                <SortedDescendingCellStyle BackColor="#F6F0C0" />
-                <SortedDescendingHeaderStyle BackColor="#7E0000" />
-                
-            </asp:GridView>
+        <div class="container" id="slider">
+            <br />
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img src="1.jpg"  width="100" height="100" />
+                    </div>
+                    <div class="item">
+                        <img src="2.jpg"  width="460" height="345" />
+                    </div>
+                    <div class="item">
+                        <img src="3.jpg" width="460" height="345" />
+                    </div>
+
+                    <div class="item">
+                        <img src="4.jpg" width="460" height="345" />
+                    </div>
+                </div>
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
         </div>
-
-
-        <
-    </div>
-        
+        </div>
 </asp:Content>

@@ -21,4 +21,10 @@
     $("#search-capacity").click(function () {
         $("#drop-search-capactiy").fadeToggle("fast");
     })
+    $("#search-areaL").click(function () {
+        $("#drop-search-areaL").fadeToggle("fast");
+    })
+    $("#search-capacityL").click(function () {
+        $("#drop-search-capactiyL").fadeToggle("fast");
+    })
 })

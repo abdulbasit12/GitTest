@@ -15,19 +15,12 @@
                 <div class="searchbar">
                     <asp:TextBox CssClass="searchtext" runat="server" ID="SearchArea"></asp:TextBox>
                 </div>
-                <ul class="allarea">
-                    <li>All Areas</li>
-                </ul>
-                <h4 style="padding-top: 10px; padding-left: 5px;">Popular Areas</h4>
             </div>
             <div id="search-capacity">All Capacities &emsp; &emsp; &emsp; &emsp; ▼</div>
             <div id="drop-search-capactiy">
                 <div class="searchbar">
                     <asp:TextBox CssClass="searchtext" runat="server"></asp:TextBox>
                 </div>
-                <ul class="allarea">
-                    <li>All Capacities</li>
-                </ul>
             </div>
             <div id="search-button">
                 <asp:Button runat="server" Text="Search" Style="height: 50px; line-height: 30px; border-radius: 0px;" CssClass="button" OnClick="Unnamed2_Click" />
@@ -44,17 +37,16 @@
                 </ol>
                 <div class="carousel-inner" role="listbox">
                     <div class="item active">
-                        <img src="1.jpg"  width="100" height="100" />
+                        <img src="lawn1.jpg"  width="460" height="345" />
                     </div>
                     <div class="item">
-                        <img src="2.jpg"  width="460" height="345" />
+                        <img src="lawn2.jpg"  width="460" height="345" />
                     </div>
                     <div class="item">
-                        <img src="3.jpg" width="460" height="345" />
+                        <img src="lawn3.jpg" width="460" height="345" />
                     </div>
-
                     <div class="item">
-                        <img src="4.jpg" width="460" height="345" />
+                        <img src="lawn4.jpg" width="460" height="345" />
                     </div>
                 </div>
                 <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">

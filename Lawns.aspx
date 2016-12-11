@@ -1,7 +1,27 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Lawns.aspx.cs" Inherits="Lawns" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+        function myFunction() {
+            // Declare variables
+            var input, filter, ul, li, a, i;
+            input = document.getElementById('SearchArea');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName('li');
+
+            // Loop through all list items, and hide those who don't match the search query
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+</script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div id="main">
@@ -9,12 +29,17 @@
             <div id="search-areaL">All Areas &emsp; &emsp; &emsp; &emsp; &emsp; ▼</div>
             <div id="drop-search-areaL">
                 <div class="searchbar">
-                    <asp:TextBox CssClass="searchtext" runat="server" ID="SearchArea"></asp:TextBox>
+                    <asp:TextBox CssClass="searchtext" runat="server" ID="SearchArea" onkeyup="myFunction()"></asp:TextBox>
                 </div>
-                <ul class="allarea">
-                    <li>All Areas</li>
+                <ul id="myUL">
+                    <li><a href="#">Defence</a></li>
+                    <li><a href="#">Korangi</a></li>
+                    <li><a href="#">Nazimabad</a></li>
+                    <li><a href="#">Jamshed Road</a></li>
+                    <li><a href="#">Gulistan e Johar</a></li>
+                    <li><a href="#">Water Pump</a></li>
+                    <li><a href="#">Saddar</a></li>
                 </ul>
-                <h4 style="padding-top: 10px; padding-left: 5px;">Popular Areas</h4>
             </div>
             <div id="search-capacityL">All Capacities &emsp; &emsp; &emsp; &emsp; ▼</div>
             <div id="drop-search-capactiyL">

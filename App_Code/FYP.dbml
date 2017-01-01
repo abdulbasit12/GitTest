@@ -1,29 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Database" Class="FYPDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="WebSettings" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="DatabaseConnectionString" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.[User]" Member="Users">
-    <Type Name="User">
-      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="Phone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="Password" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="[Confrom Password]" Member="Confrom_Password" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.LawnOwners" Member="LawnOwners">
-    <Type Name="LawnOwner">
-      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="LawnName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="SeatingCapacity" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="Address" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="BankAcc" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="Phone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="Password" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="ConfirmPassword" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="Area" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.Images" Member="Images">
     <Type Name="Image">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -41,6 +17,40 @@
       <Column Name="Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="CNIC" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="[Contact No]" Member="Contact_No" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LawnID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CustomerID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LawnOwners" Member="LawnOwners">
+    <Type Name="LawnOwner">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LawnName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SeatingCapacity" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BankAcc" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ConfirmPassword" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Area" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Rent" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AllUsers" Member="AllUsers">
+    <Type Name="AllUser">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[Email ID]" Member="Email_ID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[User Role]" Member="User_Role" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[User]" Member="Users">
+    <Type Name="User">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

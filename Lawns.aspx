@@ -2,34 +2,52 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script>
-        function myFunction() {
-            // Declare variables
-            var input, filter, ul, li, a, i;
-            input = document.getElementById('SearchArea');
-            filter = input.value.toUpperCase();
-            ul = document.getElementById("myUL");
-            li = ul.getElementsByTagName('li');
-
-            // Loop through all list items, and hide those who don't match the search query
-            for (i = 0; i < li.length; i++) {
-                a = li[i].getElementsByTagName("a")[0];
-                if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                    li[i].style.display = "";
-                } else {
-                    li[i].style.display = "none";
-                }
-            }
+    <style>
+        .btn2 {
+            position: relative;
+            height: 35px;
+            width: 50%;
+            background-color: darkorange;
+            border-radius: 0px;
+            color: white;
+            font-family: Arial;
+            font-size: 15px;
+            left: 0%;
+            border:none;
         }
-</script>
+
+        #Repeater{
+            position:relative;
+            width:100%;
+            height:100px;
+            left:10%;
+            background-color:white;
+            border:2px solid gray;
+            border-bottom-color:black;
+        }
+
+        .Rimg{
+            position:relative;
+            max-height:350px;
+            width:50%;
+        }
+        #detail1{
+            position:absolute;
+            font-family:Arial;
+            left:55%;
+            width:50%;
+            top:20%;
+        }
+    </style>
 </asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div id="main">
         <div id="searchfilterL">
-            <div id="search-areaL">All Areas &emsp; &emsp; &emsp; &emsp; &emsp; ▼</div>
+            <div id="search-areaL">All Areas</div>
             <div id="drop-search-areaL">
                 <div class="searchbar">
-                    <asp:TextBox CssClass="searchtext" runat="server" ID="SearchArea" onkeyup="myFunction()"></asp:TextBox>
+                    <asp:TextBox ID="SearchArea" CssClass="searchtext" runat="server" onkeyup="myFunction()"></asp:TextBox>
                 </div>
                 <ul id="myUL">
                     <li><a href="#">Defence</a></li>
@@ -41,60 +59,49 @@
                     <li><a href="#">Saddar</a></li>
                 </ul>
             </div>
-            <div id="search-capacityL">All Capacities &emsp; &emsp; &emsp; &emsp; ▼</div>
+            <div id="search-capacityL">All Capacities</div>
             <div id="drop-search-capactiyL">
                 <div class="searchbar">
-                    <asp:TextBox CssClass="searchtext" runat="server"></asp:TextBox>
+                    <asp:TextBox CssClass="searchtext" runat="server" ID="SearchCapacity"></asp:TextBox>
                 </div>
                 <ul class="allarea">
                     <li>All Capacities</li>
                 </ul>
             </div>
             <div id="search-buttonL">
-                <asp:Button runat="server" Text="Search" Style="height: 50px; line-height: 30px; border-radius: 0px;" CssClass="button" />
+                <asp:Button runat="server" Text="Search" Style="height: 50px; line-height: 30px; border-radius: 0px;" CssClass="button" OnClick="Unnamed2_Click1" />
             </div>
         </div>
         <div id="datagrid">
 
             <asp:Repeater ID="Repeater1" runat="server" OnItemCommand="Repeater1_ItemCommand">
-
                 <ItemTemplate>
-                    <table style="border: groove 1px; background-color: orange; width: 100%">
+                    <table id="Repeater">
                         <tr>
-                            <td style="width: 220px">
-                                <asp:Image ID="Imag" ImageUrl='<%# Eval("Uimg") %>' runat="server" Width="400px" />
-
-                            </td>
-
                             <td>
-                                <table>
+                                <asp:Image ID="Imag" ImageUrl='<%# Eval("Uimg") %>' runat="server" CssClass="Rimg"/>
+                            </td>
+                            <td>
+                                <table id="detail1">
                                     <tr>
-                                        <td>
-                                            <b>Name: </b>
-                                        </td>
-                                        <td>
+                                        <td style="font-family:Arial; font-size:35px; font-weight:400;">
                                             <asp:Label ID="Name" Text='<%# Eval("LawnName") %>' runat="server" />
+                                            <asp:Label ID="IDLAWN" runat="server" Visible="false" Text='<%# Eval("Address") %>'></asp:Label>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>
-                                            <b>Capacity:  </b>
-                                        </td>
-                                        <td>
+                                        <td style="font-family:Arial; font-size:20px;">
                                             <asp:Label ID="Label3" Text='<%# Eval("SeatingCapacity") %>' runat="server" />
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>
-                                            <b>Address : </b>
-                                        </td>
-                                        <td>
+                                        <td style="font-family:Arial; font-size:20px;">
                                             <asp:Label ID="Label122" Text='<%# Eval("Address") %>' runat="server" />
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <asp:Button Visible="True" runat="server" Text="Details"></asp:Button>
+                                            <asp:Button ID="SSLAwn" runat="server" Text="Check Availbility" OnClick="SSLAwn_Click" CssClass="btn2"></asp:Button>
                                         </td>
                                     </tr>
                                 </table>
@@ -103,13 +110,20 @@
                     </table>
                 </ItemTemplate>
 
-                <SeparatorTemplate>
+<%--                <SeparatorTemplate>
 
-                    <asp:Image runat="server" ID="immm" ImageUrl="~/,65c8c7ad-4a42-4c9f-9557-94586baacfb2newImage.png" />
-
+                    <asp:Image ID="immm1" ImageUrl="uploadimages/AhsanBuffet_Setup_1.jpg" />>
+                     <asp:Image ID="immm2" ImageUrl="uploadimages/AhsanBuffet_Setup_1.jpg" />
+                    <asp:Image ID="immm3" ImageUrl="uploadimages/AhsanBuffet_Setup_1.jpg" />
+                    <asp:Image ID="immm4" ImageUrl="uploadimages/AhsanBuffet_Setup_1.jpg" />
+                    <asp:Image ID="immm5" ImageUrl="uploadimages/AhsanBuffet_Setup_1.jpg" />
+                    <asp:Image ID="immm6" ImageUrl="uploadimages/AhsanBuffet_Setup_1.jpg" />
                 </SeparatorTemplate>
+--%>
+
             </asp:Repeater>
         </div>
+
     </div>
 </asp:Content>
 

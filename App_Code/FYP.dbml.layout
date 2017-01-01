@@ -2,28 +2,34 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="FYP">
   <DataContextMoniker Name="/FYPDataContext" />
   <nestedChildShapes>
-    <classShape Id="44437916-f63e-41dc-9c5d-e296d40c5f5d" absoluteBounds="0.5, 1, 2, 1.9631982421875">
-      <DataClassMoniker Name="/FYPDataContext/User" />
-      <nestedChildShapes>
-        <elementListCompartment Id="25784c21-e3ad-49f5-86c0-9f909c9d4152" absoluteBounds="0.515, 1.46, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="ede99d18-da46-4a49-8f51-dba3d6a22450" absoluteBounds="5, 1.625, 2, 2.7324039713541666">
-      <DataClassMoniker Name="/FYPDataContext/LawnOwner" />
-      <nestedChildShapes>
-        <elementListCompartment Id="628086ea-060f-4ebe-8686-1b2b98e80274" absoluteBounds="5.015, 2.085, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="eaadc2cd-7e58-4d1c-997c-4143926104f1" absoluteBounds="2.75, 0.5, 2, 1.5785953776041666">
+    <classShape Id="eaadc2cd-7e58-4d1c-997c-4143926104f1" absoluteBounds="2.875, 0.5, 2, 1.5785953776041666">
       <DataClassMoniker Name="/FYPDataContext/Image" />
       <nestedChildShapes>
-        <elementListCompartment Id="6eb51f16-c982-4e2a-bb5f-312ba200e871" absoluteBounds="2.7649999999999997, 0.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="6eb51f16-c982-4e2a-bb5f-312ba200e871" absoluteBounds="2.8899999999999997, 0.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="1a975ae5-9cce-46ec-89e4-e592bcd8ae18" absoluteBounds="2.875, 2.5, 2, 2.1554996744791666">
+    <classShape Id="d000fcb4-ee34-41d7-bc08-f83fc6b9d7b4" absoluteBounds="3, 3.25, 2, 2.5401025390625">
       <DataClassMoniker Name="/FYPDataContext/BookingInformation" />
       <nestedChildShapes>
-        <elementListCompartment Id="f5ea6cc4-d68d-4fe0-ab6d-17580f113c91" absoluteBounds="2.89, 2.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="fd5804a4-08c4-4746-bc86-66c031ecfb2f" absoluteBounds="3.0149999999999997, 3.71, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1c144bc7-9029-4177-9c94-ec2f1de4b6a4" absoluteBounds="0.625, 3.125, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/FYPDataContext/LawnOwner" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ef383b6a-7b22-4c56-9056-870a47255631" absoluteBounds="0.64000000000000012, 3.585, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c5e54902-1267-448c-815d-3b0c392ae19a" absoluteBounds="5.125, 0.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/FYPDataContext/AllUser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="44d8c418-dbbd-4d01-8c13-b39ffbfccbd0" absoluteBounds="5.14, 0.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a4cdde9b-cae4-4f9b-b5c1-29c3c7eb3415" absoluteBounds="0.5, 0.625, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/FYPDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="771d6c99-6008-4b94-a5f2-ce77a875ca93" absoluteBounds="0.51500000000000012, 1.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

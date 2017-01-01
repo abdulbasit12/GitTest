@@ -17,8 +17,9 @@ public partial class _Default : System.Web.UI.Page
         {
             FYPDataContext db = new FYPDataContext();
             User u = new User();
-            var checkuser = (from x in db.Users
-                              where x.Email.Equals(txtEmail.Text) 
+            AllUser all = new AllUser();
+            var checkuser = (from x in db.AllUsers
+                              where x.Email_ID.Equals(txtEmail.Text) 
                               select x).FirstOrDefault();
             
 
@@ -28,16 +29,25 @@ public partial class _Default : System.Web.UI.Page
                 u.Name = txtName.Text;
                 u.Phone = txtPhoneNumber.Text;
                 u.Email = txtEmail.Text;
-                u.Password = txtPassword.Text;
-                u.Confrom_Password = txtConfirmPassword.Text;
+                //u.Password = txtPassword.Text;
+                all.Password = txtPassword.Text;
+                all.Email_ID = txtEmail.Text;
+                all.User_Role="User";
+                db.AllUsers.InsertOnSubmit(all);
 
                 db.Users.InsertOnSubmit(u);
                 db.SubmitChanges();
                 Response.Write("Registration Scuessfully Complete");
                 txtPhoneNumber.Text = txtEmail.Text = txtName.Text = "";
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('Registration Completed');", true);
-                Response.Redirect("Index.aspx");
-                Session["BookingUser"] = txtName.Text;
+               
+                //User u1 = new User();
+                //var checkuser2 = (from x in db.Users
+                //                 where x.Email.Equals(txtEmail.Text)
+                //                 select x).FirstOrDefault();
+                //Session["BookingUser"] = checkuser2.Id;
+                Response.Redirect("Lawns.aspx");
+               
             }
 
             else {

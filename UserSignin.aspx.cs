@@ -19,37 +19,44 @@ public partial class UserSignin : System.Web.UI.Page
             FYPDataContext db = new FYPDataContext();
 
 
-            var userresult = (from x in db.Users
-                              where x.Name.Equals(txtSignInName.Text) & x.Password.Equals(txtpasswordSignIn.Text)
+            var userresult = (from x in db.AllUsers
+                              where x.Email_ID.Equals(txtSignInName.Text) & x.Password.Equals(txtpasswordSignIn.Text)
                               select x).FirstOrDefault();
 
-            var Vendor_result = (from x in db.LawnOwners
-                                 where x.LawnName.Equals(txtSignInName.Text) & x.Password.Equals(txtpasswordSignIn.Text)
-                                 select x).FirstOrDefault();
-            
-            Session["BookingUser"]=userresult;
+            //var Vendor_result = (from x in db.LawnOwners
+            //                     where x.LawnName.Equals(txtSignInName.Text) & x.Password.Equals(txtpasswordSignIn.Text)
+            //                     select x).FirstOrDefault();
 
-            if (userresult != null)
+
+            if (userresult == null)
             {
-               
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('UserName or Password is Incorrect');", true);
+
+            }
+            else if (Session["CurrentURL"] != null)
+            {
+
+                Response.Redirect(Session["CurrentURL"].ToString());
+            
+            
+            }
+            else if (userresult.User_Role != "Vendor")
+            {
+                Session["BookingUser"] = userresult.Id;
                 Response.Redirect("index.aspx");
 
             }
 
 
-            if (Vendor_result != null)
+            else if (userresult.User_Role == "User")
             {
-                Session["Name"] = Vendor_result.LawnName;
+                //Session["Name"] = Vendor_result.LawnName;
 
-                Session["VVID"] = Vendor_result.Id;
+                //Session["VVID"] = Vendor_result.Id;
                 Response.Redirect("VenderHome.aspx");
 
             }
-            else
-            {
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('UserName or Password is Incorrect');", true);
-
-            }
+            
         }
     }
 }

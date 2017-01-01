@@ -17,10 +17,11 @@ public partial class LawnRegister : System.Web.UI.Page
         {
             FYPDataContext db = new FYPDataContext();
             LawnOwner L = new LawnOwner();
+            AllUser all = new AllUser();
 
 
-            var checkVendor = (from x in db.LawnOwners
-                             where x.Address.Equals(txtAddress.Text)
+            var checkVendor = (from x in db.AllUsers
+                               where x.Email_ID.Equals(txtEmailL.Text)
                              select x).FirstOrDefault();
             if (checkVendor == null)
             {
@@ -29,11 +30,14 @@ public partial class LawnRegister : System.Web.UI.Page
                 L.Address = txtAddress.Text;
                 L.BankAcc = txtAcc.Text;
                 L.Phone = txtphone.Text;
-                L.Email = txtEmailL.Text;
-                L.Password = txtPass.Text;
-                L.ConfirmPassword = txtConfirmPass.Text;
+                //L.Email = txtEmailL.Text;
+                all.Email_ID = txtEmailL.Text;
+                all.Password = txtPass.Text;
+                all.User_Role = "Vendor";
+              //  L.Password = txtPass.Text;
+                //L.ConfirmPassword = txtConfirmPass.Text;
                 L.Area = txtArea.Text;
-
+                db.AllUsers.InsertOnSubmit(all);
                 db.LawnOwners.InsertOnSubmit(L);
                 db.SubmitChanges();
                 Session["Address"] = txtAddress.Text;

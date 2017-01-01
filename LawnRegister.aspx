@@ -49,7 +49,7 @@
                     </tr>
                     <tr>
                         <td><asp:TextBox required="required" CssClass="textbox"
-                                runat="server" placeholder="Rent"
+                                runat="server" placeholder="Lawn Rent"
                                 ID="txtRent"></asp:TextBox></td>
                         <td>
                             <asp:TextBox required="required" CssClass="textbox"

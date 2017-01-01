@@ -9,7 +9,7 @@
             <table>
                 <tr>
                     <td>
-                        <asp:TextBox runat="server" CssClass="textbox" required="required" placeholder="Organizer Name" ID="txtOrgName"></asp:TextBox></td>
+                        <asp:TextBox runat="server" CssClass="textbox" required="required" placeholder="Organizer Name" ID="txtOrgName" ReadOnly="True"></asp:TextBox></td>
                  <td>
                         <asp:TextBox runat="server" CssClass="textbox" required="required" placeholder="UserName" ID="txtUser"></asp:TextBox></td>
                        <td>
@@ -17,13 +17,13 @@
                     <td>
                         <asp:TextBox runat="server" CssClass="textbox" required="required" placeholder="No. of Guests" ID="txtGuests"></asp:TextBox></td>
                     <td>
-                        <asp:TextBox runat="server" CssClass="textbox" required="required" TextMode="Date" ID="txtDate"></asp:TextBox></td>
+                        <asp:TextBox runat="server" CssClass="textbox" required="required" TextMode="Date" ID="txtDate" AutoPostBack="True"></asp:TextBox></td>
                     <td>
                         <asp:TextBox runat="server" CssClass="textbox" required="required" placeholder="Contact #" TextMode="Phone" ID="txtContact"></asp:TextBox></td>
                 </tr>
                 <tr>
                     <td></td>
-                    <td></td>
+                    <td>&nbsp;</td>
                     <td>
                         <asp:Button runat="server" CssClass="button" Text="Book" OnClick="Unnamed3_Click" /></td>
                 </tr>

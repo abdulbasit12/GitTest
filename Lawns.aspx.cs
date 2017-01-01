@@ -13,7 +13,49 @@ public partial class Lawns : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (!IsPostBack)
+        {
+            FYPDataContext db = new FYPDataContext();
+            Image img = new Image();
+            var Laww = from x in db.LawnOwners
+                      // where x.Area.Equals(SearchArea.Text)
+                       select x.Id;
 
+            //if (SearchArea != null)
+            //{
+            //     Laww = from x in db.LawnOwners
+            //               where x.Area.Equals(Convert.ToString( SearchArea.Text))
+            //               select x.Id;
+            //}
+            //else {
+            //     Laww = from x in db.LawnOwners
+            //            where x.SeatingCapacity.Equals(SearchCapacity.Text)
+            //               select x.Id;
+            
+            //}
+
+
+            var CoverImage = from x in db.Images
+                             where x.Name.Equals("Cover")
+                             select x.Id;
+
+
+            var Imggg = (from x in db.Images
+                         join y in db.LawnOwners on x.LawnID equals y.Id
+                         where Laww.Contains(Convert.ToInt32(x.LawnID)) &&
+                             //where x.Name.Equals(Convert.ToInt32("Cover".ToString()))
+                      CoverImage.Contains(x.Id)
+                         select new { x.Uimg, y.LawnName, y.SeatingCapacity, y.Address });
+
+
+           
+
+            Repeater1.DataSource = Imggg;
+            Repeater1.DataBind();
+        
+        
+        
+        }
     }
 
     protected void Unnamed2_Click(object sender, EventArgs e)
@@ -23,9 +65,9 @@ public partial class Lawns : System.Web.UI.Page
         Image img = new Image();
 
 
-
+        
         var Laww = from x in db.LawnOwners
-                   where x.Area.Equals(SearchArea.Text)
+                   where x.Area.Equals(SearchArea.Text) || x.SeatingCapacity.Equals(Convert.ToString( SearchCapacity.Text))
                    select x.Id;
 
 
@@ -56,5 +98,48 @@ public partial class Lawns : System.Web.UI.Page
         Response.Redirect("BookingPage.aspx");
 
 
+    }
+    protected void Unnamed2_Click1(object sender, EventArgs e)
+    {
+        FYPDataContext db = new FYPDataContext();
+        Image img = new Image();
+
+
+
+        var Laww = from x in db.LawnOwners
+                   where x.Area.Equals(SearchArea.Text) || Convert.ToInt32(x.SeatingCapacity )>= Convert.ToInt32(SearchCapacity.Text)
+                   select x.Id;
+
+
+        var CoverImage = from x in db.Images
+                         where x.Name.Equals("Cover")
+                         select x.Id;
+
+
+        var Imggg = (from x in db.Images
+                     join y in db.LawnOwners on x.LawnID equals y.Id
+                     where Laww.Contains(Convert.ToInt32(x.LawnID)) &&
+                         //where x.Name.Equals(Convert.ToInt32("Cover".ToString()))
+                  CoverImage.Contains(x.Id)
+                     select new { x.Uimg, y.LawnName, y.SeatingCapacity, y.Address });
+
+
+
+
+        Repeater1.DataSource = Imggg;
+        Repeater1.DataBind();
+        SearchCapacity.Text = SearchArea.Text = "";
+    }
+    protected void LinkButton2_Click(object sender, EventArgs e)
+    {
+
+    }
+    protected void SSLAwn_Click(object sender, EventArgs e)
+    {
+        
+        RepeaterItem item = (sender as Button).Parent as RepeaterItem;
+        string ADD = (item.FindControl("IDLAWN") as Label).Text;
+        Session["CheckAvail"] = ADD.ToString();
+        Response.Redirect("LawnDetails.aspx");
     }
 }

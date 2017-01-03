@@ -80,26 +80,17 @@ li {
     top: 0px;
     left: 0px;
 }*/
-#userform {
-    position: relative;
-    top: 10%;
-    left: 2%;
-    font-size: 150%;
-    color: #4819af;
-    font-size: 100%;
-    line-height: 20px;
-}
+
 
 #userdiv {
     position: absolute;
-    height: 45%;
-    width: 95%;
-    left: 2%;
-    top: 32%;
+    height: 60%;
+    width: 45%;
+    left: 30%;
+    top: 10%;
     background-color: white;
     margin: 0px 0px;
     padding: 0px;
-    border: 3px solid orange;
     border-radius: 10px 10px;
 }
 
@@ -155,16 +146,6 @@ li {
     border-radius: 10px 10px;
 }
 
-#lawnform {
-    position: relative;
-    top: 10%;
-    left: 2%;
-    font-size: 150%;
-    color: #4819af;
-    font-size: 100%;
-    line-height: 20px;
-}
-
 #signindiv {
     position: absolute;
     height:50%;
@@ -176,15 +157,6 @@ li {
     padding: 0px;
     border-radius: 10px 10px;
 }
-/*#signinform {
-    position: relative;
-    top: 0%;
-    left:33%;
-    font-size: 150%;
-    color: #4819af;
-    font-size: 100%;
-    line-height: 20px;
-}*/
 
 
 #imagediv {
@@ -200,16 +172,6 @@ li {
     border-radius: 10px 10px;
 }
 
-#imageform {
-    position: relative;
-    top: 0%;
-    left: 33%;
-    font-size: 150%;
-    color: #4819af;
-    font-size: 100%;
-    line-height: 20px;
-}
-
 #bookingdiv {
     position: absolute;
     height: 40%;
@@ -221,16 +183,6 @@ li {
     padding: 0px;
     border: 3px solid orange;
     border-radius: 10px 10px;
-}
-
-#bookingform {
-    position: relative;
-    top: 0%;
-    left: 1%;
-    font-size: 150%;
-    color: #4819af;
-    font-size: 100%;
-    line-height: 20px;
 }
 
 /*logout css*/

@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
      <div id="bookingdiv">
-        <h1 class="heading">Booking Form</h1>
+        <h1 class="heading">Booking For</h1>
         <div id="bookingform">
             <table>
                 <tr>

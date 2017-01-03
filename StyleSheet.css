@@ -1,14 +1,13 @@
 ﻿body {
     background-image: url(Back.jpg);
     background-size: cover;
-    background-repeat: repeat;
-    font-family: presario;
     background-attachment: fixed;
+    font-family:myfont;
 }
 
 @font-face {
-    font-family: presario;
-    src: url(CompaqSupplement.ttf);
+    font-family: myfont;
+    src: url(VtksLombriga.ttf);
 }
 
 #menubar {
@@ -17,7 +16,7 @@
     left: 23%;
 }
 
-ul {
+/*ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -68,9 +67,9 @@ li {
 
 .dropdown:hover .dropdown-content {
     display: block;
-}
+}*/
 
-#header {
+/*#header {
     position: fixed;
     height: 120px;
     width: 100%;
@@ -80,35 +79,18 @@ li {
     z-index: 1;
     top: 0px;
     left: 0px;
-}
+}*/
 
-#logo {
-    position: fixed;
-    height: 40%;
-    width: 20%;
-    top: -10%;
-}
-
-#userform {
-    position: relative;
-    top: 10%;
-    left: 2%;
-    font-size: 150%;
-    color: #4819af;
-    font-size: 100%;
-    line-height: 20px;
-}
 
 #userdiv {
     position: absolute;
-    height: 45%;
-    width: 95%;
-    left: 2%;
-    top: 32%;
+    height: 60%;
+    width: 45%;
+    left: 30%;
+    top: 10%;
     background-color: white;
     margin: 0px 0px;
     padding: 0px;
-    border: 3px solid orange;
     border-radius: 10px 10px;
 }
 
@@ -122,7 +104,7 @@ li {
     text-wrap: normal;
 }
 
-.textbox {
+/*.textbox {
     width: 80%;
     height: 20px;
     transition: 500ms;
@@ -130,25 +112,26 @@ li {
     margin-right: 40px;
     border: none;
     border-bottom: 1px solid lightgray;
-}
+    font-family:Arial;
+}*/
 
-.button {
+/*.button {
     border: 2px solid transparent;
     display: inline-block;
     line-height: 42px;
-    font-size: 12px;
+    font-size: 30px;
     font-weight: 800;
     color: rgb(255, 255, 255);
     text-transform: uppercase;
     vertical-align: bottom;
-    border-radius: 5px;
     border-image: initial;
     padding: 8px 0px;
     outline: none;
     background: rgb(255, 134, 37);
     transition: all 0.3s ease;
-    width: 80%;
-}
+    width: 20%;
+}*/
+
 
 #lawndiv {
     position: absolute;
@@ -163,37 +146,16 @@ li {
     border-radius: 10px 10px;
 }
 
-#lawnform {
-    position: relative;
-    top: 10%;
-    left: 2%;
-    font-size: 150%;
-    color: #4819af;
-    font-size: 100%;
-    line-height: 20px;
-}
-
 #signindiv {
     position: absolute;
-    height: 50%;
-    width: 50%;
-    left: 25%;
+    height:50%;
+    width: 30%;
+    left: 35%;
     top: 32%;
-    background-color: white;
+    background-color:white;
     margin: 0px 0px;
     padding: 0px;
-    border: 3px solid orange;
     border-radius: 10px 10px;
-}
-
-#signinform {
-    position: relative;
-    top: 0%;
-    left: 33%;
-    font-size: 150%;
-    color: #4819af;
-    font-size: 100%;
-    line-height: 20px;
 }
 
 
@@ -210,16 +172,6 @@ li {
     border-radius: 10px 10px;
 }
 
-#imageform {
-    position: relative;
-    top: 0%;
-    left: 33%;
-    font-size: 150%;
-    color: #4819af;
-    font-size: 100%;
-    line-height: 20px;
-}
-
 #bookingdiv {
     position: absolute;
     height: 40%;
@@ -231,16 +183,6 @@ li {
     padding: 0px;
     border: 3px solid orange;
     border-radius: 10px 10px;
-}
-
-#bookingform {
-    position: relative;
-    top: 0%;
-    left: 1%;
-    font-size: 150%;
-    color: #4819af;
-    font-size: 100%;
-    line-height: 20px;
 }
 
 /*logout css*/
@@ -340,7 +282,7 @@ li.drop {
 }
 
 #search-area {
-    position:fixed;
+    position: fixed;
     top: 45%;
     left: 14.8%;
     height: 50px;
@@ -504,37 +446,28 @@ li.drop {
     width: 28%;
 }
 
-.btn {
-    position: relative;
-    height: 35px;
-    width: 75%;
-    background-color: darkorange;
-    border: none;
-    color: white;
-}
-
 /*Slider CSS*/
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
-    width:80%;
-    margin:auto;
+    width: 90%;
+    margin: auto;
+    max-height:100%;
 }
 
 #slider {
-    position: fixed;
-    top: 17%;
-    left:0%;
-    width:100%;
+    position: absolute;
+    top:5%;
+    left: 0%;
+    width: 100%;
     z-index: -1;
 }
 
 /*Lawn Data Css*/
-#datagrid{
-    position:absolute;
-    display:block;
-    width:80%;
-    height:100%;
-
+#datagrid {
+    position: absolute;
+    display: block;
+    width: 80%;
+    height: 100%;
 }
 
 /*Search Filter Lawn*/
@@ -545,7 +478,7 @@ li.drop {
 }
 
 #search-areaL {
-    position:fixed;
+    position: absolute;
     top: 30%;
     left: 14.8%;
     height: 50px;
@@ -558,8 +491,8 @@ li.drop {
 }
 
 #drop-search-areaL {
-    position: fixed;
-    width: 24%;
+    position: absolute;
+    width: 22%;
     height: 300px;
     top: 38%;
     background-color: white;
@@ -586,7 +519,7 @@ li.drop {
 }
 
 #search-capacityL {
-    position: fixed;
+    position:absolute;
     top: 30%;
     left: 39.5%;
     height: 50px;
@@ -599,8 +532,8 @@ li.drop {
 }
 
 #drop-search-capactiyL {
-    position: fixed;
-    width: 24%;
+    position:absolute;
+    width: 22%;
     height: 300px;
     top: 38%;
     background-color: white;
@@ -612,7 +545,7 @@ li.drop {
 }
 
 #search-buttonL {
-    position: fixed;
+    position: absolute;
     top: 30.2%;
     left: 64.3%;
     width: 30%;
@@ -621,7 +554,7 @@ li.drop {
 
 /*Search CSS*/
 
-#SearchArea{
+#SearchArea {
     background-image: url('/css/searchicon.png');
     background-position: 10px 12px;
     background-repeat: no-repeat;
@@ -638,21 +571,104 @@ li.drop {
     margin: 0;
 }
 
-#myUL li{
-    width:100%;
+    #myUL li {
+        width: 100%;
+    }
+
+        #myUL li a {
+            border: 1px solid #ddd;
+            margin-top: -1px;
+            background-color: #f6f6f6;
+            padding: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            color: black;
+            display: block;
+        }
+
+            #myUL li a:hover:not(.header) {
+                background-color: #eee;
+            }
+/*Details Page CSS*/
+#content {
+    position: absolute;
+    width: 100%;
+    float: left;
+    background-color: none;
+    height: 500px;
+    top: 20%;
+    left: 0%;
 }
 
-#myUL li a {
-    border: 1px solid #ddd;
-    margin-top: -1px;
-    background-color: #f6f6f6;
-    padding: 12px;
-    text-decoration: none;
-    font-size: 18px;
-    color: black;
-    display: block;
+.lbName{
+    position:absolute;
+    width:30%;
+    height:20px;
+    color:white;
+    font:bold 50px Arial;
+    top:5%;
+    left:5%;
 }
 
-#myUL li a:hover:not(.header) {
-    background-color: #eee;
+.lbAddress{
+    position:absolute;
+    width:50%;
+    height:15px;
+    color:white;
+    font:30px Arial;
+    top:20%;
+    left:5%;
+}
+
+#Calendar{
+    position:absolute;
+    background-color:lightgray;
+    width:22%;
+    left:65%;
+    height:250px;
+    top:10%;
+}
+
+.lawndate{
+    position:absolute;
+    top:20%;
+    left:20%;
+    width:60%;
+    height:30px;
+    background-color:white;
+    font-family:Arial;
+}
+
+.name{
+    position:absolute;
+    height:15px;
+    color:black;
+    font:20px Arial;
+    top:5%;
+    left:20%;
+}
+
+.btn1 {
+    position: absolute;
+    height: 35px;
+    width: 60%;
+    background-color: darkorange;
+    border-radius:0px;
+    color: white;
+    font-family:Arial;
+    font-size:15px;
+    top:40%;
+    left:20%;
+}
+
+#details{
+    position:absolute;
+    border:1px solid lightgray;
+    top:100%;
+    width:29%;
+    height:auto;
+    left:6%;
+    font-family:Arial;
+    font-size:18px;
+    color:black;
 }

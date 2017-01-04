@@ -5,7 +5,7 @@
         #form {
             position: relative;
             width: 50%;
-            left:25%;
+            margin:auto;
         }
         #logo{
             position:relative;

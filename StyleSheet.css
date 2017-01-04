@@ -136,12 +136,12 @@ li {
 #lawndiv {
     position: relative;
     height: 50%;
-    width: 95%;
+    width: 50%;
     /*left: 2%;
     top: 32%;*/
     background-color: transparent;
     margin:auto;
-    margin-top:15%;
+    margin-top:5%;
     border-radius: 10px 10px;
 }
 

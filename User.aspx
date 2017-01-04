@@ -5,7 +5,7 @@
         #form {
             position: relative;
             width: 50%;
-            left: 26%;
+            margin:auto;
         }
     </style>
 </asp:Content>
@@ -28,7 +28,7 @@
             </div>
             <br />
             <div class="input-group">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
                 <asp:TextBox required="required" class="form-control" runat="server" placeholder="Email" ID="txtEmail" TextMode="Email"></asp:TextBox>
             </div>
             <br />

@@ -83,14 +83,14 @@ li {
 
 
 #userdiv {
-    position: absolute;
+    position: relative;
     height: 60%;
     width: 45%;
-    left: 30%;
-    top: 10%;
-    background-color: white;
-    margin: 0px 0px;
-    padding: 0px;
+    /*left: 30%;
+    top: 10%;*/
+    background-color: transparent;
+    margin:auto;
+    margin-top:15%;
     border-radius: 10px 10px;
 }
 
@@ -134,27 +134,26 @@ li {
 
 
 #lawndiv {
-    position: absolute;
+    position: relative;
     height: 50%;
     width: 95%;
-    left: 2%;
-    top: 32%;
-    background-color: white;
-    margin: 0px 0px;
-    padding: 0px;
-    border: 3px solid orange;
+    /*left: 2%;
+    top: 32%;*/
+    background-color: transparent;
+    margin:auto;
+    margin-top:15%;
     border-radius: 10px 10px;
 }
 
 #signindiv {
-    position: absolute;
-    height:50%;
+    position: relative;
+    height:55%;
     width: 30%;
-    left: 35%;
-    top: 32%;
-    background-color:white;
-    margin: 0px 0px;
-    padding: 0px;
+    /*left: 35%;
+    top: 32%;*/
+    background-color:transparent;
+    margin:auto;
+    margin-top:15%;
     border-radius: 10px 10px;
 }
 

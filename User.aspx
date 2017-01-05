@@ -10,7 +10,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <div id="userdiv">
+    <div class="backdiv">
         <h1 class="heading">REGISTER NOW AND JOIN WITH US</h1>
         <hr />
         <br />

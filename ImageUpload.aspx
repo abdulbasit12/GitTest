@@ -15,9 +15,9 @@
             <h1 class="heading">Manage Your Place</h1>
             <hr />
             <div id="form">
-                <asp:FileUpload ID="FileUpload1" runat="server" AllowMultiple="True" />
+                <asp:FileUpload ID="FileUpload1" class="btn btn-primary btn-block" runat="server" AllowMultiple="True" />
                 <br />
-                <asp:Button class="button" ID="Button1" runat="server" OnClick="Button1_Click" Text="Submit Details" />
+                <asp:Button class="btn btn-primary btn-block" ID="Button1" runat="server" OnClick="Button1_Click" Text="Submit Details" />
                 <asp:Label ID="PicSuccess" runat="server" Text="Pic Upload Sucessfully" Visible="False"></asp:Label>
                 <asp:Label ID="Pic_Error" runat="server" Text="Please select Image" Visible="False"></asp:Label>
             </div>

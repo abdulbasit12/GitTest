@@ -20,22 +20,22 @@
             </div>
             <br />
             <div class="input-group">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <span class="input-group-addon"><i class="glyphicon glyphicon-credit-card"></i></span>
                 <asp:TextBox runat="server" class="form-control" required="required" placeholder="CNIC" ID="txtCNIC"></asp:TextBox>
             </div>
             <br />
             <div class="input-group">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
                 <asp:TextBox runat="server" class="form-control" required="required" placeholder="No. of Guests" ID="txtGuests"></asp:TextBox>
             </div>
             <br />
             <div class="input-group">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
                 <asp:TextBox runat="server" class="form-control" required="required" TextMode="Date"></asp:TextBox>
             </div>
             <br />
             <div class="input-group">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
                 <asp:TextBox runat="server" class="form-control" required="required" placeholder="Contact #" TextMode="Phone"></asp:TextBox>
             </div>
             <br />

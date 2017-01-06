@@ -28,8 +28,8 @@
 
         .Rimg{
             position:relative;
-            max-height:350px;
-            width:50%;
+            height:250px;
+            width:35%;
         }
         #detail1{
             position:absolute;

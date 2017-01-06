@@ -18,7 +18,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <div id="signindiv">
+    <div class="backdiv">
         <img src="logo.png" id="logo"/>
         <hr />
         <br />

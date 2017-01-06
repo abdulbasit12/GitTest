@@ -11,7 +11,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div id="main">
-        <div id="lawndiv">
+        <div class="backdiv">
             <h1 class="heading">GET YOUR LAWN/BANQUET REGISTER NOW</h1>
             <hr />
             <div id="form">

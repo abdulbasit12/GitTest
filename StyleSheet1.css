@@ -82,17 +82,17 @@ li {
 }*/
 
 
-#userdiv {
+/*#userdiv {
     position: relative;
     height: 60%;
     width: 45%;
-    /*left: 30%;
-    top: 10%;*/
+    left: 30%;
+    top: 10%;
     background-color: transparent;
     margin:auto;
-    margin-top:auto;
+    
     border-radius: 10px 10px;
-}
+}*/
 
 .heading {
     text-align: center;
@@ -133,56 +133,52 @@ li {
 }*/
 
 
-#lawndiv {
+/*#lawndiv {
     position: relative;
     height: 50%;
     width: 50%;
-    /*left: 2%;
-    top: 32%;*/
+    left: 2%;
+    top: 32%;
     background-color: transparent;
     margin:auto;
-    margin-top:auto;
+    
     border-radius: 10px 10px;
-}
+}*/
 
-#signindiv {
+/*#signindiv {
     position: relative;
     height:55%;
     width: 30%;
     /*left: 35%;
+    top: 32%;
+    background-color:transparent;
+    margin:auto;
+    border-radius: 10px 10px;
+}*/
+
+
+.backdiv {
+    position: relative;
+    height:auto;
+    width:30%;
+    /*left: 35%;
     top: 32%;*/
     background-color:transparent;
     margin:auto;
-    margin-top:auto;
     border-radius: 10px 10px;
 }
 
-
-#imagediv {
-    position: absolute;
-    height: 60%;
-    width: 50%;
-    left: 25%;
+/*#bookingdiv {
+    position: relative;
+    height:55%;
+    width: 30%;
+    /*left: 35%;
     top: 32%;
-    background-color: white;
-    margin: 0px 0px;
-    padding: 0px;
-    border: 3px solid orange;
+    background-color:transparent;
+    margin:auto;
+    
     border-radius: 10px 10px;
-}
-
-#bookingdiv {
-    position: absolute;
-    height: 40%;
-    width: 95%;
-    left: 2%;
-    top: 32%;
-    background-color: white;
-    margin: 0px 0px;
-    padding: 0px;
-    border: 3px solid orange;
-    border-radius: 10px 10px;
-}
+}*/
 
 /*logout css*/
 #welcomeVender {

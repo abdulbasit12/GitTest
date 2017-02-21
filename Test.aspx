@@ -4,7 +4,6 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div id="DataView">
- 
             <div id="lawnData">
                 <img src="black.jpg" id="dataimg" />
                 

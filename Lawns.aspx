@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
-        .btn2 {
+        /*.btn2 {
             position: relative;
             height: 35px;
             width: 50%;
@@ -12,31 +12,63 @@
             color: white;
             font-family: Arial;
             font-size: 15px;
-            left: 0%;
-            border:none;
+            left: 50%;
+            border: none;
+        }*/
+
+        #Repeater {
+            position: relative;
+            width: 100%;
+            height: 150px;
+            /*left: 10%;*/
+            margin: auto;
+            background-color: white;
+            border: none;
         }
 
-        #Repeater{
-            position:relative;
-            width:100%;
-            height:100px;
-            left:10%;
-            background-color:white;
-            border:2px solid gray;
-            border-bottom-color:black;
+        .Rimg {
+            position: relative;
+            height: 100%;
+            width: 100%;
         }
 
-        .Rimg{
-            position:relative;
-            max-height:350px;
-            width:50%;
+        #detail1 {
+            position: relative;
+            width: 50%;
+            margin:auto
         }
-        #detail1{
-            position:absolute;
-            font-family:Arial;
-            left:55%;
-            width:50%;
-            top:20%;
+
+        .dataimg {
+            position: absolute;
+            top: 5%;
+            border: 1px solid lightgray;
+            height: 80px;
+            width: 20%;
+            left: 5%;
+        }
+
+        #img {
+            position: absolute;
+            top: 5%;
+            border: 1px solid lightgray;
+            height: 90px;
+            width: 15%;
+            left: 5%;
+        }
+
+        #btn_avlble {
+            position: relative;
+            width: 50%;
+            margin: auto;
+        }
+
+        #tb_btn {
+            position: absolute;
+            height: auto;
+            float: right;
+            width: 20%;
+            right: 5%;
+            top: 0%;
         }
     </style>
 </asp:Content>
@@ -79,48 +111,48 @@
                     <table id="Repeater">
                         <tr>
                             <td>
-                                <asp:Image ID="Imag" ImageUrl='<%# Eval("Uimg") %>' runat="server" CssClass="Rimg"/>
+                                <div id="img">
+                                    <asp:Image ID="Imag" ImageUrl='<%# Eval("Uimg") %>' runat="server" CssClass="Rimg" />
+                                </div>
                             </td>
                             <td>
                                 <table id="detail1">
                                     <tr>
-                                        <td style="font-family:Arial; font-size:35px; font-weight:400;">
-                                            <asp:Label ID="Name" Text='<%# Eval("LawnName") %>' runat="server" />
+                                        <td>
+                                            <asp:Label ID="Name" Text='<%# Eval("LawnName") %>' runat="server" Font-Size="35px" />
                                             <asp:Label ID="IDLAWN" runat="server" Visible="false" Text='<%# Eval("Address") %>'></asp:Label>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td style="font-family:Arial; font-size:20px;">
+                                        <td>
                                             <asp:Label ID="Label3" Text='<%# Eval("SeatingCapacity") %>' runat="server" />
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td style="font-family:Arial; font-size:20px;">
+                                        <td>
                                             <asp:Label ID="Label122" Text='<%# Eval("Address") %>' runat="server" />
                                         </td>
                                     </tr>
                                     <tr>
+                                    </tr>
+                                </table>
+                                <table id="tb_btn">
+                                    <tr>
                                         <td>
-                                            <asp:Button ID="SSLAwn" runat="server" Text="Check Availbility" OnClick="SSLAwn_Click" CssClass="btn2"></asp:Button>
+                                            <asp:Label runat="server" Text="Lawn Rent" Font-Size="25px"></asp:Label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td id="btn_avlble">
+                                            <asp:Button runat="server" class="btn btn-primary btn-block" Text="Check Availbility" OnClick="SSLAwn_Click"></asp:Button>
                                         </td>
                                     </tr>
                                 </table>
                             </td>
                         </tr>
                     </table>
+                    <br />
                 </ItemTemplate>
-
-<%--                <SeparatorTemplate>
-
-                    <asp:Image ID="immm1" ImageUrl="uploadimages/AhsanBuffet_Setup_1.jpg" />>
-                     <asp:Image ID="immm2" ImageUrl="uploadimages/AhsanBuffet_Setup_1.jpg" />
-                    <asp:Image ID="immm3" ImageUrl="uploadimages/AhsanBuffet_Setup_1.jpg" />
-                    <asp:Image ID="immm4" ImageUrl="uploadimages/AhsanBuffet_Setup_1.jpg" />
-                    <asp:Image ID="immm5" ImageUrl="uploadimages/AhsanBuffet_Setup_1.jpg" />
-                    <asp:Image ID="immm6" ImageUrl="uploadimages/AhsanBuffet_Setup_1.jpg" />
-                </SeparatorTemplate>
---%>
-
             </asp:Repeater>
         </div>
 

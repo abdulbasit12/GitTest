@@ -67,7 +67,7 @@ public partial class Lawns : System.Web.UI.Page
 
         
         var Laww = from x in db.LawnOwners
-                   where x.Area.Equals(SearchArea.Text) || x.SeatingCapacity.Equals(Convert.ToString( SearchCapacity.Text))
+                   where x.Area.Equals(SearchArea.Value) || x.SeatingCapacity.Equals(Convert.ToString( SearchCapacity.Value))
                    select x.Id;
 
 
@@ -107,7 +107,7 @@ public partial class Lawns : System.Web.UI.Page
 
 
         var Laww = from x in db.LawnOwners
-                   where x.Area.Equals(SearchArea.Text) || Convert.ToInt32(x.SeatingCapacity )>= Convert.ToInt32(SearchCapacity.Text)
+                   where x.Area.Equals(SearchArea.Value) || Convert.ToInt32(x.SeatingCapacity )>= Convert.ToInt32(SearchCapacity.Value)
                    select x.Id;
 
 
@@ -128,7 +128,7 @@ public partial class Lawns : System.Web.UI.Page
 
         Repeater1.DataSource = Imggg;
         Repeater1.DataBind();
-        SearchCapacity.Text = SearchArea.Text = "";
+        SearchCapacity.Value = SearchArea.Value = "";
     }
     protected void LinkButton2_Click(object sender, EventArgs e)
     {

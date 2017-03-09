@@ -2,7 +2,7 @@
     background-image: url(Back.jpg);
     background-size: cover;
     background-attachment: fixed;
-    font-family:myfont;
+    font-family: myfont;
 }
 
 @font-face {
@@ -117,7 +117,7 @@ li {
 
 /*.button {
     border: 2px solid transparent;
-    display: inline-block;
+    display: block;
     line-height: 42px;
     font-size: 30px;
     font-weight: 800;
@@ -128,11 +128,11 @@ li {
     padding: 8px 0px;
     outline: none;
     background: rgb(255, 134, 37);
+    background-image: url(search.png);
+    background-repeat: no-repeat;
     transition: all 0.3s ease;
-    width: 20%;
+    width: 100%;
 }*/
-
-
 /*#lawndiv {
     position: relative;
     height: 50%;
@@ -159,12 +159,12 @@ li {
 
 .backdiv {
     position: relative;
-    height:auto;
-    width:30%;
+    height: auto;
+    width: 30%;
     /*left: 35%;
     top: 32%;*/
-    background-color:transparent;
-    margin:auto;
+    background-color: transparent;
+    margin: auto;
     border-radius: 10px 10px;
 }
 
@@ -446,12 +446,12 @@ li.drop {
 .carousel-inner > .item > a > img {
     width: 90%;
     margin: auto;
-    max-height:100%;
+    max-height: 100%;
 }
 
 #slider {
     position: absolute;
-    top:5%;
+    top: 5%;
     left: 0%;
     width: 100%;
     z-index: -1;
@@ -514,7 +514,7 @@ li.drop {
 }
 
 #search-capacityL {
-    position:absolute;
+    position: absolute;
     top: 30%;
     left: 39.5%;
     height: 50px;
@@ -527,7 +527,7 @@ li.drop {
 }
 
 #drop-search-capactiyL {
-    position:absolute;
+    position: absolute;
     width: 22%;
     height: 300px;
     top: 38%;
@@ -540,11 +540,13 @@ li.drop {
 }
 
 #search-buttonL {
-    position: absolute;
-    top: 30.2%;
-    left: 64.3%;
-    width: 30%;
-    height: 40px;
+    position: relative;
+    width: 10%;
+    top: 20%;
+    right: 0;
+    float: right;
+    margin: auto;
+    height: auto;
 }
 
 /*Search CSS*/
@@ -595,52 +597,52 @@ li.drop {
     left: 0%;
 }
 
-.lbName{
-    position:absolute;
-    width:30%;
-    height:20px;
-    color:white;
-    font:bold 50px Arial;
-    top:5%;
-    left:5%;
+.lbName {
+    position: absolute;
+    width: 30%;
+    height: 20px;
+    color: white;
+    font: bold 50px Arial;
+    top: 5%;
+    left: 5%;
 }
 
-.lbAddress{
-    position:absolute;
-    width:50%;
-    height:15px;
-    color:white;
-    font:30px Arial;
-    top:20%;
-    left:5%;
+.lbAddress {
+    position: absolute;
+    width: 50%;
+    height: 15px;
+    color: white;
+    font: 30px Arial;
+    top: 20%;
+    left: 5%;
 }
 
-#Calendar{
-    position:absolute;
-    background-color:lightgray;
-    width:22%;
-    left:65%;
-    height:250px;
-    top:10%;
+#Calendar {
+    position: absolute;
+    background-color: lightgray;
+    width: 22%;
+    left: 65%;
+    height: 250px;
+    top: 10%;
 }
 
-.lawndate{
-    position:absolute;
-    top:20%;
-    left:20%;
-    width:60%;
-    height:30px;
-    background-color:white;
-    font-family:Arial;
+.lawndate {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: 60%;
+    height: 30px;
+    background-color: white;
+    font-family: Arial;
 }
 
-.name{
-    position:absolute;
-    height:15px;
-    color:black;
-    font:20px Arial;
-    top:5%;
-    left:20%;
+.name {
+    position: absolute;
+    height: 15px;
+    color: black;
+    font: 20px Arial;
+    top: 5%;
+    left: 20%;
 }
 
 .btn1 {
@@ -648,22 +650,187 @@ li.drop {
     height: 35px;
     width: 60%;
     background-color: darkorange;
-    border-radius:0px;
+    border-radius: 0px;
     color: white;
-    font-family:Arial;
-    font-size:15px;
-    top:40%;
-    left:20%;
+    font-family: Arial;
+    font-size: 15px;
+    top: 40%;
+    left: 20%;
 }
 
-#details{
-    position:absolute;
-    border:1px solid lightgray;
-    top:100%;
-    width:29%;
-    height:auto;
-    left:6%;
+#details {
+    position: absolute;
+    border: 1px solid lightgray;
+    top: 100%;
+    width: 29%;
+    height: auto;
+    left: 6%;
+    font-family: Arial;
+    font-size: 18px;
+    color: black;
+}
+
+/*Search Filter Css*/
+.Search {
+    background-color: #f6f6f6;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    width: 100%;
+    height: auto;
+}
+
+.frame {
+    width: 936px;
+    margin: auto;
+}
+
+.filter {
+    padding: 20px;
+}
+
+.fiterbar {
+    background: #fff;
+    /*margin: 0;
+    padding: 0;
+    vertical-align: baseline;*/
+}
+
+.filter-right {
+    float: right;
+    height: 33px;
+    border-radius: 0 4px 4px 0;
+    border: 1px solid #cdcdcd;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown {
+    cursor: pointer;
+    float: left;
+    position: relative;
+    height: 33px;
+    background: #f3f3f3;
+}
+
+/*.filter-right .dropdown:first-child {
+    border-left: none;
+}
+
+.filter-right .dropdown {
+    border-left: 1px solid #cdcdcd;
+}*/
+
+.dropdown-span {
+    overflow: hidden;
+}
+
+.dropdown-icon {
+    float: right;
+    width: 7px;
+    height: 7px;
+    margin: 14px 6px 0 0;
+    background-image: url("downArrow.png");
+    background-size: 7px 7px;
+}
+
+.dropdown-label {
+    display: block;
+    margin: 0 20px 0 7px;
+    color: #888;
+    white-space: nowrap;
+    font-size: 12px;
+    line-height: 33px;
+}
+
+.dropdown-select {
+    display: block;
+    cursor: pointer;
+    outline: none;
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 35px;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+}
+
+.search-button {
+    overflow: hidden;
+    float: right;
+    position: relative;
+    width: 45px;
+    height: 35px;
+    margin: -1px -1px 0 0;
+    border-radius: 0 4px 4px 0;
+    background: #fff;
+    border: 1px solid #6cc0e1;
+}
+
+.search-icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    margin: auto;
+    background-image: url("search.png");
+    background-size: 25px 25px;
+}
+
+.button-Search {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    text-indent: -1000px;
+    border: none;
+    background: transparent;
+}
+
+.filter-fill {
+    overflow: hidden;
+    position: relative;
+    height: 33px;
+    border-radius: 4px 0 0 4px;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-right: none;
+}
+
+.filter-field {
+    display: block;
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    height: 33px;
+    padding: 5px 0 6px 0;
+    color: #333;
+    text-indent: 8px;
+    font-size: 0.9em;
+    border: none;
+    background: none;
     font-family:Arial;
-    font-size:18px;
-    color:black;
+    font-size:15px;
+    font-variant-caps:inherit;
+}
+
+.cb {
+clear:both;
+float:none;
+}
+
+.search-text {
+    height: 35px;
+    width: 50%;
 }

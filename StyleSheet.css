@@ -662,3 +662,161 @@ li.drop {
     height: 35px;
     width: 50%;
 }
+
+/*Search Filter Css*/
+.Search {
+    background-color: #f6f6f6;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    width: 100%;
+    height: auto;
+}
+
+.frame {
+    width: 936px;
+    margin: auto;
+}
+
+.filter {
+    padding: 20px;
+}
+
+.fiterbar {
+    background: #fff;
+    /*margin: 0;
+    padding: 0;
+    vertical-align: baseline;*/
+}
+
+.filter-right {
+    float: right;
+    height: 33px;
+    border-radius: 0 4px 4px 0;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown {
+    cursor: pointer;
+    float: left;
+    position: relative;
+    height: 33px;
+    background: #f3f3f3;
+    border:1px solid rgba(51, 51, 51, 0.29)
+}
+
+/*.filter-right .dropdown:first-child {
+    border-left: none;
+}
+.filter-right .dropdown {
+    border-left: 1px solid #cdcdcd;
+}*/
+
+.dropdown-span {
+    overflow: hidden;
+}
+
+.dropdown-icon {
+    float: right;
+    width: 7px;
+    height: 7px;
+    margin: 14px 6px 0 0;
+    background-image: url("downArrow.png");
+    background-size: 7px 7px;
+}
+
+.dropdown-label {
+    display: block;
+    margin: 0 20px 0 7px;
+    color: #888;
+    white-space: nowrap;
+    font-size: 12px;
+    line-height: 33px;
+}
+
+.dropdown-select {
+    display: block;
+    cursor: pointer;
+    outline: none;
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 35px;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+}
+
+.search-button {
+    overflow: hidden;
+    float: right;
+    position: relative;
+    width: 45px;
+    height: 33px;
+    margin: 0px -1px 0 0;
+    border-radius: 0 4px 4px 0;
+    background: #fff;
+    border: 1px solid #6cc0e1;
+}
+
+.search-icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    margin: auto;
+    background-image: url("search.png");
+    background-size: 25px 25px;
+}
+
+.button-Search {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    text-indent: -1000px;
+    border: none;
+    background: transparent;
+}
+
+.filter-fill {
+    overflow: hidden;
+    position: relative;
+    height: 33px;
+    border-radius: 4px 0 0 4px;
+    border: 1px solid #ccc;
+    border-right: none;
+}
+
+.filter-field {
+    display: block;
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    height: 33px;
+    padding: 5px 0 6px 0;
+    color: #333;
+    text-indent: 8px;
+    font-size: 0.9em;
+    border: none;
+    background: none;
+    font-family:Arial;
+    font-size:15px;
+    font-variant-caps:inherit;
+}
+
+.cb {
+clear:both;
+float:none;
+}

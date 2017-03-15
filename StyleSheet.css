@@ -1,5 +1,5 @@
 ﻿body {
-    background-image: url(Back.jpg);
+    /*background-image: url(Back.jpg);*/
     background-size: cover;
     background-attachment: fixed;
     font-family: myfont;
@@ -804,7 +804,7 @@ li.drop {
     position: absolute;
     z-index: 100;
     width: 100%;
-    height: 33px;
+    height: 31px;
     padding: 5px 0 6px 0;
     color: #333;
     text-indent: 8px;
@@ -820,3 +820,13 @@ li.drop {
 clear:both;
 float:none;
 }
+
+/*User menu Css*/
+
+.user-div{width:100%; background-color:white; height:auto; /*border-bottom:1px solid #ff3300;*/}
+.toggle{margin:5px 0 5px 10px; padding:5px; border-radius:5px; box-sizing: border-box; background-color:#f6f6f6;}
+.user-div .userdiv-right{width:25%; float:right;}
+.user-div .userdiv-right .fa-user{font-size:18px; color:#ff3300; margin:17px 5px 0 0;}
+.user-div .userdiv-right .user-label{font-family:Arial; font-size:15px;}
+.user-div .userdiv-right .fa-sign-out{font-size:18px; color:#ff3300; margin:17px 5px 0 20px;}
+.user-div .userdiv-right .user-label-logout{font-family:Arial; font-size:15px;}

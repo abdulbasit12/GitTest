@@ -24,6 +24,7 @@
             background-color: white;
             border: none;
             top: 0;
+            box-shadow:5px 5px 2px rgba(120, 109, 109, 0.34);   
         }
 
         .Rimg {
@@ -33,7 +34,6 @@
         }
 
         #detail1 {
-            position: relative;
             width: 50%;
             margin: auto;
         }
@@ -77,6 +77,9 @@
             font-size: 20px;
             height: 30px;
             border: none;
+        }
+        #info {
+        vertical-align:top;
         }
     </style>
 </asp:Content>
@@ -171,7 +174,7 @@
                                 <asp:Image ID="Imag" ImageUrl='<%# Eval("Uimg") %>' runat="server" CssClass="Rimg" />
                             </div>
                         </td>
-                        <td>
+                        <td id="info">
                             <table id="detail1">
                                 <tr>
                                     <td>
@@ -191,9 +194,7 @@
                                         <i class="fa fa-location-arrow" style="font-size: 15px;"></i>
                                         <asp:Label ID="Label122" Text='<%# Eval("Address") %>' runat="server" />
                                     </td>
-                                </tr>
-                                <tr>
-                                </tr>
+                                </tr>                            
                             </table>
                             <table id="tb_btn">
                                 <tr>

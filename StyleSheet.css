@@ -666,7 +666,7 @@ li.drop {
 
 /*Search Filter Css*/
 .Search {
-    background-color: #f6f6f6;
+    background-color: #fff;
     margin: 0 0 50px 0;
     padding: 0;
     border: 0;
@@ -802,6 +802,7 @@ li.drop {
     border-radius: 4px 0 0 4px;
     border: 1px solid #ccc;
     border-right: none;
+    margin:0 -14px;
 }
 
 .filter-field {
@@ -828,13 +829,14 @@ clear:both;
 float:none;
 }
 
-input[type="text"],input[type="password"],input[type="tel"],input[type="email"] {
+input[type="text"],input[type="password"],input[type="tel"],input[type="email"], input[type="number"] {
 font-family:Arial; color:black;
 }
 
 /*User menu Css*/
 
-.user-div{width:100%; background-color:#f6f6f6; height:auto; /*border-bottom:1px solid #ff3300;*/}
+.user-div{width:100%; background-color:#ffffff; height:auto; /*border-bottom:1px solid #ff3300;*/}
+.user-div h3{display:inline-block; margin:14px 0 0 4px; position:absolute;}
 .toggle{margin:5px 0 5px 10px; padding:5px; border-radius:5px; box-sizing: border-box; background-color:#f6f6f6;}
 .user-div .userdiv-right{width:25%; float:right;}
 .user-div .userdiv-right .fa-user{font-size:18px; color:#ff3300; margin:17px 5px 0 0;}

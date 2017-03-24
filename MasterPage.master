@@ -110,6 +110,7 @@
     </div>
     <div class="user-div">
         <span style="font-size: 30px; cursor: pointer" onclick="openNav()" class="fa fa-bars toggle"></span>
+        <h3>Menu</h3>
         <div class="userdiv-right">
             <span class="fa fa-user"></span>
             <label class="user-label">Guests</label>

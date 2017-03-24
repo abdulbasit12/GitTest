@@ -830,3 +830,7 @@ float:none;
 .user-div .userdiv-right .user-label{font-family:Arial; font-size:15px;}
 .user-div .userdiv-right .fa-sign-out{font-size:18px; color:#ff3300; margin:17px 5px 0 20px;}
 .user-div .userdiv-right .user-label-logout{font-family:Arial; font-size:15px;}
+
+.container{margin:0; padding:0;}
+.container .carousel{position:fixed; width:100%; height:100%;}
+.carousel-inner > .item > img, .carousel-inner > .item > a > img{width:100%; min-height:100%;}

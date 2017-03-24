@@ -9,7 +9,7 @@
         }
         #logo{
             position:relative;
-            background-color:black;
+            background-color:#663399;
             height:150px;
             width:40%;
             border-radius:100%;

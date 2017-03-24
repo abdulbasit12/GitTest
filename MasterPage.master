@@ -63,6 +63,10 @@
                     font-size: 18px;
                 }
         }
+        .sidenav .img-rounded {
+        border-radius:100%;
+        background-color:#663399;
+        }
     </style>
     <script>
         function openNav() {

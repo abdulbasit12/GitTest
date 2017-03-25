@@ -6,12 +6,12 @@
         <div class="container" id="slider">
             <br />
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
+                <%--<ol class="carousel-indicators">
                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                     <li data-target="#myCarousel" data-slide-to="1"></li>
                     <li data-target="#myCarousel" data-slide-to="2"></li>
                     <li data-target="#myCarousel" data-slide-to="3"></li>
-                </ol>
+                </ol>--%>
                 <div class="carousel-inner" role="listbox">
                     <div class="item active">
                         <img src="lawn1.jpg"  width="460" height="345" />

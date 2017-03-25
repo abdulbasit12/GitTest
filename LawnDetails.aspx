@@ -4,17 +4,17 @@
     <style>
         .carousel-inner > .item > img,
         .carousel-inner > .item > a > img {
-            width: 80%;
+            width: 40%;
             margin: auto;
         }
 
-        #slider {
+        /*#slider {
             position: absolute;
             top: 40%;
             left: 0%;
             width: 50%;
             z-index: -1;
-        }
+        }*/
 
         .tdstyle {
             position: relative;
@@ -35,8 +35,11 @@
             font-size: 15px;
             top: 60%;
             left: 20%;
-            border:none;  
+            border: none;
         }
+        .container{margin:235px 0 0 68px;}
+        .container .carousel {position:relative; width:58%; background-color:white;}
+        .carousel-inner > .item > img, .carousel-inner > .item > a > img{opacity:1; width:100%; max-height:100%;}
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -55,30 +58,30 @@
     <div class="container" id="slider">
         <br />
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
+            <%--<ol class="carousel-indicators">
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                 <li data-target="#myCarousel" data-slide-to="1"></li>
                 <li data-target="#myCarousel" data-slide-to="2"></li>
                 <li data-target="#myCarousel" data-slide-to="3"></li>
-            </ol>
+            </ol>--%>
             <div class="carousel-inner" role="listbox">
-             <asp:Repeater runat="server" ID="SliderRep">
-                        <ItemTemplate>
-                           
-                           <%-- <table>
+                <asp:Repeater runat="server" ID="SliderRep">
+                    <ItemTemplate>
+
+                        <%-- <table>
                                 <tr>
                                     <td>
                             <asp:Image ID="Imag" ImageUrl='<%# Eval("Uimg") %>' runat="server" Width="400px"/>
                                 </td>
                                         </tr>
                                     </table>--%>
-                            <div class='<%# Eval("Name").ToString() == "Cover" ? "item active" : "item" %>'>
-                    <img src='<%# Eval("Uimg") %>' width="460" height="345" />
-                </div>
-                        </ItemTemplate>
+                        <div class='<%# Eval("Name").ToString() == "Cover" ? "item active" : "item" %>'>
+                            <img src='<%# Eval("Uimg") %>'/>
+                        </div>
+                    </ItemTemplate>
 
 
-                    </asp:Repeater>
+                </asp:Repeater>
                 <%--<div class="item active">
                     <img src="lawn1.jpg" width="460" height="345" />
                 </div>
@@ -101,6 +104,7 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
+        <div class="cb"></div>
     </div>
     <div id="details">
         <table style="width: 100%">

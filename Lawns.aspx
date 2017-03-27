@@ -21,7 +21,7 @@
             width: 100%;
             height: 150px;
             /*left: 10%;*/
-            background-color: white;
+            background-color: #41af9a;
             border: none;
             top: 0;
             box-shadow:5px 5px 2px rgba(120, 109, 109, 0.34);   

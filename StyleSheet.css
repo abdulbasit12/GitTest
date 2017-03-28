@@ -464,6 +464,7 @@ li.drop {
     display: block;
     width: 96%;
     height: 100%;
+    margin-top:150px;
 }
 
 /*Search Filter Lawn*/
@@ -619,12 +620,13 @@ li.drop {
 }
 
 #Calendar {
-    position: absolute;
+    position:relative;
+    display:block;
     background-color: lightgray;
     width: 22%;
-    left: 65%;
+    left: 75%;
     height: 250px;
-    top: 10%;
+    top: 36%;
 }
 
 .lawndate {
@@ -639,7 +641,7 @@ li.drop {
 
 .name {
     position: absolute;
-    height: 15px;
+    height: auto;
     color: black;
     font: 20px Arial;
     top: 5%;
@@ -666,13 +668,15 @@ li.drop {
 
 /*Search Filter Css*/
 .Search {
-    background-color: #fff;
+    background-color: #bba7a7;
     margin: 0 0 50px 0;
     padding: 0;
     border: 0;
     vertical-align: baseline;
     width: 100%;
     height: auto;
+    margin-top:50px;
+    position:fixed;
 }
 
 .frame {
@@ -686,6 +690,7 @@ li.drop {
 
 .fiterbar {
     background: #fff;
+    border-radius:4px 4px;
     /*margin: 0;
     padding: 0;
     vertical-align: baseline;*/
@@ -816,7 +821,6 @@ li.drop {
     text-indent: 8px;
     font-size: 0.9em;
     border: none;
-    background: none;
     font-family:Arial;
     font-size:15px;
     font-variant-caps:inherit;
@@ -835,7 +839,7 @@ font-family:Arial; color:black;
 
 /*User menu Css*/
 
-.user-div{width:100%; background-color:#ffffff; height:auto; /*border-bottom:1px solid #ff3300;*/}
+.user-div{width:100%; background-color:#bba7a7; height:auto; position:fixed; top:0; z-index:999;}
 .user-div h3{display:inline-block; margin:14px 0 0 4px; position:absolute;}
 .toggle{margin:5px 0 5px 10px; padding:5px; border-radius:5px; box-sizing: border-box; background-color:#f6f6f6;}
 .user-div .userdiv-right{width:25%; float:right;}

@@ -25,7 +25,6 @@
         }
 
         .btn1 {
-            position: absolute;
             height: 35px;
             width: 60%;
             background-color: darkorange;
@@ -33,10 +32,10 @@
             color: white;
             font-family: Arial;
             font-size: 15px;
-            top: 60%;
-            left: 20%;
             border: none;
+            display:block;
         }
+        .btn1 .position{}
         .container{margin:235px 0 0 68px;}
         .container .carousel {position:relative; width:58%; background-color:white;}
         .carousel-inner > .item > img, .carousel-inner > .item > a > img{opacity:1; width:100%; max-height:100%;}
@@ -50,8 +49,8 @@
             <div id="Calendar">
                 <asp:Label runat="server" CssClass="name" Text="Check Availability"></asp:Label>
                 <asp:TextBox ID="CheckAvailb" runat="server" CssClass="lawndate" TextMode="Date"></asp:TextBox>
-                <asp:Button runat="server" Text="Check Availability" CssClass="btn" OnClick="Unnamed_Click" />
-                <asp:Button runat="server" Text="Book Lawn" CssClass="btn1" OnClick="Unnamed_Click1" />
+                <asp:Button runat="server" Text="Check Availability" CssClass="btn1" OnClick="Unnamed_Click" />
+                <asp:Button runat="server" Text="Book Lawn" CssClass="btn1 position" OnClick="Unnamed_Click1" />
             </div>
         </div>
     </div>

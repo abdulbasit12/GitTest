@@ -590,24 +590,21 @@ li.drop {
             }
 /*Details Page CSS*/
 #content {
-    position: absolute;
+    position: relative;
     width: 100%;
-    float: left;
     background-color: none;
-    height: 500px;
-    top: 20%;
+    height: auto;
     left: 0%;
 }
 
-.lbName {
+/*.lbName {
     position: absolute;
     width: 30%;
-    height: 20px;
     color: #000;
-    font: bold 50px Arial;
+    font:30px Arial;
     top: 5%;
     left: 5%;
-}
+}*/
 
 .lbAddress {
     position: absolute;
@@ -620,45 +617,44 @@ li.drop {
 }
 
 #Calendar {
-    position:relative;
     display:block;
     background-color: lightgray;
     width: 22%;
-    left: 75%;
+    float:right;
     height: 250px;
-    top: 36%;
+    margin:20px 180px auto auto;
 }
 
 .lawndate {
-    position: absolute;
-    top: 20%;
-    left: 20%;
-    width: 60%;
+    width: 88%;
     height: 30px;
     background-color: white;
     font-family: Arial;
+    margin:10px auto 0 auto;
+    display:block;
 }
 
 .name {
-    position: absolute;
+    display:block;
     height: auto;
     color: black;
-    font: 20px Arial;
-    top: 5%;
-    left: 20%;
+    font-size:25px;
+    margin-top:18px;
+    text-align:center;
 }
 
 .btn1 {
-    position: absolute;
     height: 35px;
     width: 60%;
     background-color: darkorange;
-    border-radius: 0px;
+    border:none;
     color: white;
     font-family:Arial;
     font-size:15px;
     top:40%;
     left:20%;
+    display:block;
+    margin:20px auto 0 auto;
 }
 
 .search-text {
@@ -850,4 +846,5 @@ font-family:Arial; color:black;
 
 .container{margin:0; padding:0;}
 .container .carousel{position:fixed; width:100%; height:100%; top:0; z-index:-1;}
-.carousel-inner > .item > img, .carousel-inner > .item > a > img{width:100%; min-height:100%; opacity:0.5;}
+.carousel-inner .item img{width:100%; min-height:100%; opacity:0.5;}
+.carousel-inner{height:250px;}

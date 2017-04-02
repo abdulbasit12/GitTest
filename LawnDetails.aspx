@@ -24,35 +24,51 @@
             text-align: left;
         }
 
-        .btn1 {
-            height: 35px;
-            width: 60%;
-            background-color: darkorange;
-            border-radius: 0px;
-            color: white;
-            font-family: Arial;
-            font-size: 15px;
-            border: none;
-            display:block;
+        .container {
+            margin: 0 0 0 70px;
         }
-        .btn1 .position{}
-        .container{margin:235px 0 0 68px;}
-        .container .carousel {position:relative; width:58%; background-color:white;}
-        .carousel-inner > .item > img, .carousel-inner > .item > a > img{opacity:1; width:100%; max-height:100%;}
+
+            .container .carousel {
+                position: relative;
+                width: 60%;
+                background-color: white;
+            }
+
+        .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+            opacity: 1;
+            width: 100%;
+            max-height: 100%;
+        }
+
+        span.lname {
+            display: block;
+            font-size: 35px;
+            margin: 0px 0 0 65px;
+            color:#666666;
+        }
+        span.laddress{
+            display:block; font-size:20px; margin:0 0 0 70px; color:#666666
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div id="main">
         <div id="content">
-            <asp:Label ID="LabelName" runat="server" Text="Lawn Name" CssClass="lbName"></asp:Label>
-            <asp:Label ID="LabelAdd" runat="server" Text="Lawn Address" CssClass="lbAddress"></asp:Label>
-            <div id="Calendar">
+            <span class="lname">
+                <i class="glyphicon glyphicon-home"></i>
+                <asp:Label ID="LabelName" runat="server" Text="Lawn Name"></asp:Label>
+            </span>
+            <span class="laddress">
+                <i class="fa fa-map-marker"></i>
+                <asp:Label ID="LabelAdd" runat="server" Text="Lawn Address"></asp:Label>
+            </span>
+        </div>
+        <div id="Calendar">
                 <asp:Label runat="server" CssClass="name" Text="Check Availability"></asp:Label>
                 <asp:TextBox ID="CheckAvailb" runat="server" CssClass="lawndate" TextMode="Date"></asp:TextBox>
                 <asp:Button runat="server" Text="Check Availability" CssClass="btn1" OnClick="Unnamed_Click" />
                 <asp:Button runat="server" Text="Book Lawn" CssClass="btn1 position" OnClick="Unnamed_Click1" />
             </div>
-        </div>
     </div>
     <div class="container" id="slider">
         <br />
@@ -75,7 +91,7 @@
                                         </tr>
                                     </table>--%>
                         <div class='<%# Eval("Name").ToString() == "Cover" ? "item active" : "item" %>'>
-                            <img src='<%# Eval("Uimg") %>'/>
+                            <img src='<%# Eval("Uimg") %>' />
                         </div>
                     </ItemTemplate>
 

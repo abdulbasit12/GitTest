@@ -54,6 +54,28 @@
         .lawn-details{margin:10px auto 0 54px; background:#fff; width:703px;}
         .h-details{margin:20px auto 5px 54px; width:703px; border-bottom:1px solid #b7b7b7}
         .h-details .active{border-bottom:2px solid #FF8C00;}
+
+            .container .carousel {
+                position: relative;
+                width: 60%;
+                background-color: white;
+            }
+
+        .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+            opacity: 1;
+            width: 100%;
+            max-height: 100%;
+        }
+
+        span.lname {
+            display: block;
+            font-size: 35px;
+            margin: 0px 0 0 65px;
+            color:#666666;
+        }
+        span.laddress{
+            display:block; font-size:20px; margin:0 0 0 70px; color:#666666
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">

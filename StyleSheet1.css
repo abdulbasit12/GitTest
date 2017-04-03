@@ -618,6 +618,7 @@ li.drop {
 
 #Calendar {
     display:block;
+    background-color: #b7b7b7;
     background-color: lightgray;
     width: 22%;
     float:right;
@@ -664,6 +665,7 @@ li.drop {
 
 /*Search Filter Css*/
 .Search {
+    background-color: #b7b7b7;
     background-color: #bba7a7;
     margin: 0 0 50px 0;
     padding: 0;
@@ -835,13 +837,15 @@ font-family:Arial; color:black;
 
 /*User menu Css*/
 
+
+.user-div{width:100%; background-color:#b7b7b7; height:auto; position:fixed; top:0; z-index:999;}
 .user-div{width:100%; background-color:#bba7a7; height:auto; position:fixed; top:0; z-index:999;}
 .user-div h3{display:inline-block; margin:14px 0 0 4px; position:absolute;}
 .toggle{margin:5px 0 5px 10px; padding:5px; border-radius:5px; box-sizing: border-box; background-color:#f6f6f6;}
 .user-div .userdiv-right{width:25%; float:right;}
-.user-div .userdiv-right .fa-user{font-size:18px; color:#ff3300; margin:17px 5px 0 0;}
+.user-div .userdiv-right .fa-user{font-size:18px; color:#FF8C00; margin:17px 5px 0 0;}
 .user-div .userdiv-right .user-label{font-family:Arial; font-size:15px;}
-.user-div .userdiv-right .fa-sign-out{font-size:18px; color:#ff3300; margin:17px 5px 0 20px;}
+.user-div .userdiv-right .fa-sign-out{font-size:18px; color:#FF8C00; margin:17px 5px 0 20px;}
 .user-div .userdiv-right .user-label-logout{font-family:Arial; font-size:15px;}
 
 .container{margin:0; padding:0;}

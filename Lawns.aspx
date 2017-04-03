@@ -24,7 +24,7 @@
             background-color: #41af9a;
             border: none;
             top: 0;
-            box-shadow:5px 5px 2px rgba(120, 109, 109, 0.34);   
+            box-shadow: 5px 5px 2px rgba(120, 109, 109, 0.34);
         }
 
         .Rimg {
@@ -78,8 +78,9 @@
             height: 30px;
             border: none;
         }
+
         #info {
-        vertical-align:top;
+            vertical-align: top;
         }
     </style>
 </asp:Content>
@@ -127,8 +128,8 @@
                             <div class="cb"></div>
                         </div>
                         <div class="filter-fill">
-                                <asp:TextBox runat="server" ID="SearchAreaText" class="filter-field" placeholder="Search Lawn"></asp:TextBox>
-                            </div>
+                            <asp:TextBox runat="server" ID="SearchAreaText" class="filter-field" placeholder="Search Lawn"></asp:TextBox>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -194,7 +195,7 @@
                                         <i class="fa fa-location-arrow" style="font-size: 15px;"></i>
                                         <asp:Label ID="Label122" Text='<%# Eval("Address") %>' runat="server" />
                                     </td>
-                                </tr>                            
+                                </tr>
                             </table>
                             <table id="tb_btn">
                                 <tr>

@@ -21,10 +21,10 @@
     <style>
         .main div {
             position: relative;
-            background: green;
+            background: rgba(65, 175, 154, 0.5);
             width: 70%;
             margin: auto;
-            color: White;
+            color: #000;
             font-size: 30px;
             padding:15px;
         }
@@ -44,7 +44,7 @@
         h3 {
             position: relative;
             margin: 0;
-            padding: 5px;
+            font-size:33px;
         }
 
             h3 span {
@@ -54,7 +54,7 @@
             font-family: arial;
         }
         .main{margin-top:70px;}
-        .main div h3 span{height:35px; width:35px; background-position:25px 25px; background-repeat:no-repeat; background:url("plus-minus.png")}
+        .main div h3 span{height:35px; width:35px; background-repeat:no-repeat; background:url("plus-minus.png"); background-size:94px;}
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">

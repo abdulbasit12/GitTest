@@ -36,6 +36,7 @@
         #detail1 {
             width: 50%;
             margin: auto;
+            margin-top:25px;
         }
 
         .dataimg {
@@ -54,6 +55,7 @@
             height: 90px;
             width: 15%;
             left: 5%;
+            margin-top:25px;
         }
 
         #btn_avlble {
@@ -68,6 +70,7 @@
             width: 20%;
             right: 5%;
             top: 0%;
+            margin-top:30px;
         }
 
         .btn_avlble {

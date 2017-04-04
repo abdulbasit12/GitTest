@@ -49,7 +49,7 @@
         span.laddress{
             display:block; font-size:20px; margin:0 0 0 70px; color:#666666;
         }
-        .carousel-control.left, .carousel-control.right{background:#fff;}
+        .carousel-control.left, .carousel-control.right{background:#fff; opacity:1;}
         .carousel-control{color:#000;}
         .lawn-details{margin:10px auto 0 54px; background:#fff; width:703px;}
         .h-details{margin:20px auto 5px 54px; width:703px; border-bottom:1px solid #b7b7b7}
@@ -70,7 +70,7 @@
         span.lname {
             display: block;
             font-size: 35px;
-            margin: 0px 0 0 65px;
+            margin: 70px 0 0 65px;
             color:#666666;
         }
         span.laddress{

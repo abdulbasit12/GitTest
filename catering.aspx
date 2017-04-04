@@ -6,15 +6,19 @@
         $(document).ready(function () {
             $("h3").click(function () {
                 if ($(this).parent("div").children("p").css("display") == "none") {
-                    $("h3").removeClass(".active");
-                    $(this).addClass(".active");
                     $("div p").slideUp();
+                    $("h3 span").removeClass("active");
+                    $(this).children("span").addClass("active");
                     $(this).parent("div").children("p").slideDown();
                 }
                 else {
-                    $(this).removeClass("active");
+                    $(this).children("span").removeClass("active");
                     $(this).parent("div").children("p").slideUp();
                 }
+            });
+            $("h3 span").click(function () {
+                
+                
             });
         });
     </script>
@@ -26,11 +30,10 @@
             margin: auto;
             color: #000;
             font-size: 30px;
-            padding:15px;
         }
 
-        .active span {
-            color: red;
+        .active {
+            background-position-x: 35px!important;
         }
 
         .main div p {
@@ -41,36 +44,48 @@
             display: none;
         }
 
-        h3 {
+        .main div h3 {
             position: relative;
             margin: 0;
-            font-size:33px;
+            font-size: 33px;
+            padding: 15px;
         }
 
-            h3 span {
-                float: right;
-            }
+        h3 span {
+            float: right;
+        }
+
         body {
             font-family: arial;
         }
-        .main{margin-top:70px;}
-        .main div h3 span{height:35px; width:35px; background-repeat:no-repeat; background:url("plus-minus.png"); background-size:94px;}
+
+        .main {
+            margin-top: 70px;
+        }
+
+            .main div h3 span {
+                height: 35px;
+                width: 35px;
+                background-repeat: no-repeat;
+                background: url("plus-minus.png");
+                background-size: 94px;
+            }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="main">
         <div>
-            <h3>Text 1<span></span></h3>
+            <h3>BBQ<span></span></h3>
             <p>something something something something something something something something something something something something</p>
         </div>
         <br />
         <div>
-            <h3>Text 2<span></span></h3>
+            <h3>Drinks<span></span></h3>
             <p>something something something something something something something something something something something something</p>
         </div>
         <br />
         <div>
-            <h3>Text 3<span></span></h3>
+            <h3>Deserts<span></span></h3>
             <p>something something something something something something something something something something something something</p>
         </div>
     </div>

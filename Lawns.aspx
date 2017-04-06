@@ -98,7 +98,7 @@
                             <div class="dropdown">
                                 <div class="dropdown-span">
                                     <span class="dropdown-icon"></span>
-                                    <div class="dropdown-label">All Areas</div>
+                                    <div class="dropdown-label">All Types</div>
                                 </div>
                                 <select id="SearchType" class="dropdown-select" runat="server">
                                     <option value="0">All Types</option>

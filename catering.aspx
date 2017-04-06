@@ -5,23 +5,24 @@
     <script>
         $(document).ready(function () {
             $("h3").click(function () {
-                if ($(this).parent("div").children(".menu-items").css("display") == "none") {
+                if ($(this).parent("div").children(".menus").css("display") == "none") {
                     //$("div .menu-items").slideUp();
-                    $("h3 span").removeClass("active");
+                    //$("h3 span").removeClass("active");
                     $(this).children("span").addClass("active");
-                    $(this).parent("div").children(".menu-items").slideDown();
+                    $(this).parent("div").children(".menus").slideDown();
                 }
                 else {
                     $(this).children("span").removeClass("active");
-                    $(this).parent("div").children(".menu-items").slideUp();
+                    $(this).parent("div").children(".menus").slideUp();
                 }
             });
         });
     </script>
     <style>
+        body{overflow:scroll;}
+
         .main div {
             position: relative;
-            background: rgba(65, 175, 154, 0.5);
             width: 70%;
             margin: auto;
             color: #000;
@@ -46,6 +47,7 @@
             margin: 0;
             font-size: 33px;
             padding: 15px;
+            background:rgba(65, 175, 154, 0.5);
         }
 
         h3 span {
@@ -69,7 +71,8 @@
             }
             .fm{display:block; text-align:center; font-family:'Conv_zektonrg'; font-size:40px;}
             .menu-heading{display:block; text-align:center; font-size:50px; font-family:'Conv_zektonrg'; color:#FC8C0F; margin-bottom:20px;}
-            .main div .menu-items{background-color: white;color: black;width:100%;margin:0; font-size:20px; display:none;}
+            .main div .menus{display:none; margin:0; width:100%;}
+            .main div .menu-items{background-color: white;color: black;width:100%;margin:0; font-size:20px;}
             .main div .menu-items tr td{padding:10px;}
             .main div .menu-items tr td span{font-size:25px;}
             .main div .menu-items tr td input{margin-right:5px; width:20px; height:20px;}
@@ -83,7 +86,8 @@
         <span class="menu-heading">Select Food Items For Your Event</span>
         <div>
             <h3>Foods<span></span></h3>
-            <table class="menu-items">
+            <div class="menus">
+                <table class="menu-items">
                     <tr>
                         <td><asp:CheckBox runat="server"/><span>Mutton Biryani</span></td>
                         <td><asp:CheckBox runat="server"/><span>White Chicken Karhai</span></td>
@@ -97,10 +101,12 @@
                         <td><asp:CheckBox runat="server"/><span>pioneer Rashmi Handi</span></td>
                     </tr>
                 </table>
+            </div>
         </div>
         <br/>
         <div>
             <h3>BBQ<span></span></h3>
+            <div class="menus">
                 <table class="menu-items">
                     <tr>
                         <td><asp:CheckBox runat="server"/><span>Chicken Tikka</span></td>
@@ -115,11 +121,13 @@
                         <td><asp:CheckBox runat="server"/><span>Afghani Botti</span></td>
                     </tr>
                 </table>
+            </div>
         </div>
         <br />
         <div>
             <h3>Cold Bevrages<span></span></h3>
-            <table class="menu-items">
+            <div class="menus">
+                <table class="menu-items">
                     <tr>
                         <td><asp:CheckBox runat="server"/><span>7up</span></td>
                         <td><asp:CheckBox runat="server"/><span>Pepsi</span></td>
@@ -129,11 +137,13 @@
                         <td><asp:CheckBox runat="server"/><span>Marinda</span></td>
                     </tr>
                 </table>
+            </div>
         </div>
         <br />
         <div>
             <h3>ICECREAM<span></span></h3>
-            <table class="menu-items">
+            <div class="menus">
+                <table class="menu-items">
                     <tr>
                         <td><asp:CheckBox runat="server"/><span>Strawberry</span></td>
                         <td><asp:CheckBox runat="server"/><span>Pineapple</span></td>
@@ -143,6 +153,7 @@
                         <td><asp:CheckBox runat="server"/><span>Crunch Kulfi</span></td>
                     </tr>
                 </table>
+            </div>
         </div>
         <span class="btn-confirm"><asp:Button runat="server" text="Confirm Menu"/></span>
     </div>

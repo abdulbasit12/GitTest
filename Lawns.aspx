@@ -98,6 +98,17 @@
                             <div class="dropdown">
                                 <div class="dropdown-span">
                                     <span class="dropdown-icon"></span>
+                                    <div class="dropdown-label">All Types</div>
+                                </div>
+                                <select id="SearchType" class="dropdown-select" runat="server">
+                                    <option value="0">All Types</option>
+                                    <option value="1">Banquets</option>
+                                    <option value="2">Lawns</option>
+                                </select>
+                            </div>
+                            <div class="dropdown">
+                                <div class="dropdown-span">
+                                    <span class="dropdown-icon"></span>
                                     <div class="dropdown-label">All Areas</div>
                                 </div>
                                 <select id="SearchArea" class="dropdown-select" runat="server">

@@ -75,9 +75,11 @@
             .main div .menu-items{background-color: white;color: black;width:100%;margin:0; font-size:20px;}
             .main div .menu-items tr td{padding:10px;}
             .main div .menu-items tr td span{font-size:25px;}
+            .main div .menu-items tr td span:nth-child(3){float:right; color:#ff8c00; font-size:16px;}
             .main div .menu-items tr td input{margin-right:5px; width:20px; height:20px;}
             .main .btn-confirm{margin-top:20px; display:block;}
             .main .btn-confirm input{margin:auto; display:block; color:#fff; background:#FC8C0F; border:none; padding:10px 20px; font-size:30px; font-family:initial; }
+            .note{display:block; text-align:center; margin:10px auto; color:#ff0000; font-size:15px; font-family:initial;}
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -89,16 +91,34 @@
             <div class="menus">
                 <table class="menu-items">
                     <tr>
-                        <td><asp:CheckBox runat="server"/><span>Mutton Biryani</span></td>
-                        <td><asp:CheckBox runat="server"/><span>White Chicken Karhai</span></td>
+                        <td>
+                            <asp:CheckBox runat="server"/>
+                            <span>Mutton Biryani</span>
+                            <span>Rs:100</span></td>
+                        <td>
+                            <asp:CheckBox runat="server"/>
+                            <span>White Chicken Karhai</span>
+                            <span>Rs:80</span></td>
                     </tr>
                     <tr>
-                        <td><asp:CheckBox runat="server"/><span>White Mutton Karhai</span></td>
-                        <td><asp:CheckBox runat="server"/><span>Vegitable Handi</span></td>
+                        <td>
+                            <asp:CheckBox runat="server"/>
+                            <span>White Mutton Karhai</span>
+                            <span>Rs:110</span></td>
+                        <td>
+                            <asp:CheckBox runat="server"/>
+                            <span>Vegitable Handi</span>
+                            <span>Rs:60</span></td>
                     </tr>
                     <tr>
-                        <td><asp:CheckBox runat="server"/><span>Daal Makhni Handi</span></td>
-                        <td><asp:CheckBox runat="server"/><span>pioneer Rashmi Handi</span></td>
+                        <td>
+                            <asp:CheckBox runat="server"/>
+                            <span>Daal Makhni Handi</span>
+                            <span>Rs:50</span></td>
+                        <td>
+                            <asp:CheckBox runat="server"/>
+                            <span>pioneer Rashmi Handi</span>
+                            <span>Rs:70</span></td>
                     </tr>
                 </table>
             </div>
@@ -109,16 +129,33 @@
             <div class="menus">
                 <table class="menu-items">
                     <tr>
-                        <td><asp:CheckBox runat="server"/><span>Chicken Tikka</span></td>
-                        <td><asp:CheckBox runat="server"/><span>Chicken Malai Botti</span></td>
+                        <td>
+                            <asp:CheckBox runat="server"/>
+                            <span>Chicken Tikka</span>
+                            <span>Rs:40</span></td>
+                        <td>
+                            <asp:CheckBox runat="server"/>
+                            <span>Chicken Malai Botti</span>
+                            <span>Rs:40</span></td>
                     </tr>
                     <tr>
-                        <td><asp:CheckBox runat="server"/><span>Chicken Bihari Botti</span></td>
-                        <td><asp:CheckBox runat="server"/><span>Fish Tikka</span></td>
+                        <td>
+                            <asp:CheckBox runat="server"/>
+                            <span>Chicken Bihari Botti</span>
+                            <span>Rs:40</span></td>
+                        <td>
+                            <asp:CheckBox runat="server"/>
+                            <span>Fish Tikka</span>
+                            <span>Rs:70</span></td>
                     </tr>
                     <tr>
-                        <td><asp:CheckBox runat="server"/><span>Chicken Sikh Kabab</span></td>
-                        <td><asp:CheckBox runat="server"/><span>Afghani Botti</span></td>
+                        <td><asp:CheckBox runat="server"/>
+                            <span>Chicken Sikh Kabab</span>
+                            <span>Rs:40</span></td>
+                        <td>
+                            <asp:CheckBox runat="server"/>
+                            <span>Afghani Botti</span>
+                            <span>Rs:50</span></td>
                     </tr>
                 </table>
             </div>
@@ -129,12 +166,24 @@
             <div class="menus">
                 <table class="menu-items">
                     <tr>
-                        <td><asp:CheckBox runat="server"/><span>7up</span></td>
-                        <td><asp:CheckBox runat="server"/><span>Pepsi</span></td>
+                        <td>
+                            <asp:CheckBox runat="server"/>
+                            <span>7up</span>
+                            <span>Rs:25</span></td>
+                        <td>
+                            <asp:CheckBox runat="server"/>
+                            <span>Pepsi</span>
+                            <span>Rs:25</span></td>
                     </tr>
                     <tr>
-                        <td><asp:CheckBox runat="server"/><span>Coka Cola</span></td>
-                        <td><asp:CheckBox runat="server"/><span>Marinda</span></td>
+                        <td>
+                            <asp:CheckBox runat="server"/>
+                            <span>Coka Cola</span>
+                            <span>Rs:25</span></td>
+                        <td>
+                            <asp:CheckBox runat="server"/>
+                            <span>Marinda</span>
+                            <span>Rs:25</span></td>
                     </tr>
                 </table>
             </div>
@@ -145,16 +194,27 @@
             <div class="menus">
                 <table class="menu-items">
                     <tr>
-                        <td><asp:CheckBox runat="server"/><span>Strawberry</span></td>
-                        <td><asp:CheckBox runat="server"/><span>Pineapple</span></td>
+                        <td>
+                            <asp:CheckBox runat="server"/>
+                            <span>Strawberry</span>
+                            <span>Rs:35</span></td>
+                        <td>
+                            <asp:CheckBox runat="server"/>
+                            <span>Pineapple</span>
+                            <span>Rs:35</span></td>
                     </tr>
                     <tr>
-                        <td><asp:CheckBox runat="server"/><span>Chocolate</span></td>
-                        <td><asp:CheckBox runat="server"/><span>Crunch Kulfi</span></td>
+                        <td>
+                            <asp:CheckBox runat="server"/>
+                            <span>Chocolate</span><span>Rs:35</span></td>
+                        <td><asp:CheckBox runat="server"/>
+                            <span>Crunch Kulfi</span>
+                            <span>Rs:35</span></td>
                     </tr>
                 </table>
             </div>
         </div>
+        <p class="note">Note: All item mentioned prices are for per person</p>
         <span class="btn-confirm"><asp:Button runat="server" text="Confirm Menu"/></span>
     </div>
 </asp:Content>

@@ -2,7 +2,7 @@
     background-image: url(Back.jpg);
     background-size: cover;
     background-attachment: fixed;
-    font-family: myfont;
+    font-family: myfont!important;
 }
 
 @font-face {

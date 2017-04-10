@@ -49,8 +49,9 @@
 
             .container .carousel {
                 position: relative;
-                width: 60%;
+                width:100%;
                 background-color: white;
+                height: 400px;
             }
 
         .carousel-inner > .item > img, .carousel-inner > .item > a > img {
@@ -68,7 +69,7 @@
         span.laddress{
             display:block; font-size:20px; margin:0 0 0 54px; color:#666666
         }
-        .carousel-inner{height:300px;}
+        .carousel-inner{height:400px; position:absolute;}
         .detail-table{width:100%; padding:10px; font-size:20px; border:1px solid #b7b7b7;}
         .detail-table tbody tr{border-bottom:1px solid #b7b7b7}
         .detail-table tbody tr td{padding:10px;}
@@ -86,12 +87,6 @@
                 <asp:Label ID="LabelAdd" runat="server" Text="Lawn Address"></asp:Label>
             </span>
         </div>
-        <div id="Calendar">
-                <asp:Label runat="server" CssClass="name" Text="Check Availability"></asp:Label>
-                <asp:TextBox ID="CheckAvailb" runat="server" CssClass="lawndate" TextMode="Date"></asp:TextBox>
-                <asp:Button runat="server" Text="Check Availability" CssClass="btn1" OnClick="Unnamed_Click" />
-                <asp:Button runat="server" Text="Book Lawn" CssClass="btn1 position" OnClick="Unnamed_Click1" />
-            </div>
     </div>
     <div class="container" id="slider">
         <br />
@@ -144,6 +139,12 @@
         </div>
         <div class="cb"></div>
     </div>
+    <div id="Calendar">
+                <asp:Label runat="server" CssClass="name" Text="Check Availability"></asp:Label>
+                <asp:TextBox ID="CheckAvailb" runat="server" CssClass="lawndate" TextMode="Date"></asp:TextBox>
+                <asp:Button runat="server" Text="Check Availability" CssClass="btn1" OnClick="Unnamed_Click" />
+                <asp:Button runat="server" Text="Book Lawn" CssClass="btn1 position" OnClick="Unnamed_Click1" />
+            </div>
     <h3 class="h-details"><span class="active">More Details</span></h3>
     <div class="lawn-details">
         <table class="detail-table">

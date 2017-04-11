@@ -19,7 +19,7 @@
         });
     </script>
     <style>
-        body{overflow:scroll;}
+        body{overflow-y:scroll;}
 
         .main div {
             position: relative;
@@ -50,6 +50,8 @@
             background:rgba(65, 175, 154, 0.5);
         }
 
+        
+
         h3 span {
             float: right;
         }
@@ -73,13 +75,20 @@
             .menu-heading{display:block; text-align:center; font-size:50px; font-family:'Conv_zektonrg'; color:#FC8C0F; margin-bottom:20px;}
             .main div .menus{display:none; margin:0; width:100%;}
             .main div .menu-items{background-color: white;color: black;width:100%;margin:0; font-size:20px;}
-            .main div .menu-items tr td{padding:10px;}
+            .main div .menu-items tr td{padding:10px; width:50%;}
             .main div .menu-items tr td span{font-size:25px;}
             .main div .menu-items tr td span:nth-child(3){float:right; color:#ff8c00; font-size:16px;}
             .main div .menu-items tr td input{margin-right:5px; width:20px; height:20px;}
             .main .btn-confirm{margin-top:20px; display:block;}
             .main .btn-confirm input{margin:auto; display:block; color:#fff; background:#FC8C0F; border:none; padding:10px 20px; font-size:30px; font-family:initial; }
             .note{display:block; text-align:center; margin:10px auto; color:#ff0000; font-size:15px; font-family:initial;}
+    
+            .main div h4{position: relative; margin: 0; font-size: 28px; padding: 15px; background:rgba(65, 175, 154, 0.5); text-align:center;}
+            .main div .delivery-detail{margin:0; width:100%;}
+            .main div .delivery-detail .detail-form{background-color: white;color: black;width:100%;margin:0; font-size:20px;}
+            .main div .delivery-detail .detail-form tr td{padding:10px; width:50%;}
+            .main div .delivery-detail .detail-form tr td input{width:100%;}
+            .main div .delivery-detail .detail-form tr td .address{width:100%!important;}
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -215,6 +224,34 @@
             </div>
         </div>
         <p class="note">Note: All item mentioned prices are for per person</p>
+        <div>
+            <h4>Delivery Details</h4>
+            <div class="delivery-detail">
+                <table class="detail-form">
+                    <tr>
+                        <td>
+                            <asp:TextBox ID="TextBox1" runat="server" type="date"></asp:TextBox>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="TextBox2" runat="server" placeholder="Contact Number"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:TextBox ID="TextBox3" runat="server" placeholder="No of Guests"></asp:TextBox>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="TextBox4" runat="server" placeholder="Lawn Name"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:TextBox class="address" ID="TextBox5" runat="server" placeholder="Complete Address"></asp:TextBox>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
         <span class="btn-confirm"><asp:Button runat="server" text="Confirm Menu"/></span>
     </div>
 </asp:Content>

@@ -164,5 +164,23 @@
             </tr>
         </table>
     </div>
+
+    <h3 class="h-details"><span class="active">Seating Arrangments</span></h3>
+    <div class="lawn-details">
+        <table class="detail-table">
+            <tr>
+                <td>Lawn Rent</td>
+                <td>
+            </tr>
+            <tr>
+                <td>Seating Capacity</td>
+                <td>
+            </tr>
+            <tr>
+                <td>Air Condition</td>
+                <td>Centerlized</td>
+            </tr>
+        </table>
+    </div>
 </asp:Content>
 

@@ -1,0 +1,189 @@
+body a:hover{text-decoration: none;}
+.navbar-default{background-color: white!important; border-bottom: none!important; background: url(../header-bg.png) repeat-x 0 bottom; }
+
+.clear{clear:both;}
+.home{padding: 212px 0 0 0!important;}
+.home h1{display: block; text-align: center; line-height: 1; color: #ffd62b; font-size: 54px; font-family: 'Conv_zektonrg'; margin: 0 0 0 0;}
+.home h1 span{color: #313130; font-size: 35px; font-family: 'Conv_zektonrg'; display: block;}
+.home h1 strong{color: #a3a2a2; font-size: 22px; font-weight: 300; display: block;}
+
+
+.navbar-collapse{margin: 22px 30px 0 0!important;}
+.navbar-collapse .navbar-right{margin: 20px 0 0 0;}
+.navbar-collapse .navbar-right li a{color: #30302f!important;font-weight: bold;margin: 6px 0 0 25px;}
+.active{border-bottom: 3px solid #c00123!important;}
+.navbar-collapse .navbar-right li a:hover{border-bottom: 3px solid rgba(192, 1, 35, 0.38);}
+.container-fluid .navbar-brand{margin: 8px 0 0 95px!important; padding: 0!important;}
+.container-fluid .navbar-header .navbar-brand{float:left; width:163px;text-align: center!important;margin: 22px 0 0 95px!important; height: auto;background-image:url("../logo-bg.png"); background-repeat:no-repeat;background-position: bottom;}
+.container-fluid .navbar-header .navbar-brand .logo{position: relative; background-image: url("logo.png"); width: 100%;}
+.container-fluid .navbar-header .navbar-brand>img{max-width: 100%; display: inline-block; margin: 0 0 4px 0;}
+
+
+div.whoarewe{background: url("../whoweare-bg.png") center top no-repeat #2f2f2f; padding-top:114px; text-align: center;}
+div.whoarewe span.scroll{width: 116px; height: 40px; line-height: 1.2; background: #a6a6a6; font-size: 12px; display: block; padding:6px; margin:0px auto 10px auto; text-align: center; color:black; border-radius: 5px;}
+div.whoarewe .submenu{position: relative; top: auto;}
+div.whoarewe .submenu .arrow-down{background: url("../arrow-down.png"); display: block; width: 19px; height: 19px; margin: 0 auto;}
+div.whoarewe .container .carousel{margin:90px auto 0 auto!important;}
+div.whoarewe .container .carousel-inner{margin-bottom:78px!important;}
+div.whoarewe .container .carousel-indicators{position: relative; margin-top:-60px;}
+div.whoarewe .container .carousel-indicators li{border:2px solid red;}
+.active{border: none!important;}
+div.whoarewe .container .slider .item span{display: block; height: auto; float: left; width: 100%; border: 0; font-size: 32px; color: #fff; font-weight: 300;}
+
+.active{display: block!important;}
+div.boxes{background: url("../boxes-bg.png") center top no-repeat #eee; padding-top:110px; padding:0 100px;} 
+div.boxes .container > p span{display: none;}
+div.boxes .container{width: 100%; margin-top: 130px;}
+div.boxes .container p{text-align: center; height: 150px; margin-bottom: 15px; color:black; font-family: Arial; width: 80%; margin: auto;}
+div.boxes .container p strong{display: block;}
+div.boxes ul{list-style: none; margin: 0px auto 0 auto; float: left; font-size: 15px;}
+div.boxes ul li{float: left; background: url("../boxes-bg2.png") repeat-x #eee; border-bottom: 1px solid #dfdfde; border-right: #fff; height: 68px; padding:0 20px 0 0; min-width: 210px; cursor: pointer;}
+div.boxes ul li span{float: left; width: 40px; height: 40px; background: #c00123; font-size:24px; margin: 15px 0 0 20px; padding:2px 0 0 0; text-align: center; color: #fff; border-radius: 5px;}
+div.boxes ul li p{font-size: 14px; font-weight: 700; margin: 18px 0 0 17px!important; float: left; color:#333; text-align: left!important; width: auto!important;}
+div.boxes ul li p strong{font-size: 11px; color: #737373; display: block; font-weight: normal;}
+
+div.whatwedo{background: url("../whatwedo-bg.png") center top no-repeat #bbbaba; padding-top: 114px;}
+div.whatwedo .container span{display: block; margin: 45px 0 0 0; text-align: center}
+div.whatwedo .container span p{font-size:30px; color: #333333; font-weight: 300; margin:78px 0 0 0; transform: rotate(-10deg);}
+div.whatwedo .container span p a{color:#c00123;}
+div.whatwedo .container h2{margin-bottom: 30px; line-height: 0!important; padding-top: 64px; font-size: 25px;}
+div.whatwedo .container .mobile{display:none;}
+div.whatwedo .container p{text-align: center; color: #30302f; margin-bottom: 70px;}
+div.whatwedo .container .graph{width:100%; margin:0 auto; display: block; max-width: 850px; background: url("../whatwedo-graph2.png") no-repeat bottom center; height: 485px;}
+div.whatwedo .container .graph a{width: 22px; float: left; background: url("../whatwedo-graph-link.png") no-repeat;}
+div.whatwedo .container .graph a:first-child{height: 299px; margin: 58px 0 0 19px; background-position:0px -115px;}
+div.whatwedo .container .graph a:nth-child(2){height: 249px; margin: 158px 0 0 24px; background-position:-41px -166px;}
+div.whatwedo .container .graph a:nth-child(3){height: 321px; margin: 2px 0 0 35px; background-position:-89px -93px;}
+div.whatwedo .container .graph a:nth-child(4){height: 414px; margin: 17px 0 0 63px; background-position:-131px -1px;}
+div.whatwedo .container .graph a:nth-child(5){height: 330px; margin: 58px 0 0 142px; background-position:-176px -84px;}
+div.whatwedo .container .graph a:nth-child(6){height: 296px; margin: 10px 0 0 19px; background-position:-215px -118px;}
+div.whatwedo .container .graph a:nth-child(7){height: 219px; margin: 12px 0 0 43px; background-position:-264px -195px;}
+div.whatwedo .container .graph a:nth-child(8){height: 229px; margin: 4px 0 0 30px; background-position:-302px -185px;}
+div.whatwedo .container .graph a:nth-child(9){height: 145px; margin: 119px 0 0 63px; background-position:-347px -269px;}
+div.whatwedo .container .graph a:nth-child(10){height: 195px; margin: 240px 0 0 31px; background-position:-390px -219px;}
+div.whatwedo .container .graph a:nth-child(11){height: 151px; margin: 164px 0 0 34px; background-position:-438px -263px;}
+div.whatwedo .container .graph a:nth-child(12){height: 345px; margin: 15px 0 0 67px; background-position:-476px -70px;}
+div.whatwedo .container .graph a:hover{width: 22px; float: left; background-image: url("../whatwedo-graph-link-hover.png");}
+
+div.portfolio{background: url("../portfolio-bg.png") center top no-repeat #ffffff; padding-top:100px; text-align: center;}
+div.portfolio .container h2{width:18%; height: 45px; background-color:#30302f; color:white; margin:0 auto 20px auto; padding:13px 0; box-sizing: border-box; border-radius: 5px; font-size: 22px;}
+div.portfolio .container .filter-portfolio{margin-bottom:40px;}
+div.portfolio .container .filter-portfolio ul{list-style-type: none; text-decoration: none; font-weight: bold; font-size: 20px;}
+div.portfolio .container .filter-portfolio ul li{width: auto; display: inline;}
+div.portfolio .container .filter-portfolio ul li a{text-decoration: none; color:Black;}
+div.portfolio .container .filter-portfolio ul li a:hover{color:#c00123;}
+div.portfolio .container .projects{padding:25px; box-sizing: border-box; width:100%;}
+div.portfolio .container .projects span{position:relative; width:20%; height:250px; border:1px solid #000000; display:inline-block; margin:10px 10px 0 auto;}
+div.portfolio .container .projects span img{width:100%; height:100%;}
+
+div.contact{background:url("../contact-bg.png") center top no-repeat #c00123; padding-top:120px; color:white;}
+div.contact .container h2{color:white; text-align: center; margin-bottom: 30px;}
+div.contact .container .contact-info table{width:100%;}
+div.contact .container .contact-info tr td{display:block; width:48%; float:left;}
+div.contact .container .contact-info tr td input, div.contact .container .contact-info tr td textarea{color:white; margin:0 0 20px 30px; width:80%; height: 40px; background:#870018; border:none; padding:5px 0 5px 8px; font-size:18px;}
+div.contact .container .contact-info tr td textarea{height: 130px;}
+div.contact .container .contact-info tr td .Submit{width:25%; background:#fff; color:#870018; height:45px; font-size:18px;}
+
+div.footer{background: url("../footer-bg.png") center top no-repeat #333; height: 170px; padding-top:80px; color:white;}
+div.footer .container .footer-pan{border-bottom:1px solid #989898; width:75%; margin: 0 auto; display:block;}
+div.footer .container .footer-pan .footer-left{width:50%; float:left;}
+div.footer .container .footer-pan .footer-left ul{padding:0;}
+div.footer .container .footer-pan .footer-left ul li{list-style-type:none; display:block; float:left; margin:0 8px 5px 0; font-size:10px;}
+div.footer .container .footer-pan .footer-left ul li a{color:white;}
+div.footer .container .footer-pan .footer-left ul li a:hover{border-bottom:1px solid #c00123;}
+div.footer .container .footer-pan .footer-middle{width: 46%; float: left;}
+div.footer .container .footer-pan .footer-middle ul{padding:0;}
+div.footer .container .footer-pan .footer-middle ul li{list-style-type:none; display:block; float:left; margin:0 8px 8px 0; font-size:14px;}
+div.footer .container .footer-pan .footer-middle ul li a{color:white;}
+div.footer .container .footer-pan .footer-middle ul li a:hover{color:#c00123;}
+div.footer .container .footer-pan .footer-right{width:28px; height:28px;float:right; background:#c00123; color:white; border-radius:3px; padding:4px 6px;}
+div.footer .container .footer-pan .footer-right span a{color:white; text-decoration: none;}
+div.footer .container .note{margin:10px auto; display:block; width:75%;}
+div.footer .container .note p{color:#7e7e7e; font-size:10px;}
+div.footer .container .note p strong{color:#fff; font-size:13px;}
+
+/*div.popup{background:rgba(0, 0, 0, 0.2); width:100%; height: 100%; position: absolute; display: block;}*/
+div.popup .container{background:#fff; width:400px; height:auto; margin:150px auto; box-shadow:0 0 2px 2px #1e1e1e; padding:15px 20px 20px 20px;}
+div.popup .container .heading{border-bottom:1px solid #e9e9e9;}
+div.popup .container .heading h4{margin: 0 0 5px 0;}
+div.popup .container .heading a{background:url("../popupclose.png"); height:16px; width:16px; float:right; margin: -22px 3px 0 0;}
+div.popup .container .popup-details img{width:230px; height:250px; margin:20px 0 0 0;}
+div.popup .container .popup-details p{font-size:12px; margin:15px 0;}
+div.popup .container .popup-details a{padding:5px 20px; background:#c00123; color:#fff; display: inline-block;}
+
+@media all and (max-width: 1024px) {
+
+    .navbar-collapse .navbar-right{margin-top:60px;}
+    .navbar-default .navbar-collapse{margin:0!important;}
+    .container-fluid .navbar-header .navbar-brand{margin:22px 0 0 5px!important;}
+    .navbar-collapse .navbar-right li a{margin:6px 0 0 0px; padding:8px; font-weight:100;}
+    div.boxes ul li{min-width:50%; width:50%;}
+    div.boxes ul li:nth-child(2n+1){border-right:1px solid #fff!important;}
+
+    div.whatwedo .container .graph a:nth-child(12){margin:-300px 0 0 121px;}
+}
+
+@media all and (max-width: 767px) {
+    
+    .home{padding:185px 0 0 0!important;}
+    .home h1{font-size:40px;}
+    .home h1 span{font-size:32px;}
+    div.boxes{padding:0;}
+    div.boxes ul{width:100%; max-width:480px; float:none;}
+    div.boxes ul li{width:100%;}
+    div.boxes ul li:last-child{border-bottom:none;}
+    div.boxes ul li p{width:50%!important; height:auto!important;}
+
+    div.whoarewe .container .slider .item span{font-size:22px;}
+
+    div.whatwedo .container .mobile{display:block;}
+    div.whatwedo .container .mobile img{width:100%;}
+    div.whatwedo .container .graph{display:none;}
+
+    div.portfolio .container h2{width:25%; height:auto;}
+    div.portfolio .container .projects span{margin:10px 0 10px 33px; width:35%;}
+    div.contact .container .contact-info tr td .Submit{padding:0;}
+
+    div.contact .container .contact-info tr td{display: block; width:100%;}
+    div.contact .container .contact-info tr td input, div.contact .container .contact-info tr td textarea{margin:0 0 20px 0; width:100%; background: #870018}
+    div.contact .container .contact-info tr td input{height:50px;}
+
+    .container-fluid .navbar-header .navbar-brand{display:block; float:none; margin:22px auto 0 auto!important;}
+
+    div.footer .container .footer-pan .footer-left{width:65%;}
+    div.footer .container .footer-pan .footer-middle{width:27%;}
+}
+
+@media all and (max-width: 320px) {
+    .home{padding:190px 0 0 0!important;}
+    .home h1{font-size:23px;}
+    .home h1 span{font-size:20px}
+    .home h1 strong{font-size:17px;}
+
+    div.whoarewe .container .slider .item span{font-size:17px;}
+    
+    div.boxes .container p{width:90%;}
+
+    div.whatwedo .container span p{font-size:16px; margin-top:90px;}
+
+    div.boxes ul{padding:0;}
+    div.boxes ul li p{font-size:13px;}
+
+    div.portfolio .container h2{width:70%;}
+    div.portfolio .container .filter-portfolio ul{padding:0; font-size:16px;}
+    div.portfolio .container .filter-portfolio{margin-bottom:0;}
+    div.portfolio .container .projects span{margin:0 auto 10px auto; width:100%;}
+
+    div.contact .container .contact-info tr td .Submit{width:50%;}
+
+    div.footer{padding-top:55px; height:auto;}
+    div.footer .container .footer-pan{width:100%;}
+    div.footer .container .note{text-align:center;}
+    div.footer .container .footer-pan .footer-left{width:100%;}
+    div.footer .container .footer-pan .footer-middle{width:100%; margin:auto;}
+    div.footer .container .footer-pan .footer-left ul{text-align:center;}
+    div.footer .container .footer-pan .footer-left ul li{display:inline-block; float:none; font-size:12px;}
+
+    div.footer .container .footer-pan .footer-middle ul{text-align:center; margin-bottom:inherit;}
+    div.footer .container .footer-pan .footer-middle ul li{display:inline-block; float:none; margin-bottom:0; font-size:17px;}
+}

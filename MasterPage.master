@@ -6,7 +6,7 @@
 <head runat="server">
     <meta charset="utf-8" />
     <%--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />--%>
-    <link href="bootstrap.min.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
     <%--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>--%>
     <script src="jquery.min.js"></script>
     <%--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>--%>
@@ -19,8 +19,8 @@
     <script src="jquery-3.1.1.min.js"></script>
     <script src="JQuery.js"></script>
     <link href="StyleSheet1.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="font-awesome.css"/>
-    <link rel="stylesheet" type="text/css" href="font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css"/>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <style>
@@ -35,7 +35,7 @@
             overflow-x: hidden;
             transition: 0.5s;
             padding-top: 60px;
-            margin-top:50px;
+            z-index:9999;
         }
 
             .sidenav a {
@@ -114,8 +114,7 @@
         <a href="User.aspx">SignUp</a>
     </div>
     <div class="user-div">
-        <span style="font-size: 30px; cursor: pointer" onclick="openNav()" class="fa fa-bars toggle"></span>
-        <h3>Menu</h3>
+        <span onclick="openNav()" class="fa fa-bars toggle"></span>
         <div class="userdiv-right">
             <span class="fa fa-user"></span>
             <label class="user-label">Guests</label>

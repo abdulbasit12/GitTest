@@ -98,7 +98,7 @@ li {
     text-align: center;
     position: relative;
     width: 100%;
-    color: #ff8625;
+    color: #fff;
     font-weight: 900;
     font-size: 36px;
     text-wrap: normal;
@@ -838,7 +838,7 @@ font-family:Arial; color:black;
 
 .user-div{width:100%; background-color:#444; height:auto; position:fixed; top:0; z-index:999;}
 .user-div h3{display:inline-block; margin:14px 0 0 4px; position:absolute;}
-.toggle{margin:5px 0 5px 10px; padding:5px; border-radius:5px; box-sizing: border-box; color:#fff; font-size:18px!important;}
+.toggle{margin:5px 0 5px 20px; padding:5px; border-radius:5px; box-sizing: border-box; color:#fff; font-size:18px!important;}
 .user-div .userdiv-right{float:right; margin-right:30px;}
 .user-div .userdiv-right .fa-user{font-size:18px; color:#fff; margin:8px 5px 0 0;}
 .user-div .userdiv-right .user-label{font-family:Arial; font-size:15px; color:#fff;}

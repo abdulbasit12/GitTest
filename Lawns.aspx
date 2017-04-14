@@ -21,7 +21,7 @@
             width: 100%;
             height: 150px;
             /*left: 10%;*/
-            background-color: rgba(65, 175, 154, 0.26);
+            background-color: rgba(0, 188, 212, 0.49);
             border: none;
             top: 0;
             box-shadow: 5px 5px 2px rgba(120, 109, 109, 0.34);
@@ -35,8 +35,7 @@
 
         #detail1 {
             width: 50%;
-            margin: auto;
-            margin-top:25px;
+            margin:25px auto auto 215px;
         }
 
         .dataimg {
@@ -50,10 +49,10 @@
 
         #img {
             position: absolute;
-            top: 5%;
+            top: 0%;
             border: 1px solid lightgray;
-            height: 90px;
-            width: 15%;
+            height: 110px;
+            width: 140px;
             left: 5%;
             margin-top:25px;
         }
@@ -193,7 +192,6 @@
                             <table id="detail1">
                                 <tr>
                                     <td>
-                                        <i class="glyphicon glyphicon-home" style="font-size: 30px;"></i>
                                         <asp:Label ID="Name" Text='<%# Eval("LawnName") %>' runat="server" Font-Size="35px" />
                                         <asp:Label ID="IDLAWN" runat="server" Visible="false" Text='<%# Eval("Address") %>'></asp:Label>
                                     </td>

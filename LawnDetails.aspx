@@ -18,6 +18,7 @@
 
         .container {
             margin: 0 auto 0 auto;
+            width:96%;
         }
 
             .container .carousel {
@@ -43,8 +44,8 @@
         }
         .carousel-control.left, .carousel-control.right{background:#fff;}
         .carousel-control{color:#000; opacity:1;}
-        .lawn-details{margin:10px auto 0 54px; background:#fff; width:450px;}
-        .h-details{margin:20px auto 5px 54px; width:450px; border-bottom:1px solid #b7b7b7}
+        .lawn-details{margin:10px auto 0 24px; background:#fff; width:450px;}
+        .h-details{margin:20px auto 5px 24px; width:450px; border-bottom:1px solid #b7b7b7}
         .h-details .active{border-bottom:2px solid #FF8C00;}
 
             .container .carousel {
@@ -63,11 +64,11 @@
         span.lname {
             display: block;
             font-size: 35px;
-            margin: 70px 0 0 54px;
+            margin: 70px 0 0 24px;
             color:#666666;
         }
         span.laddress{
-            display:block; font-size:20px; margin:0 0 0 54px; color:#666666
+            display:block; font-size:20px; margin:0 0 0 24px; color:#666666
         }
         .carousel-inner{height:400px; position:absolute;}
         .detail-table{width:100%; padding:10px; font-size:20px; border:1px solid #b7b7b7;}
@@ -79,7 +80,6 @@
     <div id="main">
         <div id="content">
             <span class="lname">
-                <i class="glyphicon glyphicon-home"></i>
                 <asp:Label ID="LabelName" runat="server" Text="Lawn Name"></asp:Label>
             </span>
             <span class="laddress">

@@ -850,3 +850,5 @@ font-family:Arial; color:black;
 .carousel-inner{height:100%;}
 .carousel-inner .item{height: 100%;}
 .carousel-inner .item img{width:100%; min-height:100%; opacity:0.5;}
+
+.seating-images{width:100px; height:100px;}

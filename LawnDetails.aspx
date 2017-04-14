@@ -169,16 +169,18 @@
     <div class="lawn-details">
         <table class="detail-table">
             <tr>
-                <td>Lawn Rent</td>
                 <td>
-            </tr>
-            <tr>
-                <td>Seating Capacity</td>
+                    <asp:RadioButton runat="server" />
+                    <span><img src="Seating/img1.png" class="seating-images"/></span>
+                </td>
                 <td>
-            </tr>
-            <tr>
-                <td>Air Condition</td>
-                <td>Centerlized</td>
+                    <asp:RadioButton ID="RadioButton1" runat="server" />
+                    <span><img src="Seating/img2.png" class="seating-images"/></span>
+                </td>
+                <td>
+                    <asp:RadioButton ID="RadioButton2" runat="server" />
+                    <span><img src="Seating/img3.png" class="seating-images"/></span>
+                </td>
             </tr>
         </table>
     </div>

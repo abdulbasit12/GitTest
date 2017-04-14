@@ -54,7 +54,7 @@
             height: 110px;
             width: 140px;
             left: 5%;
-            margin-top:25px;
+            margin-top:22px;
         }
 
         #btn_avlble {
@@ -73,9 +73,9 @@
         }
 
         .btn_avlble {
-            background-color: #ff3300;
+            background-color: #fff;
             width: 100%;
-            color: white;
+            color: #000;
             font-size: 20px;
             height: 30px;
             border: none;
@@ -84,6 +84,7 @@
         #info {
             vertical-align: top;
         }
+        #detail1 tr td span{font-size:17px;}
     </style>
 </asp:Content>
 

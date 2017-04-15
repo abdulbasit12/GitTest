@@ -35,27 +35,42 @@ public partial class LawnDetails : System.Web.UI.Page
     }
     protected void Unnamed_Click(object sender, EventArgs e)
     {
-        string d = CheckAvailb.Text;
+        DateTime d = Convert.ToDateTime(CheckAvailb.Text);
         FYPDataContext db = new FYPDataContext();//db.BookingInformations
-        var chkLawnID = (from x in db.LawnOwners
-                         where x.Address.Equals(Session["CheckAvail"].ToString())
-                         select x).FirstOrDefault();
-        int LID = chkLawnID.Id;
-        var checkavail = (from x in db.BookingInformations
-                          where x.Date.Equals(d) && x.LawnID.Equals(LID)
-                          select x).FirstOrDefault();
-        if (checkavail != null)
+        DateTime inn = DateTime.Now.Date.Date;
+        TimeSpan ff = d-inn ;
+        int fffff = ff.Days;
+        if ( fffff < 0)
         {
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('This Date is already taken. Choose Another');", true);
-
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('Don not select old dates');", true);
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('This Date is Availible');", true);
+
+            var chkLawnID = (from x in db.LawnOwners
+                             where x.Address.Equals(Session["CheckAvail"].ToString())
+                             select x).FirstOrDefault();
+            int LID = chkLawnID.Id;
+            var checkavail = (from x in db.BookingInformations
+                              where x.Date.Equals(d) && x.LawnID.Equals(LID)
+                              select x).FirstOrDefault();
+            if (checkavail != null)
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('This Date is already taken. Choose Another');", true);
+
+            }
+            else
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('This Date is Availible');", true);
+            }
         }
     }
     protected void Unnamed_Click1(object sender, EventArgs e)
     {
         Response.Redirect("Booking.aspx");
+    }
+    protected void CheckAvailb_DataBinding(object sender, EventArgs e)
+    {
+        
     }
 }

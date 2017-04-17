@@ -664,7 +664,7 @@ li.drop {
 }
 
 /*Search Filter Css*/
-.Search {
+/*.Search {
     background-color: #b7b7b7;
     padding: 0;
     border: 0;
@@ -689,7 +689,7 @@ li.drop {
     border-radius:4px 4px;
     /*margin: 0;
     padding: 0;
-    vertical-align: baseline;*/
+    vertical-align: baseline;
 }
 
 .filter-right {
@@ -708,13 +708,6 @@ li.drop {
     background: #f3f3f3;
     border:1px solid rgba(134, 134, 134, 0)
 }
-
-/*.filter-right .dropdown:first-child {
-    border-left: none;
-}
-.filter-right .dropdown {
-    border-left: 1px solid #cdcdcd;
-}*/
 
 .dropdown-span {
     overflow: hidden;
@@ -820,9 +813,9 @@ li.drop {
     font-family:Arial;
     font-size:15px;
     font-variant-caps:inherit;
-}
+}*/
 
-#ContentPlaceHolder1_SearchArea{margin-left:-15px;}
+/*#ContentPlaceHolder1_SearchArea{margin-left:-15px;}*/
 
 .cb {
 clear:both;
@@ -852,3 +845,18 @@ font-family:Arial; color:black;
 .carousel-inner .item img{width:100%; min-height:100%; opacity:0.5;}
 
 .seating-images{width:100px; height:100px;}
+
+/*Search Bar Css Start*/
+#main{margin-top:38px;}
+.search{background:#fff; width:100%; height:75px;}
+.search .search-filters .search-bar{float:left; margin-top:20px;}
+.search .search-filters .search-bar .filter-fill .filter-field{display: block; position: absolute; z-index: 100; width: 889px; height: 33px; padding: 5px 0 6px 0; color: #333; text-indent: 8px; font-size: 0.9em; border: none; font-family:Arial; font-size:15px; font-variant-caps:inherit; border:1px solid #e8e8e8; border-radius:5px 0 0 5px;}
+.search .search-filters{width:96%; height:50px; margin:15px auto auto auto;}
+.search .search-filters .filter-right{float:right; margin-top:20px;}
+.search .search-filters .filter-right .filter{display:inline-block; margin:0; padding:0;}
+.search .search-filters .filter-right .filter .dropdown-select{width:auto; height:33px; margin:0; padding:0; right:0; background:#e8e8e8;}
+.search .search-filters .filter-right .search-button{overflow: hidden; float: right; position: relative; width: 45px; height: 33px; margin: 0 0 0 0; border-radius: 0 4px 4px 0; background: #fff; border: 1px solid #6cc0e1;}
+.search .search-filters .filter-right .search-button .search-icon{position: absolute; top: 0; bottom: 0; left: 0; right: 0; width: 24px; height: 24px; margin: auto; background-image: url("search.png"); background-size: 25px 25px;}
+.search .search-filters .filter-right .search-button .button-Search{cursor: pointer; display: block; position: relative; z-index: 100; width: 100%; height: 100%; margin: 0; padding: 0; text-indent: -1000px; border: none; background: transparent;}
+
+/*Search Bar Css End*/

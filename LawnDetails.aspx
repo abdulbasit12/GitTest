@@ -141,7 +141,7 @@
     </div>
     <div id="Calendar">
                 <asp:Label runat="server" CssClass="name" Text="Check Availability"></asp:Label>
-                <asp:TextBox ID="CheckAvailb" runat="server" CssClass="lawndate" TextMode="Date"></asp:TextBox>
+                <asp:TextBox ID="CheckAvailb" runat="server" CssClass="lawndate" TextMode="Date" OnDataBinding="CheckAvailb_DataBinding"></asp:TextBox>
                 <asp:Button runat="server" Text="Check Availability" CssClass="btn1" OnClick="Unnamed_Click" />
                 <asp:Button runat="server" Text="Book Lawn" CssClass="btn1 position" OnClick="Unnamed_Click1" />
             </div>

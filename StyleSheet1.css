@@ -464,7 +464,7 @@ li.drop {
     display: block;
     width: 96%;
     height: 100%;
-    margin-top:150px;
+    margin-top:100px;
 }
 
 /*Search Filter Lawn*/
@@ -663,167 +663,6 @@ li.drop {
     width: 50%;
 }
 
-/*Search Filter Css*/
-.Search {
-    background-color: #b7b7b7;
-    padding: 0;
-    border: 0;
-    vertical-align: baseline;
-    width: 100%;
-    height: auto;
-    margin-top:38px;
-    position:fixed;
-}
-
-.frame {
-    width: 936px;
-    margin: auto;
-}
-
-.filter {
-    padding: 20px;
-}
-
-.fiterbar {
-    background: #fff;
-    border-radius:4px 4px;
-    /*margin: 0;
-    padding: 0;
-    vertical-align: baseline;*/
-}
-
-.filter-right {
-    float: right;
-    height: 33px;
-    border-radius: 0 4px 4px 0;
-    margin: 0;
-    padding: 0;
-}
-
-.dropdown {
-    cursor: pointer;
-    float: left;
-    position: relative;
-    height: 33px;
-    background: #f3f3f3;
-    border:1px solid rgba(134, 134, 134, 0)
-}
-
-/*.filter-right .dropdown:first-child {
-    border-left: none;
-}
-.filter-right .dropdown {
-    border-left: 1px solid #cdcdcd;
-}*/
-
-.dropdown-span {
-    overflow: hidden;
-    width:92px;
-    margin: 0 0 0 0;
-}
-
-.dropdown-icon {
-    float: right;
-    width: 7px;
-    height: 7px;
-    margin: 14px 6px 0 0;
-    background-image: url("downArrow.png");
-    background-size: 7px 7px;
-}
-
-.dropdown-label {
-    display: block;
-    margin: 0 20px 0 7px;
-    color: #888;
-    white-space: nowrap;
-    font-size: 12px;
-    line-height: 33px;
-}
-
-.dropdown-select {
-    display: block;
-    cursor: pointer;
-    outline: none;
-    visibility: visible;
-    position: absolute;
-    top: -1px;
-    left: 0;
-    width: auto;
-    height: 33px;
-    margin: 0;
-    padding: 0;
-    opacity: 1;
-    z-index:99;
-    background-color:#f6f6f6;
-}
-
-.search-button {
-    overflow: hidden;
-    float: right;
-    position: relative;
-    width: 45px;
-    height: 33px;
-    margin: 0 0 0 0;
-    border-radius: 0 4px 4px 0;
-    background: #fff;
-    border: 1px solid #6cc0e1;
-}
-
-.search-icon {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 24px;
-    height: 24px;
-    margin: auto;
-    background-image: url("search.png");
-    background-size: 25px 25px;
-}
-
-.button-Search {
-    cursor: pointer;
-    display: block;
-    position: relative;
-    z-index: 100;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    text-indent: -1000px;
-    border: none;
-    background: transparent;
-}
-
-.filter-fill {
-    overflow: hidden;
-    position: relative;
-    height: 33px;
-    border-radius: 4px 0 0 4px;
-    border: 1px solid #ccc;
-    border-right: none;
-    margin:0 -14px;
-}
-
-.filter-field {
-    display: block;
-    position: absolute;
-    z-index: 100;
-    width: 100%;
-    height: 31px;
-    padding: 5px 0 6px 0;
-    color: #333;
-    text-indent: 8px;
-    font-size: 0.9em;
-    border: none;
-    font-family:Arial;
-    font-size:15px;
-    font-variant-caps:inherit;
-}
-
-#ContentPlaceHolder1_SearchArea{margin-left:-15px;}
-
 .cb {
 clear:both;
 float:none;
@@ -852,3 +691,18 @@ font-family:Arial; color:black;
 .carousel-inner .item img{width:100%; min-height:100%; opacity:0.5;}
 
 .seating-images{width:100px; height:100px;}
+
+/*Search Bar Css Start*/
+#main{margin-top:38px;}
+.search{background:rgba(255, 255, 255, 0.64); width:100%; height:75px; position:fixed;}
+.search .search-filters .search-bar{float:left; margin-top:20px;}
+.search .search-filters .search-bar .filter-fill .filter-field{display: block; position: absolute; z-index: 100; width: 896px; height: 33px; padding: 5px 0 6px 0; color: #333; text-indent: 8px; font-size: 0.9em; border: none; font-family:Arial; font-size:15px; font-variant-caps:inherit; border:1px solid #e8e8e8; border-radius:5px 0 0 5px;}
+.search .search-filters{width:96%; height:50px; margin:auto;}
+.search .search-filters .filter-right{float:right; margin-top:20px;}
+.search .search-filters .filter-right .filter{display:inline-block; margin:0; padding:0; float:left!important;}
+.search .search-filters .filter-right .filter .dropdown-select{width:auto; height:33px; margin:0; padding:0; right:0; background:rgba(232, 232, 232, 0.41);}
+.search .search-filters .filter-right .search-button{overflow: hidden; float: right; position: relative; width: 45px; height: 33px; margin: 0 0 0 0; border-radius: 0 4px 4px 0; background: #fff; border: 1px solid #6cc0e1;}
+.search .search-filters .filter-right .search-button .search-icon{position: absolute; top: 0; bottom: 0; left: 0; right: 0; width: 24px; height: 24px; margin: auto; background-image: url("search.png"); background-size: 25px 25px;}
+.search .search-filters .filter-right .search-button .button-Search{cursor: pointer; display: block; position: relative; z-index: 100; width: 100%; height: 100%; margin: 0; padding: 0; text-indent: -1000px; border: none; background: transparent;}
+
+/*Search Bar Css End*/

@@ -35,7 +35,7 @@
 
         #detail1 {
             width: 50%;
-            margin:25px auto auto 215px;
+            margin: 25px auto auto 215px;
         }
 
         .dataimg {
@@ -54,7 +54,7 @@
             height: 110px;
             width: 140px;
             left: 5%;
-            margin-top:22px;
+            margin-top: 22px;
         }
 
         #btn_avlble {
@@ -69,7 +69,7 @@
             width: 20%;
             right: 5%;
             top: 0%;
-            margin-top:30px;
+            margin-top: 30px;
         }
 
         .btn_avlble {
@@ -84,51 +84,53 @@
         #info {
             vertical-align: top;
         }
-        #detail1 tr td span{font-size:17px;}
+
+        #detail1 tr td span {
+            font-size: 17px;
+        }
     </style>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div id="main">
         <div class="search">
-        <div class="search-filters">
-            <div class="search-bar">
-                <div class="filter-fill">
+            <div class="search-filters">
+                <div class="search-bar">
                     <asp:TextBox runat="server" ID="SearchAreaText" class="filter-field" placeholder="Search Lawn"></asp:TextBox>
                 </div>
-            </div>
-            <div class="filter-right">
-            <div class="filter">
-                <select id="SearchType" class="dropdown-select" runat="server">
-                    <option value="0">All Types</option>
-                    <option value="1">Banquets</option>
-                    <option value="2">Lawns</option>
-                </select>
-            </div>
-            <div class="filter">
-                <select id="SearchArea" class="dropdown-select" runat="server">
-                    <option value="0">All Areas</option>
-                    <option value="1">Jamshed Road</option>
-                    <option value="2">Korangi</option>
-                    <option value="3">Gulistan-e-Johar</option>
-                    <option value="4">Defence</option>
-                    <option value="5">Gulshan-e-Iqbal</option>
-                </select>
-            </div>
-            <div class="filter">
-                <select id="SearchCapacity" class="dropdown-select" runat="server">
-                    <option value="0">All Capacities</option>
-                    <option value="1">50-100</option>
-                    <option value="2">100-200</option>
-                    <option value="3">200-300</option>
-                    <option value="4">300-400</option>
-                    <option value="5">400-500</option>
-                    <option value="5">500+</option>
-                </select>
-            </div>
-                <div class="search-button">
-                    <span class="search-icon"></span>
-                    <asp:Button runat="server" CssClass="button-Search" Text="Search" />
+                <div class="filter-right">
+                    <div class="filter">
+                        <select id="SearchType" class="dropdown-select" runat="server">
+                            <option value="0">All Types</option>
+                            <option value="1">Banquets</option>
+                            <option value="2">Lawns</option>
+                        </select>
+                    </div>
+                    <div class="filter">
+                        <select id="SearchArea" class="dropdown-select" runat="server">
+                            <option value="0">All Areas</option>
+                            <option value="1">Jamshed Road</option>
+                            <option value="2">Korangi</option>
+                            <option value="3">Gulistan-e-Johar</option>
+                            <option value="4">Defence</option>
+                            <option value="5">Gulshan-e-Iqbal</option>
+                        </select>
+                    </div>
+                    <div class="filter">
+                        <select id="SearchCapacity" class="dropdown-select" runat="server">
+                            <option value="0">All Capacities</option>
+                            <option value="1">50-100</option>
+                            <option value="2">100-200</option>
+                            <option value="3">200-300</option>
+                            <option value="4">300-400</option>
+                            <option value="5">400-500</option>
+                            <option value="5">500+</option>
+                        </select>
+                    </div>
+                    <div class="search-button">
+                        <span class="search-icon"></span>
+                        <asp:Button runat="server" CssClass="button-Search" Text="Search" />
+                    </div>
                 </div>
             </div>
         </div>

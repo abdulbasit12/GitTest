@@ -210,17 +210,17 @@
                 <table class="detail-table">
                     <tr>
                         <td>
-                            <asp:RadioButton ID="RadioButton0" runat="server" name="radio" checked/>
+                            <input type="radio" ID="RadioButton0" runat="server" name="radio" checked/>
                             <span>
                                 <img src="Seating/img1.png" class="seating-images" /></span>
                         </td>
                         <td>
-                            <asp:RadioButton ID="RadioButton1" runat="server" name="radio"/>
+                            <input type="radio" ID="RadioButton1" runat="server" name="radio"/>
                             <span>
                                 <img src="Seating/img2.png" class="seating-images" /></span>
                         </td>
                         <td>
-                            <asp:RadioButton ID="RadioButton2" runat="server" name="radio"/>
+                            <input type="radio" ID="RadioButton2" runat="server" name="radio"/>
                             <span>
                                 <img src="Seating/img3.png" class="seating-images" /></span>
                         </td>

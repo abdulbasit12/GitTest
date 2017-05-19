@@ -126,7 +126,10 @@
             background: #fff;
             width: 96%;
             }
-            .seating-arrangment .lawn-details-SA .detail-table tbody{display:table; width:100%;}
+            .seating-arrangment{margin-bottom:25px;}
+            .seating-arrangment .lawn-details-SA .detail-table-SA tbody{display:table; width:100%;}
+            .seating-arrangment .lawn-details-SA .detail-table-SA tbody tr td{padding:15px 27px;}
+            .seating-arrangment .lawn-details-SA .detail-table-SA tbody tr td span{display:inline-block;}
             .more-detail .lawn-details .detail-table tbody{display:table; width:100%;}
     </style>    
 </asp:Content>
@@ -246,6 +249,11 @@
                             <input type="radio" ID="RadioButton5" runat="server" name="radio"/>
                             <span>
                                 <img src="Seating/img6.png" class="seating-images" /></span>
+                        </td>
+                        <td>
+                            <input type="radio" ID="RadioButton6" runat="server" name="radio"/>
+                            <span>
+                                <img src="Seating/img7.png" class="seating-images" /></span>
                         </td>
                     </tr>
                 </table>

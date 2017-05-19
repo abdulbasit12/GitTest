@@ -618,12 +618,12 @@ li.drop {
 
 #Calendar {
     display:block;
-    background-color: #b7b7b7;
-    background-color: lightgray;
+    background-color: #fff;
     width: 22%;
     float:right;
     height: 250px;
     margin:20px 55px auto auto;
+    box-shadow:0 0 10px 0 #767676;
 }
 
 .lawndate {

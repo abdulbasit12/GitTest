@@ -119,18 +119,19 @@
                 .detail-table tbody tr td {
                     padding: 10px;
             }
-            .more-detail{display:inline-block; width:49%;}
+            .more-detail{display:inline-block; width:auto;}
             .seating-arrangment{display:block;}
             .lawn-details-SA {
             margin: 10px auto 0 auto;
             background: #fff;
             width: 96%;
             }
+            .lawn-info{display:block;}
             .seating-arrangment{margin-bottom:25px;}
             .seating-arrangment .lawn-details-SA .detail-table-SA tbody{display:table; width:100%;}
             .seating-arrangment .lawn-details-SA .detail-table-SA tbody tr td{padding:15px 27px;}
             .seating-arrangment .lawn-details-SA .detail-table-SA tbody tr td span{display:inline-block;}
-            .more-detail .lawn-details .detail-table tbody{display:table; width:100%;}
+            .lawn-info .more-detail .lawn-details .detail-table tbody{display:table; width:100%;}
     </style>    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -173,46 +174,48 @@
             <asp:Button runat="server" Text="Check Availability" CssClass="btn1" OnClick="Unnamed_Click" />
             <asp:Button runat="server" Text="Book Lawn" CssClass="btn1 position" OnClick="Unnamed_Click1" />
         </div>
-        <div class="more-detail">
-            <h3 class="h-details"><span class="active">More Details</span></h3>
-            <div class="lawn-details">
-                <table class="detail-table">
-                    <tr>
-                        <td>Lawn Rent</td>
-                        <td>
-                            <asp:Label runat="server" Text="Lawn Rent" ID="lblrent"></asp:Label></td>
-                    </tr>
-                    <tr>
-                        <td>Seating Capacity</td>
-                        <td>
-                            <asp:Label runat="server" Text="Lawn Capacity" ID="lblcapacity"></asp:Label></td>
-                    </tr>
-                    <tr>
-                        <td>Air Condition</td>
-                        <td>Centerlized</td>
-                    </tr>
-                </table>
+        <div class="lawn-info">
+            <div class="more-detail">
+                <h3 class="h-details"><span class="active">More Details</span></h3>
+                <div class="lawn-details">
+                    <table class="detail-table">
+                        <tr>
+                            <td>Lawn Rent</td>
+                            <td>
+                                <asp:Label runat="server" Text="Lawn Rent" ID="lblrent"></asp:Label></td>
+                        </tr>
+                        <tr>
+                            <td>Seating Capacity</td>
+                            <td>
+                                <asp:Label runat="server" Text="Lawn Capacity" ID="lblcapacity"></asp:Label></td>
+                        </tr>
+                        <tr>
+                            <td>Air Condition</td>
+                            <td>Centerlized</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
-        </div>
-        <div class="more-detail">
-            <h3 class="h-details"><span class="active">More Details</span></h3>
-            <div class="lawn-details">
-                <table class="detail-table">
-                    <tr>
-                        <td>Bride Room</td>
-                        <td>
-                            <asp:Label runat="server" Text="Yes"></asp:Label></td>
-                    </tr>
-                    <tr>
-                        <td>Playing Area</td>
-                        <td>
-                            <asp:Label runat="server" Text="Yes"></asp:Label></td>
-                    </tr>
-                    <tr>
-                        <td>Washroom</td>
-                        <td>Yes</td>
-                    </tr>
-                </table>
+            <div class="more-detail">
+                <h3 class="h-details"><span class="active">More Details</span></h3>
+                <div class="lawn-details">
+                    <table class="detail-table">
+                        <tr>
+                            <td>Bride Room</td>
+                            <td>
+                                <asp:Label runat="server" Text="Yes"></asp:Label></td>
+                        </tr>
+                        <tr>
+                            <td>Playing Area</td>
+                            <td>
+                                <asp:Label runat="server" Text="Yes"></asp:Label></td>
+                        </tr>
+                        <tr>
+                            <td>Washroom</td>
+                            <td>Yes</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
         <div class="seating-arrangment">
@@ -236,7 +239,7 @@
                                 <img src="Seating/img3.png" class="seating-images" /></span>
                         </td>
                         <td>
-                            <input type="radio" ID="RadioButton3" runat="server" name="radio" checked/>
+                            <input type="radio" ID="RadioButton3" runat="server" name="radio"/>
                             <span>
                                 <img src="Seating/img4.png" class="seating-images" /></span>
                         </td>

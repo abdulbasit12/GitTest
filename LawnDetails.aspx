@@ -58,13 +58,13 @@
         }
 
         .lawn-details {
-            margin: 10px auto 0 24px;
+            margin: 10px auto 0 0;
             background: #fff;
-            width: 595px;
+            display:block;
         }
 
         .h-details {
-            margin: 20px auto 5px 24px;
+            margin: 20px auto 5px 0;
             width: 450px;
             border-bottom: 1px solid #b7b7b7;
         }
@@ -119,17 +119,20 @@
                 .detail-table tbody tr td {
                     padding: 10px;
             }
-            .more-detail{display:inline-block; width:auto;}
-            .seating-arrangment{display:block;}
+            .more-detail{display:inline-block; width:49%;}
             .lawn-details-SA {
-            margin: 10px auto 0 auto;
+            margin: 10px 0 0 0;
             background: #fff;
-            width: 96%;
+            display:block;
             }
-            .lawn-info{display:block;}
-            .seating-arrangment{margin-bottom:25px;}
-            .seating-arrangment .lawn-details-SA .detail-table-SA tbody{display:table; width:100%;}
-            .seating-arrangment .lawn-details-SA .detail-table-SA tbody tr td{padding:15px 27px;}
+            .lawn-info{display:block; width:95%; margin:0 auto;}
+            .lawn-info .more-detail:nth-child(2){float:right;}
+            .seating-arrangment{display:block; width:95%; margin:0 auto 20px auto;}
+            .seating-arrangment .lawn-details-SA .detail-table-SA{display: block;}
+            .seating-arrangment .lawn-details-SA .detail-table-SA tbody{display:block;}
+            .seating-arrangment .lawn-details-SA .detail-table-SA tbody tr{display:block;}
+            .seating-arrangment .lawn-details-SA .detail-table-SA tbody tr td{padding:20px 15px 20px 0; width:14%;}
+            .seating-arrangment .lawn-details-SA .detail-table-SA tbody tr td input{margin-left:4px;}
             .seating-arrangment .lawn-details-SA .detail-table-SA tbody tr td span{display:inline-block;}
             .lawn-info .more-detail .lawn-details .detail-table tbody{display:table; width:100%;}
     </style>    

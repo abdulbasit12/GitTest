@@ -125,13 +125,14 @@
             background: #fff;
             display:block;
             }
-            .lawn-info{display:block; width:95%; margin:0 auto;}
+            .lawn-info{display:block; width:96%; margin:0 auto;}
             .lawn-info .more-detail:nth-child(2){float:right;}
-            .seating-arrangment{display:block; width:95%; margin:0 auto 20px auto;}
+            .seating-arrangment{display:block; width:96%; margin:0 auto 20px auto;}
             .seating-arrangment .lawn-details-SA .detail-table-SA{display: block;}
             .seating-arrangment .lawn-details-SA .detail-table-SA tbody{display:block;}
             .seating-arrangment .lawn-details-SA .detail-table-SA tbody tr{display:block;}
-            .seating-arrangment .lawn-details-SA .detail-table-SA tbody tr td{padding:20px 15px 20px 0; width:14%;}
+            .seating-arrangment .lawn-details-SA .detail-table-SA tbody tr td{padding:20px 15px 20px 0; width:14%; display:inline-block;}
+            .seating-arrangment .lawn-details-SA .detail-table-SA tbody tr td:first-child{margin-left:3px;}
             .seating-arrangment .lawn-details-SA .detail-table-SA tbody tr td input{margin-left:4px;}
             .seating-arrangment .lawn-details-SA .detail-table-SA tbody tr td span{display:inline-block;}
             .lawn-info .more-detail .lawn-details .detail-table tbody{display:table; width:100%;}

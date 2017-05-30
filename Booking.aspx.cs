@@ -42,9 +42,7 @@ public partial class Booking : System.Web.UI.Page
 
               Session["CurrentURL"] =""+  HttpContext.Current.Request.Url.AbsolutePath+"";
               string ddddd = HttpContext.Current.Request.Url.AbsolutePath + HttpContext.Current.Request.Url.AbsolutePath;
-              ViewState["ReturnUrl"] = Request.QueryString["ReturnUrl"];
-              string Rurl = Request.QueryString["ReturnUrl"];
-
+              
                 // Response.Redirect(Session["CurrentURL"].ToString());
                // Server.Transfer("UserSignIn.aspx");
                 Response.Redirect("UserSignIn.aspx");

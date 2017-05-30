@@ -35,7 +35,7 @@
 
         #detail1 {
             width: 50%;
-            margin:25px auto auto 215px;
+            margin: 25px auto auto 215px;
         }
 
         .dataimg {
@@ -54,7 +54,7 @@
             height: 110px;
             width: 140px;
             left: 5%;
-            margin-top:22px;
+            margin-top: 22px;
         }
 
         #btn_avlble {
@@ -69,7 +69,7 @@
             width: 20%;
             right: 5%;
             top: 0%;
-            margin-top:30px;
+            margin-top: 30px;
         }
 
         .btn_avlble {
@@ -84,101 +84,56 @@
         #info {
             vertical-align: top;
         }
-        #detail1 tr td span{font-size:17px;}
+
+        #detail1 tr td span {
+            font-size: 17px;
+        }
     </style>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div id="main">
-        <div class="Search">
-            <div class="frame">
-                <div class="filter">
-                    <div class="fiterbar">
-                        <div class="filter-right">
-                            <div class="dropdown">
-                                <div class="dropdown-span">
-                                    <span class="dropdown-icon"></span>
-                                    <div class="dropdown-label">All Types</div>
-                                </div>
-                                <select id="SearchType" class="dropdown-select" runat="server">
-                                    <option value="0">All Types</option>
-                                    <option value="1">Banquets</option>
-                                    <option value="2">Lawns</option>
-                                </select>
-                            </div>
-                            <div class="dropdown">
-                                <div class="dropdown-span">
-                                    <span class="dropdown-icon"></span>
-                                    <div class="dropdown-label">All Areas</div>
-                                </div>
-                                <select id="SearchArea" class="dropdown-select" runat="server">
-                                    <option value="0">All Areas</option>
-                                    <option value="1">Jamshed Road</option>
-                                    <option value="2">Korangi</option>
-                                    <option value="3">Gulistan-e-Johar</option>
-                                    <option value="4">Defence</option>
-                                    <option value="5">Gulshan-e-Iqbal</option>
-                                </select>
-                            </div>
-                            <div class="dropdown">
-                                <div class="dropdown-span">
-                                    <span class="dropdown-icon"></span>
-                                    <div class="dropdown-label">All Capacities</div>
-                                </div>
-                                 <asp:TextBox runat="server" ID="Capacity" class="filter-field" placeholder="SearchCapacity" TextMode="Number"></asp:TextBox>
-                              
-                                <%--<select id="SearchCapacity" class="dropdown-select" runat="server">
-                                    <option value="0">All Capacities</option>
-                                    <option value="1">50-100</option>
-                                    <option value="2">100-200</option>
-                                    <option value="3">200-300</option>
-                                    <option value="4">300-400</option>
-                                    <option value="5">400-500</option>
-                                    <option value="5">500+</option>
-                                </select>--%>
-                            </div>
-                            <div class="search-button">
-                                <span class="search-icon"></span>
-                                <asp:Button runat="server" CssClass="button-Search" Text="Search" OnClick="Unnamed2_Click1" />
-                            </div>
-                            <div class="cb"></div>
-                        </div>
-                        <div class="filter-fill">
-                            <asp:TextBox runat="server" ID="SearchAreaText" class="filter-field" placeholder="Search Lawn"></asp:TextBox>
-                        </div>
+        <div class="search">
+            <div class="search-filters">
+                <div class="search-bar">
+                    <asp:TextBox runat="server" ID="SearchAreaText" class="filter-field" placeholder="Search Lawn"></asp:TextBox>
+                </div>
+                <div class="filter-right">
+                    <div class="filter">
+                        <select id="SearchType" class="dropdown-select" runat="server">
+                            <option value="0">All Types</option>
+                            <option value="1">Banquets</option>
+                            <option value="2">Lawns</option>
+                        </select>
+                    </div>
+                    <div class="filter">
+                        <select id="SearchArea" class="dropdown-select" runat="server">
+                            <option value="0">All Areas</option>
+                            <option value="1">Jamshed Road</option>
+                            <option value="2">Korangi</option>
+                            <option value="3">Gulistan-e-Johar</option>
+                            <option value="4">Defence</option>
+                            <option value="5">Gulshan-e-Iqbal</option>
+                        </select>
+                    </div>
+                    <div class="filter">
+                        <select id="SearchCapacity" class="dropdown-select" runat="server">
+                            <option value="0">All Capacities</option>
+                            <option value="1">50-100</option>
+                            <option value="2">100-200</option>
+                            <option value="3">200-300</option>
+                            <option value="4">300-400</option>
+                            <option value="5">400-500</option>
+                            <option value="5">500+</option>
+                        </select>
+                    </div>
+                    <div class="search-button">
+                        <span class="search-icon"></span>
+                        <asp:Button runat="server" CssClass="button-Search" Text="Search" />
                     </div>
                 </div>
             </div>
         </div>
-        <%--            <div id="searchfilterL">
-                <div id="search-areaL">All Areas</div>
-                <div id="drop-search-areaL">
-                    <div class="searchbar">
-                        <asp:TextBox ID="SearchArea" CssClass="searchtext" runat="server" onkeyup="myFunction()"></asp:TextBox>
-                    </div>
-                    <ul id="myUL">
-                        <li><a href="#">Defence</a></li>
-                        <li><a href="#">Korangi</a></li>
-                        <li><a href="#">Nazimabad</a></li>
-                        <li><a href="#">Jamshed Road</a></li>
-                        <li><a href="#">Gulistan e Johar</a></li>
-                        <li><a href="#">Water Pump</a></li>
-                        <li><a href="#">Saddar</a></li>
-                    </ul>
-                </div>
-                <div id="search-capacityL">All Capacities</div>
-                <div id="drop-search-capactiyL">
-                    <div class="searchbar">
-                        <asp:TextBox CssClass="searchtext" runat="server" ID="SearchCapacity"></asp:TextBox>
-                    </div>
-                    <ul class="allarea">
-                        <li>All Capacities</li>
-                    </ul>
-                </div>
-                <div id="search-buttonL">
-                    <asp:Button runat="server" class="btn btn-primary btn-block" Text="Search" OnClick="Unnamed2_Click1"></asp:Button>
-                </div>
-            </div>--%>
     </div>
     <div id="datagrid">
 

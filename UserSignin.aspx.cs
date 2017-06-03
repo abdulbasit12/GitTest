@@ -35,7 +35,8 @@ public partial class UserSignin : System.Web.UI.Page
             }
             else if (Session["CurrentURL"] != null)
             {
-
+                Response.Redirect(Request.QueryString["ReturnUrl"].ToString());
+                Response.Redirect("index.aspx");
                 Response.Redirect(Session["CurrentURL"].ToString());
             
             

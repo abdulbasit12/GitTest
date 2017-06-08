@@ -35,10 +35,11 @@ public partial class UserSignin : System.Web.UI.Page
             }
             else if (Session["CurrentURL"] != null)
             {
-
+                Response.Redirect(Request.QueryString["ReturnUrl"].ToString());
+                Response.Redirect("index.aspx");
                 Response.Redirect(Session["CurrentURL"].ToString());
-            
-            
+
+
             }
             else if (userresult.User_Role != "Vendor")
             {
@@ -56,7 +57,7 @@ public partial class UserSignin : System.Web.UI.Page
                 Response.Redirect("VenderHome.aspx");
 
             }
-            
+
         }
     }
 }

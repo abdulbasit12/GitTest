@@ -19,9 +19,9 @@ public partial class _Default : System.Web.UI.Page
             User u = new User();
             AllUser all = new AllUser();
             var checkuser = (from x in db.AllUsers
-                              where x.Email_ID.Equals(txtEmail.Text) 
-                              select x).FirstOrDefault();
-            
+                             where x.Email_ID.Equals(txtEmail.Text)
+                             select x).FirstOrDefault();
+
 
             if (checkuser == null)
             {
@@ -32,7 +32,7 @@ public partial class _Default : System.Web.UI.Page
                 //u.Password = txtPassword.Text;
                 all.Password = txtPassword.Text;
                 all.Email_ID = txtEmail.Text;
-                all.User_Role="User";
+                all.User_Role = "User";
                 db.AllUsers.InsertOnSubmit(all);
 
                 db.Users.InsertOnSubmit(u);
@@ -40,20 +40,21 @@ public partial class _Default : System.Web.UI.Page
                 Response.Write("Registration Scuessfully Complete");
                 txtPhoneNumber.Text = txtEmail.Text = txtName.Text = "";
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('Registration Completed');", true);
-               
+
                 //User u1 = new User();
                 //var checkuser2 = (from x in db.Users
                 //                 where x.Email.Equals(txtEmail.Text)
                 //                 select x).FirstOrDefault();
                 //Session["BookingUser"] = checkuser2.Id;
                 Response.Redirect("Lawns.aspx");
-               
+
             }
 
-            else {
-                User_Error.Visible=true;
+            else
+            {
+                User_Error.Visible = true;
                 txtPhoneNumber.Text = txtEmail.Text = txtName.Text = "";
-            
+
             }
 
         }

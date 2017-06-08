@@ -117,6 +117,9 @@
                         </select>
                     </div>
                     <div class="filter">
+                        <asp:TextBox runat="server" ID="Capacity" class="search-capacity" placeholder="Capacity" TextMode="Number"></asp:TextBox>
+                    </div>
+                    <%--<div class="filter">
                         <select id="SearchCapacity" class="dropdown-select" runat="server">
                             <option value="0">All Capacities</option>
                             <option value="1">50-100</option>
@@ -126,7 +129,7 @@
                             <option value="5">400-500</option>
                             <option value="5">500+</option>
                         </select>
-                    </div>
+                    </div>--%>
                     <div class="search-button">
                         <span class="search-icon"></span>
                         <asp:Button runat="server" CssClass="button-Search" Text="Search" />

@@ -163,7 +163,7 @@ li {
     width: 30%;
     /*left: 35%;
     top: 32%;*/
-    background-color: rgba(0, 0, 0, 0.22);
+    background-color: rgba(255, 255, 255, 0.85);
     margin: 110px auto;
     border-radius: 10px 10px;
     padding:15px 0;
@@ -676,6 +676,7 @@ font-family:Arial; color:black;
 
 
 .user-div{width:100%; background-color:#444; height:auto; position:fixed; top:0; z-index:999;}
+.user-div .toggle{color:#fff;}
 .user-div h3{display:inline-block; margin:14px 0 0 4px; position:absolute;}
 .toggle{margin:5px 0 5px 20px; padding:5px; border-radius:5px; box-sizing: border-box; color:#fff; font-size:18px!important;}
 .user-div .userdiv-right{float:right; margin-right:30px;}
@@ -694,15 +695,19 @@ font-family:Arial; color:black;
 
 /*Search Bar Css Start*/
 #main{margin-top:38px;}
-.search{background:rgba(255, 255, 255, 0.64); width:100%; height:75px; position:fixed;}
+.search{background:rgba(255, 255, 255, 0.85); width:100%; height:75px; position:fixed;}
 .search .search-filters .search-bar{display: table-cell;padding-top: 20px;position: relative;vertical-align: top;}
 .search .search-filters{width: 96%;height:50px;margin:auto;display: table;}
 .search .search-filters .filter-right{display: table-cell;padding-top: 20px;vertical-align: top;width: 320px;}
 .search .search-filters .search-bar .filter-field{display:block; z-index:100; height:33px; padding: 5px 0 6px 0; color: #333; text-indent: 8px; font-size: 0.9em; border: none; font-family:Arial; font-size:15px; font-variant-caps:inherit; border:1px solid #e8e8e8; border-radius:5px 0 0 5px; width:100%;}
 .search .search-filters .filter-right .filter{display:inline-block; margin:0; padding:0; float:left!important;}
+.search .search-filters .filter-right .filter .filter-capacity{height:33px; width:105px; display:inline-block; padding-left:8px;}
 .search .search-filters .filter-right .filter .dropdown-select{width:auto; height:33px; margin:0; padding:0; right:0; background:rgba(232, 232, 232, 0.41);}
 .search .search-filters .filter-right .filter .search-capacity{width:96px; height:33px; margin:0; padding:0; right:0; padding-left:8px;}
 .search .search-filters .filter-right .search-button{overflow: hidden;/* float: right; */position: relative;width: 45px;height: 33px;margin: 0 0 0 0;border-radius: 0 4px 4px 0;background: #fff;border: 1px solid #6cc0e1;}
 .search .search-filters .filter-right .search-button .search-icon{position: absolute; top: 0; bottom: 0; left: 0; right: 0; width: 24px; height: 24px; margin: auto; background-image: url("search.png"); background-size: 25px 25px;}
 .search .search-filters .filter-right .search-button .button-Search{cursor: pointer; display: block; position: relative; z-index: 100; width: 100%; height: 100%; margin: 0; padding: 0; text-indent: -1000px; border: none; background: transparent;}
 /*Search Bar Css End*/
+
+.glyphicon{color:#000;}
+.fa{color:#000;}

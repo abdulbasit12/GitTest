@@ -17,7 +17,22 @@ public partial class Lawns : System.Web.UI.Page
         {
             FYPDataContext db = new FYPDataContext();
             Image img = new Image();
+            var area = (from x in db.LawnOwners
+                        where x.Area != null
+                        orderby x.Area
+                        select new { x.Area }).Distinct();
 
+            DropDownList2.DataSource = area;
+            DropDownList2.DataTextField = "Area";
+            DropDownList2.DataValueField = "Area";
+            DropDownList2.DataBind();
+            DropDownList1.Items.Insert(0, "Type");
+            DropDownList1.Items.Insert(1, "ALL");
+            DropDownList1.Items.Insert(2, "Banquet");
+            DropDownList1.Items.Insert(3, "Lawn");
+            DropDownList2.Items.Insert(0, "Area");
+            DropDownList2.Items.Insert(1, "ALL");
+            //                TownDropDown.Items.Insert(0, "ALL");
             var Laww = from x in db.LawnOwners
                            // where x.Area.Equals(SearchArea.Text)
                        select x.Id;
@@ -34,7 +49,7 @@ public partial class Lawns : System.Web.UI.Page
             //               select x.Id;
 
             //}
-            String dd = SearchArea.DataValueField;
+            String dd = DropDownList2.SelectedValue; ;
 
             var CoverImage = from x in db.Images
                              where x.Name.Equals("Cover")
@@ -72,7 +87,7 @@ public partial class Lawns : System.Web.UI.Page
         {
 
             var Laww = from x in db.LawnOwners
-                       where x.Area.Equals(SearchArea.Value) //|| x.SeatingCapacity.Equals(Convert.ToString( SearchCapacity.Value))
+                       where x.Area.Equals(DropDownList2.SelectedValue) //|| x.SeatingCapacity.Equals(Convert.ToString( SearchCapacity.Value))
                        select x.Id;
 
 
@@ -110,7 +125,23 @@ public partial class Lawns : System.Web.UI.Page
         FYPDataContext db = new FYPDataContext();
         Image img = new Image();
         string text = Capacity.Text;
+        string Type = string.Empty;
+        string area = string.Empty;
+        int capacity = 0;
 
+        if (DropDownList2.SelectedIndex != 0)
+        {
+            area = DropDownList2.SelectedValue.ToString();
+        }
+
+        if (DropDownList1.SelectedIndex != 0)
+        {
+            Type = DropDownList1.SelectedValue;
+        }
+        if (Capacity.Text != "")
+        {
+            capacity = Convert.ToInt32(Capacity.Text);
+        }
         if (Capacity.Text != "" && Convert.ToInt32((Capacity.Text)) <= 0)
         {
             ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('Please select valid options');", true);
@@ -118,7 +149,7 @@ public partial class Lawns : System.Web.UI.Page
         else
         {
             var Laww = from x in db.LawnOwners
-                       where x.LawnName.Contains(SearchAreaText.Text) || Convert.ToInt32(x.SeatingCapacity) >= Convert.ToInt32(Capacity.Text)
+                       where x.LawnName.Contains(SearchAreaText.Text) && Convert.ToInt32(x.SeatingCapacity) >= capacity && x.LawnName.Contains(Type) && x.Area.Contains(area)
                        select x.Id;
 
 

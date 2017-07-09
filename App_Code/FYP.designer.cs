@@ -41,6 +41,9 @@ public partial class FYPDataContext : System.Data.Linq.DataContext
   partial void InsertAllUser(AllUser instance);
   partial void UpdateAllUser(AllUser instance);
   partial void DeleteAllUser(AllUser instance);
+  partial void InsertVerifyingCode(VerifyingCode instance);
+  partial void UpdateVerifyingCode(VerifyingCode instance);
+  partial void DeleteVerifyingCode(VerifyingCode instance);
   partial void InsertUser(User instance);
   partial void UpdateUser(User instance);
   partial void DeleteUser(User instance);
@@ -105,6 +108,14 @@ public partial class FYPDataContext : System.Data.Linq.DataContext
 		get
 		{
 			return this.GetTable<AllUser>();
+		}
+	}
+	
+	public System.Data.Linq.Table<VerifyingCode> VerifyingCodes
+	{
+		get
+		{
+			return this.GetTable<VerifyingCode>();
 		}
 	}
 	
@@ -941,6 +952,116 @@ public partial class AllUser : INotifyPropertyChanging, INotifyPropertyChanged
 	}
 }
 
+[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.VerifyingCode")]
+public partial class VerifyingCode : INotifyPropertyChanging, INotifyPropertyChanged
+{
+	
+	private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+	
+	private int _Id;
+	
+	private string _EmailID;
+	
+	private string _Code;
+	
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(int value);
+    partial void OnIdChanged();
+    partial void OnEmailIDChanging(string value);
+    partial void OnEmailIDChanged();
+    partial void OnCodeChanging(string value);
+    partial void OnCodeChanged();
+    #endregion
+	
+	public VerifyingCode()
+	{
+		OnCreated();
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+	public int Id
+	{
+		get
+		{
+			return this._Id;
+		}
+		set
+		{
+			if ((this._Id != value))
+			{
+				this.OnIdChanging(value);
+				this.SendPropertyChanging();
+				this._Id = value;
+				this.SendPropertyChanged("Id");
+				this.OnIdChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmailID", DbType="NVarChar(50)")]
+	public string EmailID
+	{
+		get
+		{
+			return this._EmailID;
+		}
+		set
+		{
+			if ((this._EmailID != value))
+			{
+				this.OnEmailIDChanging(value);
+				this.SendPropertyChanging();
+				this._EmailID = value;
+				this.SendPropertyChanged("EmailID");
+				this.OnEmailIDChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Code", DbType="NVarChar(50)")]
+	public string Code
+	{
+		get
+		{
+			return this._Code;
+		}
+		set
+		{
+			if ((this._Code != value))
+			{
+				this.OnCodeChanging(value);
+				this.SendPropertyChanging();
+				this._Code = value;
+				this.SendPropertyChanged("Code");
+				this.OnCodeChanged();
+			}
+		}
+	}
+	
+	public event PropertyChangingEventHandler PropertyChanging;
+	
+	public event PropertyChangedEventHandler PropertyChanged;
+	
+	protected virtual void SendPropertyChanging()
+	{
+		if ((this.PropertyChanging != null))
+		{
+			this.PropertyChanging(this, emptyChangingEventArgs);
+		}
+	}
+	
+	protected virtual void SendPropertyChanged(String propertyName)
+	{
+		if ((this.PropertyChanged != null))
+		{
+			this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+		}
+	}
+}
+
 [global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[User]")]
 public partial class User : INotifyPropertyChanging, INotifyPropertyChanged
 {
@@ -957,6 +1078,8 @@ public partial class User : INotifyPropertyChanging, INotifyPropertyChanged
 	
 	private string _Password;
 	
+	private string _CNIC;
+	
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -971,6 +1094,8 @@ public partial class User : INotifyPropertyChanging, INotifyPropertyChanged
     partial void OnEmailChanged();
     partial void OnPasswordChanging(string value);
     partial void OnPasswordChanged();
+    partial void OnCNICChanging(string value);
+    partial void OnCNICChanged();
     #endregion
 	
 	public User()
@@ -1074,6 +1199,26 @@ public partial class User : INotifyPropertyChanging, INotifyPropertyChanged
 				this._Password = value;
 				this.SendPropertyChanged("Password");
 				this.OnPasswordChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CNIC", DbType="NVarChar(50)")]
+	public string CNIC
+	{
+		get
+		{
+			return this._CNIC;
+		}
+		set
+		{
+			if ((this._CNIC != value))
+			{
+				this.OnCNICChanging(value);
+				this.SendPropertyChanging();
+				this._CNIC = value;
+				this.SendPropertyChanged("CNIC");
+				this.OnCNICChanged();
 			}
 		}
 	}

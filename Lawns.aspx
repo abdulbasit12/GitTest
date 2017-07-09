@@ -15,29 +15,26 @@
             left: 50%;
             border: none;
         }*/
-
         #Repeater {
             position: relative;
             width: 100%;
             height: 150px;
             /*left: 10%;*/
-            background-color: rgba(0, 188, 212, 0.49);
+            background-color: rgba(0, 188, 212, 0.95);
             border: none;
             top: 0;
-            box-shadow: 5px 5px 2px rgba(120, 109, 109, 0.34);
+            box-shadow:0px 0px 1px 0px #ccc;
         }
-
         .Rimg {
             position: relative;
             height: 100%;
             width: 100%;
         }
-
         #detail1 {
             width: 50%;
             margin: 25px auto auto 215px;
+            color:#000;
         }
-
         .dataimg {
             position: absolute;
             top: 5%;
@@ -46,7 +43,6 @@
             width: 20%;
             left: 5%;
         }
-
         #img {
             position: absolute;
             top: 0%;
@@ -56,12 +52,10 @@
             left: 5%;
             margin-top: 22px;
         }
-
         #btn_avlble {
             position: relative;
             width: 50%;
         }
-
         #tb_btn {
             position: absolute;
             height: auto;
@@ -70,8 +64,8 @@
             right: 5%;
             top: 0%;
             margin-top: 30px;
+            color:#000;
         }
-
         .btn_avlble {
             background-color: #fff;
             width: 100%;
@@ -80,11 +74,9 @@
             height: 30px;
             border: none;
         }
-
         #info {
             vertical-align: top;
         }
-
         #detail1 tr td span {
             font-size: 17px;
         }
@@ -100,36 +92,17 @@
                 </div>
                 <div class="filter-right">
                     <div class="filter">
-                        <select id="SearchType" class="dropdown-select" runat="server">
-                            <option value="0">All Types</option>
-                            <option value="1">Banquets</option>
-                            <option value="2">Lawns</option>
-                        </select>
+                        <asp:DropDownList ID="DropDownList1" runat="server" Class="dropdown-select"></asp:DropDownList>
                     </div>
                     <div class="filter">
-                        <select id="SearchArea" class="dropdown-select" runat="server">
-                            <option value="0">All Areas</option>
-                            <option value="1">Jamshed Road</option>
-                            <option value="2">Korangi</option>
-                            <option value="3">Gulistan-e-Johar</option>
-                            <option value="4">Defence</option>
-                            <option value="5">Gulshan-e-Iqbal</option>
-                        </select>
+                        <asp:DropDownList ID="DropDownList2" runat="server" Class="dropdown-select"></asp:DropDownList>
                     </div>
                     <div class="filter">
-                        <select id="SearchCapacity" class="dropdown-select" runat="server">
-                            <option value="0">All Capacities</option>
-                            <option value="1">50-100</option>
-                            <option value="2">100-200</option>
-                            <option value="3">200-300</option>
-                            <option value="4">300-400</option>
-                            <option value="5">400-500</option>
-                            <option value="5">500+</option>
-                        </select>
+                        <asp:TextBox runat="server" ID="Capacity" class="filter-capacity" placeholder="Capacity" TextMode="Number"></asp:TextBox>
                     </div>
                     <div class="search-button">
                         <span class="search-icon"></span>
-                        <asp:Button runat="server" CssClass="button-Search" Text="Search" />
+                        <asp:Button runat="server" CssClass="button-Search" Text="Search" OnClick="Unnamed2_Click1" />
                     </div>
                 </div>
             </div>
@@ -191,4 +164,3 @@
     </div>
     <div></div>
 </asp:Content>
-

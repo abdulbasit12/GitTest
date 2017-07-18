@@ -15,6 +15,7 @@
             left: 50%;
             border: none;
         }*/
+
         #Repeater {
             position: relative;
             width: 100%;
@@ -25,16 +26,19 @@
             top: 0;
             box-shadow:0px 0px 1px 0px #ccc;
         }
+
         .Rimg {
             position: relative;
             height: 100%;
             width: 100%;
         }
+
         #detail1 {
             width: 50%;
             margin: 25px auto auto 215px;
             color:#000;
         }
+
         .dataimg {
             position: absolute;
             top: 5%;
@@ -43,6 +47,7 @@
             width: 20%;
             left: 5%;
         }
+
         #img {
             position: absolute;
             top: 0%;
@@ -52,10 +57,12 @@
             left: 5%;
             margin-top: 22px;
         }
+
         #btn_avlble {
             position: relative;
             width: 50%;
         }
+
         #tb_btn {
             position: absolute;
             height: auto;
@@ -66,6 +73,7 @@
             margin-top: 30px;
             color:#000;
         }
+
         .btn_avlble {
             background-color: #fff;
             width: 100%;
@@ -74,9 +82,11 @@
             height: 30px;
             border: none;
         }
+
         #info {
             vertical-align: top;
         }
+
         #detail1 tr td span {
             font-size: 17px;
         }
@@ -164,3 +174,4 @@
     </div>
     <div></div>
 </asp:Content>
+

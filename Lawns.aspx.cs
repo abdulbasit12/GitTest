@@ -13,7 +13,6 @@ public partial class Lawns : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        
         if (!IsPostBack)
         {
             FYPDataContext db = new FYPDataContext();
@@ -27,13 +26,15 @@ public partial class Lawns : System.Web.UI.Page
             DropDownList2.DataTextField = "Area";
             DropDownList2.DataValueField = "Area";
             DropDownList2.DataBind();
-            DropDownList1.Items.Insert(0, "ALL");
-            DropDownList1.Items.Insert(1, "Banquet");
-            DropDownList1.Items.Insert(2, "Lawn");
-            DropDownList2.Items.Insert(0, "ALL");
+            DropDownList1.Items.Insert(0, "Type");
+            DropDownList1.Items.Insert(1, "ALL");
+            DropDownList1.Items.Insert(2, "Banquet");
+            DropDownList1.Items.Insert(3, "Lawn");
+            DropDownList2.Items.Insert(0, "Area");
+            DropDownList2.Items.Insert(1, "ALL");
             //                TownDropDown.Items.Insert(0, "ALL");
             var Laww = from x in db.LawnOwners
-                       // where x.Area.Equals(SearchArea.Text)
+                           // where x.Area.Equals(SearchArea.Text)
                        select x.Id;
 
             //if (SearchArea != null)
@@ -58,7 +59,7 @@ public partial class Lawns : System.Web.UI.Page
             var Imggg = (from x in db.Images
                          join y in db.LawnOwners on x.LawnID equals y.Id
                          where Laww.Contains(Convert.ToInt32(x.LawnID)) &&
-                             //where x.Name.Equals(Convert.ToInt32("Cover".ToString()))
+                      //where x.Name.Equals(Convert.ToInt32("Cover".ToString()))
                       CoverImage.Contains(x.Id)
                          select new { x.Uimg, y.LawnName, y.SeatingCapacity, y.Address });
 
@@ -98,7 +99,7 @@ public partial class Lawns : System.Web.UI.Page
             var Imggg = (from x in db.Images
                          join y in db.LawnOwners on x.LawnID equals y.Id
                          where Laww.Contains(Convert.ToInt32(x.LawnID)) &&
-                             //where x.Name.Equals(Convert.ToInt32("Cover".ToString()))
+                      //where x.Name.Equals(Convert.ToInt32("Cover".ToString()))
                       CoverImage.Contains(x.Id)
                          select new { x.Uimg, y.LawnName, y.SeatingCapacity, y.Address });
 
@@ -161,7 +162,7 @@ public partial class Lawns : System.Web.UI.Page
             var Imggg = (from x in db.Images
                          join y in db.LawnOwners on x.LawnID equals y.Id
                          where Laww.Contains(Convert.ToInt32(x.LawnID)) &&
-                             //where x.Name.Equals(Convert.ToInt32("Cover".ToString()))
+                      //where x.Name.Equals(Convert.ToInt32("Cover".ToString()))
                       CoverImage.Contains(x.Id)
                          select new { x.Uimg, y.LawnName, y.SeatingCapacity, y.Address });
 

@@ -25,7 +25,7 @@
         <div id="form">
         <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-            <asp:TextBox required="required" type="text" class="form-control" runat="server" placeholder="Enter Your Name" ID="txtSignInName"></asp:TextBox>
+            <asp:TextBox required="required" type="text" class="form-control" runat="server" placeholder="Enter Email" ID="txtSignInName"></asp:TextBox>
         </div>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtSignInName" EnableClientScript="False" ErrorMessage="Please Valid User Name"></asp:RequiredFieldValidator>
         <div class="input-group">
@@ -33,8 +33,13 @@
             <asp:TextBox required="required" class="form-control" runat="server" TextMode="Password" placeholder="Password" ID="txtpasswordSignIn"></asp:TextBox>
         </div>
         <br />
+            <div class="input-group" id="Code"  runat="server" visible="false">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+            <asp:TextBox required="required" class="form-control" runat="server" TextMode="Password" placeholder="Code" ID="CodePass"></asp:TextBox>
+        </div>
+        <br />
         <div>
-            <asp:Button class="btn btn-primary btn-block" runat="server" Text="SIGN IN" OnClick="Unnamed3_Click" />
+            <asp:Button class="btn btn-primary btn-block" runat="server" Text="SIGN IN"  />
         </div>
     </div>
         </div>

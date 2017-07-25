@@ -39,7 +39,7 @@
         </div>
         <br />
         <div>
-            <asp:Button class="btn btn-primary btn-block" runat="server" Text="SIGN IN" OnClick="Unnamed3_Click" />
+            <asp:Button class="btn btn-primary btn-block" runat="server" Text="SIGN IN"  />
         </div>
     </div>
         </div>

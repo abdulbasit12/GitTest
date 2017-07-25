@@ -16,7 +16,7 @@ public partial class UserSignin : System.Web.UI.Page
 
         }
     }
-    protected void Unnamed3_Click(object sender, EventArgs e)
+    /*protected void Unnamed3_Click(object sender, EventArgs e)
     {
         if (Page.IsValid)
         {
@@ -76,7 +76,7 @@ public partial class UserSignin : System.Web.UI.Page
             }
             
         }
-    }
+    }*/
 }
 
 

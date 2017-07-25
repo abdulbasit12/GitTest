@@ -2,7 +2,7 @@
     background-image: url(Back.jpg);
     background-size: cover;
     background-attachment: fixed;
-    font-family: myfont!important;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 @font-face {
@@ -22,12 +22,10 @@
     padding: 0;
     overflow: hidden;
 }
-
 li {
     float: left;
     color: #ff8625;
 }
-
     li a, .dropbtn {
         display: inline-block;
         color: white;
@@ -35,23 +33,19 @@ li {
         padding: 14px 16px;
         text-decoration: none;
     }
-
         li a:hover, .dropdown:hover .dropbtn {
             background-color: #ff8625;
             color: white;
         }
-
     li.dropdown {
         display: inline-block;
     }
-
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: white;
     width: 19.6%;
 }
-
     .dropdown-content a {
         color: black;
         padding: 12px 16px;
@@ -59,12 +53,10 @@ li {
         display: block;
         text-align: left;
     }
-
         .dropdown-content a:hover {
             background-color: #ff8625;
             color: white;
         }
-
 .dropdown:hover .dropdown-content {
     display: block;
 }*/
@@ -163,7 +155,7 @@ li {
     width: 30%;
     /*left: 35%;
     top: 32%;*/
-    background-color: rgba(0, 0, 0, 0.22);
+    background-color: rgba(255, 255, 255, 0.85);
     margin: 110px auto;
     border-radius: 10px 10px;
     padding:15px 0;
@@ -464,7 +456,7 @@ li.drop {
     display: block;
     width: 96%;
     height: 100%;
-    margin-top:150px;
+    margin-top:100px;
 }
 
 /*Search Filter Lawn*/
@@ -618,12 +610,12 @@ li.drop {
 
 #Calendar {
     display:block;
-    background-color: #b7b7b7;
-    background-color: lightgray;
+    background-color: #fff;
     width: 22%;
     float:right;
     height: 250px;
     margin:20px 55px auto auto;
+    box-shadow:0 0 10px 0 #767676;
 }
 
 .lawndate {
@@ -663,167 +655,6 @@ li.drop {
     width: 50%;
 }
 
-/*Search Filter Css*/
-.Search {
-    background-color: #b7b7b7;
-    padding: 0;
-    border: 0;
-    vertical-align: baseline;
-    width: 100%;
-    height: auto;
-    margin-top:38px;
-    position:fixed;
-}
-
-.frame {
-    width: 936px;
-    margin: auto;
-}
-
-.filter {
-    padding: 20px;
-}
-
-.fiterbar {
-    background: #fff;
-    border-radius:4px 4px;
-    /*margin: 0;
-    padding: 0;
-    vertical-align: baseline;*/
-}
-
-.filter-right {
-    float: right;
-    height: 33px;
-    border-radius: 0 4px 4px 0;
-    margin: 0;
-    padding: 0;
-}
-
-.dropdown {
-    cursor: pointer;
-    float: left;
-    position: relative;
-    height: 33px;
-    background: #f3f3f3;
-    border:1px solid rgba(134, 134, 134, 0)
-}
-
-/*.filter-right .dropdown:first-child {
-    border-left: none;
-}
-.filter-right .dropdown {
-    border-left: 1px solid #cdcdcd;
-}*/
-
-.dropdown-span {
-    overflow: hidden;
-    width:92px;
-    margin: 0 0 0 0;
-}
-
-.dropdown-icon {
-    float: right;
-    width: 7px;
-    height: 7px;
-    margin: 14px 6px 0 0;
-    background-image: url("downArrow.png");
-    background-size: 7px 7px;
-}
-
-.dropdown-label {
-    display: block;
-    margin: 0 20px 0 7px;
-    color: #888;
-    white-space: nowrap;
-    font-size: 12px;
-    line-height: 33px;
-}
-
-.dropdown-select {
-    display: block;
-    cursor: pointer;
-    outline: none;
-    visibility: visible;
-    position: absolute;
-    top: -1px;
-    left: 0;
-    width: auto;
-    height: 33px;
-    margin: 0;
-    padding: 0;
-    opacity: 1;
-    z-index:99;
-    background-color:#f6f6f6;
-}
-
-.search-button {
-    overflow: hidden;
-    float: right;
-    position: relative;
-    width: 45px;
-    height: 33px;
-    margin: 0 0 0 0;
-    border-radius: 0 4px 4px 0;
-    background: #fff;
-    border: 1px solid #6cc0e1;
-}
-
-.search-icon {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 24px;
-    height: 24px;
-    margin: auto;
-    background-image: url("search.png");
-    background-size: 25px 25px;
-}
-
-.button-Search {
-    cursor: pointer;
-    display: block;
-    position: relative;
-    z-index: 100;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    text-indent: -1000px;
-    border: none;
-    background: transparent;
-}
-
-.filter-fill {
-    overflow: hidden;
-    position: relative;
-    height: 33px;
-    border-radius: 4px 0 0 4px;
-    border: 1px solid #ccc;
-    border-right: none;
-    margin:0 -14px;
-}
-
-.filter-field {
-    display: block;
-    position: absolute;
-    z-index: 100;
-    width: 100%;
-    height: 31px;
-    padding: 5px 0 6px 0;
-    color: #333;
-    text-indent: 8px;
-    font-size: 0.9em;
-    border: none;
-    font-family:Arial;
-    font-size:15px;
-    font-variant-caps:inherit;
-}
-
-#ContentPlaceHolder1_SearchArea{margin-left:-15px;}
-
 .cb {
 clear:both;
 float:none;
@@ -837,6 +668,7 @@ font-family:Arial; color:black;
 
 
 .user-div{width:100%; background-color:#444; height:auto; position:fixed; top:0; z-index:999;}
+.user-div .toggle{color:#fff;}
 .user-div h3{display:inline-block; margin:14px 0 0 4px; position:absolute;}
 .toggle{margin:5px 0 5px 20px; padding:5px; border-radius:5px; box-sizing: border-box; color:#fff; font-size:18px!important;}
 .user-div .userdiv-right{float:right; margin-right:30px;}
@@ -852,3 +684,49 @@ font-family:Arial; color:black;
 .carousel-inner .item img{width:100%; min-height:100%; opacity:0.5;}
 
 .seating-images{width:100px; height:100px;}
+
+/*Search Bar Css Start*/
+#main{margin-top:38px;}
+.search{background:rgba(255, 255, 255, 0.85); width:100%; height:75px; position:fixed;}
+.search .search-filters .search-bar{display: table-cell;padding-top: 20px;position: relative;vertical-align: top;}
+.search .search-filters{width: 96%;height:50px;margin:auto;display: table;}
+.search .search-filters .filter-right{display: table-cell;padding-top: 20px;vertical-align: top;width: 320px;}
+.search .search-filters .search-bar .filter-field{display:block; z-index:100; height:33px; padding: 5px 0 6px 0; color: #333; text-indent: 8px; font-size: 0.9em; border: none; font-family:Arial; font-size:15px; font-variant-caps:inherit; border:1px solid #e8e8e8; border-radius:5px 0 0 5px; width:100%;}
+.search .search-filters .filter-right .filter{display:inline-block; margin:0; padding:0; float:left!important;}
+.search .search-filters .filter-right .filter .filter-capacity{height:33px; width:105px; display:inline-block; padding-left:8px;}
+.search .search-filters .filter-right .filter .dropdown-select{width:auto; height:33px; margin:0; padding:0; right:0; background:rgba(232, 232, 232, 0.41);}
+.search .search-filters .filter-right .filter .search-capacity{width:96px; height:33px; margin:0; padding:0; right:0; padding-left:8px;}
+.search .search-filters .filter-right .search-button{overflow: hidden;/* float: right; */position: relative;width: 45px;height: 33px;margin: 0 0 0 0;border-radius: 0 4px 4px 0;background: #fff;border: 1px solid #6cc0e1;}
+.search .search-filters .filter-right .search-button .search-icon{position: absolute; top: 0; bottom: 0; left: 0; right: 0; width: 24px; height: 24px; margin: auto; background-image: url("search.png"); background-size: 25px 25px;}
+.search .search-filters .filter-right .search-button .button-Search{cursor: pointer; display: block; position: relative; z-index: 100; width: 100%; height: 100%; margin: 0; padding: 0; text-indent: -1000px; border: none; background: transparent;}
+/*Search Bar Css End*/
+
+.glyphicon{color:#000;}
+.fa{color:#000;}
+/*services Css*/
+.services{display:block; width:100%; height:auto;}
+.services h1{margin:50px auto 20px auto; display:block; text-align:center; font-size:55px; font-family:Arial;}
+.services .servies-content{display:block; margin:60px auto; width:95%; height:500px;}
+.services .servies-content .content-div{display:block; margin:0 auto; width:90%;}
+.services .servies-content .content-div .items{display:inline-block; margin:15px; width:30%; position:relative;}
+.services .servies-content .content-div .items label{display:block; font-size:25px; font-family:Arial; margin:120px auto 0 auto; width:100%; text-align:center; position:absolute; background:rgba(255,255,255,0.8);}
+.services .servies-content .content-div .items img{width:100%;height:100%;}
+
+/*catering css*/
+.catering{display:block; width:100%; height:auto;}
+.catering .catering-packages{display:block; margin:60px auto; width:95%; height:500px;}
+.catering .catering-packages .content-div{display:block; margin:0 auto; width:90%;}
+.catering .catering-packages .content-div .items{display:inline-block; margin:15px; width:45%; position:relative; height:400px; color:#000;}
+.catering .catering-packages .content-div .items label{display:block; font-size:25px; font-family:Arial; margin:185px auto 0 auto; width:100%; text-align:center; position:absolute; background:rgba(255,255,255,0.8);}
+.catering .catering-packages .content-div .items img{display:block; width:100%; height:100%;}
+
+#catering-packages{display:inline-block; width:25%; background:#000; height:auto; margin-top:38px; height:100vh; float:left;}
+#catering-packages .packages{display:block; padding:70px 0;}
+#catering-packages .packages button{display:block; border:0; background:none; width:100%;}
+#catering-packages .packages button .package-list{display:block; text-align:left; font-size:25px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; border-bottom:1px solid #fff; padding:10px; color:#fff;}
+#catering-packages .packages button .package-list i{float:right;}
+.package-detail{display:inline-block; width:75%; margin-top:38px; float:left;}
+.package-detail h4{display:block; text-align:center; font-size:35px;}
+.package-detail .items table, .package-detail .items table tbody, .package-detail .items table tbody tr, .package-detail .items table tbody tr td{display:block;}
+.package-detail .items table tbody tr{padding:10px 20px;}
+.package-detail .items table tbody tr td{text-align:center; font-size:25px; border:1px solid #e0e0e0; border-radius:5px;}

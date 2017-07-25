@@ -14,16 +14,19 @@ public partial class Booking : System.Web.UI.Page
         if (IsPostBack) {
             FYPDataContext db=new FYPDataContext();
             BookingInformation BookInf= new BookingInformation();
-            String date = txtDate.Text;
+            DateTime d = Convert.ToDateTime(txtDate.Text);
             DateTime now1 = Convert.ToDateTime( txtDate.Text);
             var checkdate = (from x in db.BookingInformations
-                            where x.Date.Equals(date) & x.LawnName.Equals(txtOrgName.Text)
+                            where x.Date.Equals(d) & x.LawnName.Equals(txtOrgName.Text)
                             select x).FirstOrDefault();
-            DateTime now = DateTime.Now.Date;
            
-            
-            
-            if (now1.Day <= now.Day && now1.Month <= now.Month && now1.Year<=now.Year) {
+            DateTime inn = DateTime.Now.Date.Date;
+            TimeSpan ff = d - inn;
+            int fffff = ff.Days;
+
+
+            if (fffff < 0)
+            {
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('You have selected OLD Date or Current Date. Please Select tomorrow or Onward Date');", true);
             
             }
@@ -55,7 +58,9 @@ public partial class Booking : System.Web.UI.Page
             var info = (from x in db.LawnOwners
                         where x.Address.Equals(Session["CheckAvail"].ToString())
                         select x).FirstOrDefault();
-
+            txtUser.Text = Session["Username"].ToString();
+            txtCNIC.Text = Session["UserCNIC"].ToString();
+            txtContact.Text = Session["UserPhone"].ToString();
             txtOrgName.Text = info.LawnName;
             txtGuests.Text = info.SeatingCapacity;
             Session["LawnOwnerEmail"] = info.Email;

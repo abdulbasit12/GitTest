@@ -9,6 +9,7 @@ public partial class LawnDetails : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        CheckAvailb.Attributes["min"] = DateTime.Now.ToString("yyyy-MM-dd");
         
         if (!IsPostBack) { 
             FYPDataContext db= new FYPDataContext();
@@ -19,6 +20,7 @@ public partial class LawnDetails : System.Web.UI.Page
             LabelName.Text = chkk.LawnName.ToString();
             LabelAdd.Text = chkk.Address.ToString();
             lblcapacity.Text = chkk.SeatingCapacity.ToString();
+            lblrent.Text = chkk.Rent.ToString();
             int VIDD = Convert.ToInt32( chkk.Id);
 
           var chkpic = (from x in db.Images

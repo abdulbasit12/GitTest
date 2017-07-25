@@ -117,7 +117,7 @@
         <span onclick="openNav()" class="fa fa-bars toggle"></span>
         <div class="userdiv-right">
             <span class="fa fa-user"></span>
-            <label class="user-label">Guests</label>
+            <label class="user-label" runat="server" id="UserName">Guests</label>
             <span class="fa fa-sign-out"></span>
             <label class="user-label-logout">Logout</label>
         </div>

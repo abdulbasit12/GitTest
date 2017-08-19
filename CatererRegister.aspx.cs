@@ -9,7 +9,7 @@ public partial class LawnRegister : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-       
+
     }
     protected void Unnamed1_Click(object sender, EventArgs e)
     {
@@ -53,5 +53,4 @@ public partial class LawnRegister : System.Web.UI.Page
             txtArea.Text=txtEmailL.Text = txtphone.Text = txtAcc.Text = txtAddress.Text = txtSeating.Text = txtLawnName.Text = "";
         }
     }
-   
 }

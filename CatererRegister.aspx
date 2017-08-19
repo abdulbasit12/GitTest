@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="MasterPage.master" AutoEventWireup="true" CodeFile="LawnRegister.aspx.cs" Inherits="LawnRegister" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="MasterPage.master" AutoEventWireup="true" CodeFile="CatererRegister.aspx.cs" Inherits="LawnRegister" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <style>
@@ -7,30 +7,16 @@
             width: 50%;
             margin: auto;
         }
-
         #backdiv {
-            width: 70%;
+        width:70%;
         }
-
-        .left {
-            margin-right: 25px;
-        }
-
-        .backdiv #form .type-lawn select{
-            width:100%;
-            border-radius:3px;
-            height:35px;
-        }
-
-        .backdiv #form input.btn {
-            margin-top: 20px;
-        }
+        .left{margin-right:25px;}
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div id="main">
         <div class="backdiv" id="backdiv">
-            <h1 class="heading">GET YOUR LAWN/BANQUET REGISTER NOW</h1>
+            <h1 class="heading">GET YOUR CATERING SERVICE REGISTER NOW</h1>
             <hr />
             <div id="form">
                 <table>
@@ -107,16 +93,9 @@
                         </td>
                     </tr>
                 </table>
-                <div class="type-lawn">
-                    <select runat="server">
-                        <option hidden>Select your lawn Type</option>
-                        <option>Lawn</option>
-                        <option>Banquet</option>
-                    </select>
-                </div>
                 <asp:Button class="btn btn-primary btn-block"
                     runat="server" Text="Next" OnClick="Unnamed1_Click" />
-                <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="txtPass" ControlToValidate="txtConfirmPass" EnableClientScript="False" ErrorMessage="Password Not Matched" Font-Size="X-Small" ForeColor="Red"></asp:CompareValidator>
+                    <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="txtPass" ControlToValidate="txtConfirmPass" EnableClientScript="False" ErrorMessage="Password Not Matched" Font-Size="X-Small" ForeColor="Red"></asp:CompareValidator>
             </div>
         </div>
     </div>

@@ -41,7 +41,7 @@
             .sidenav a {
                 padding: 8px 8px 8px 32px;
                 text-decoration: none;
-                font-size: 25px;
+                font-size: 17px;
                 color: #818181;
                 display: block;
                 transition: 0.3s;
@@ -117,13 +117,15 @@
         <span onclick="openNav()" class="fa fa-bars toggle"></span>
         <div class="userdiv-right">
             <span class="fa fa-user"></span>
-            <label class="user-label">Guests</label>
+            <label class="user-label" runat="server" id="UserName">Guests</label>
             <span class="fa fa-sign-out"></span>
             <label class="user-label-logout">Logout</label>
         </div>
     </div>
     <form id="form1" runat="server">
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
         </asp:ContentPlaceHolder>
     </form>
 </body>

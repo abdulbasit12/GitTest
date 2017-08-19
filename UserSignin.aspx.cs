@@ -9,14 +9,28 @@ public partial class UserSignin : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (Session["SignInUSerCheck"] != null)
+        {
+            Code.Visible = true;
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('Please Enter the Code below for First Time Login to Verification');", true);
 
+        }
     }
     protected void Unnamed3_Click(object sender, EventArgs e)
     {
         if (Page.IsValid)
         {
-
             FYPDataContext db = new FYPDataContext();
+            var checkcode = (from y in db.VerifyingCodes
+                             select y).FirstOrDefault();
+
+            
+            if (Session["SignInUSerCheck"] != null) {
+                checkcode = (from x in db.VerifyingCodes
+                             where x.Code.Equals(CodePass.Text) && x.EmailID.Equals(txtSignInName.Text)
+                             select x).FirstOrDefault();
+
+            }
 
 
             var userresult = (from x in db.AllUsers
@@ -28,22 +42,27 @@ public partial class UserSignin : System.Web.UI.Page
             //                     select x).FirstOrDefault();
 
 
-            if (userresult == null)
+            if (userresult == null || checkcode == null)
             {
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('UserName or Password is Incorrect');", true);
 
             }
-            else if (Session["CurrentURL"] != null)
-            {
-                Response.Redirect(Request.QueryString["ReturnUrl"].ToString());
-                Response.Redirect("index.aspx");
-                Response.Redirect(Session["CurrentURL"].ToString());
-            
-            
-            }
+           
             else if (userresult.User_Role != "Vendor")
             {
+                var userresult1 = (from x in db.Users
+                                  where x.Email.Equals(txtSignInName.Text) 
+                                  select x).FirstOrDefault();
+                
+
                 Session["BookingUser"] = userresult.Id;
+                Session["Username"] = userresult1.Name;		
+
+                Session["UserCNIC"] = userresult1.CNIC;
+                Session["UserPhone"] = userresult1.Phone;
+                Session["UserLogoName"] = 1;
+
+                Session["SignInUSerCheck"] = null;
                 Response.Redirect("index.aspx");
 
             }

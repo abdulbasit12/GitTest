@@ -45,6 +45,11 @@
             </div>
             <br />
             <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                <asp:TextBox required="required" class="form-control" runat="server" placeholder="CNIC" ID="CNIC" TextMode="Number"  ></asp:TextBox>
+            </div>
+            <br />
+            <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
                 <asp:TextBox required="required" class="form-control" runat="server" TextMode="Password" placeholder="Password" ID="txtPassword"></asp:TextBox>
             </div>

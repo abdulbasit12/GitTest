@@ -150,13 +150,16 @@ li {
 
 
 .backdiv {
-    position: relative;
-    height: auto;
-    width: 30%;
+    position:absolute;
+    height:auto;
+    width:30%;
     /*left: 35%;
     top: 32%;*/
     background-color: rgba(0, 0, 0, 0.85);
-    margin: 60px auto;
+    top:50%;
+    left:50%;
+    margin-left:-192px;
+    margin-top:-221px;
     border-radius: 10px 10px;
     padding:15px 0;
     box-sizing:border-box;

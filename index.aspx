@@ -28,8 +28,10 @@ body{overflow:scroll}
 	.main .container .img-box .span-img{display:block; height:300px;}
 	.main .container .img-box .span-img img{position:relative; transition-duration:1s; transform:scale(1,1); margin-bottom:82px; opacity:1; max-width:100%; min-height:100%;}
 	.image-on{opacity:1!important; transform:scale(1.5,1.5)!important; transform:translate(5deg)!important;}
-	.text-span{position:relative; color:white; font-size:20px; font-family:arial; font-weight:bold; height:80px; display:block; padding:25px; transition-duration:1s;}
-	.center{text-align:center; transition-duration:1s;}
+	.text-span{position:relative; color:white; font-size:20px; font-family:arial; font-weight:bold; height:80px; display:block; padding:5px 25px 25px 25px; transition-duration:1s;}
+	.text-span a{color:#fff;}
+	.text-span a:hover{text-decoration:none;}
+	.center{padding-top:25px; text-align:center;}
 	.clear{clear:both;}
 </style>
 </asp:Content>
@@ -65,25 +67,25 @@ body{overflow:scroll}
 				<span class="span-img">
 					<img src="lawn1.jpg"/>
 				</span>
-				<span class="text-span orange">Lawns & Banquet</span>
+				<span class="text-span orange"><a href="Lawns.aspx">Lawns & Banquet</a></span>
 			</div>
 			<div class="img-box blue">
 				<span class="span-img">
-					<img src="services1.png" />
+					<img src="services1.png"/>
 				</span>
-				<span class="text-span blue">Decoration</span>
+				<span class="text-span blue"><a href="#">Decoration</a></span>
 			</div>
 			<div class="img-box green">
 				<span class="span-img">
 					<img src="services2.png" />
 				</span>
-				<span class="text-span green">Catering</span>
+				<span class="text-span green"><a href="cateringPackages.aspx">Catering</a></span>
 			</div>
 			<div class="img-box black">
 				<span class="span-img">
 					<img src="services3.png"/>
 				</span>
-				<span class="text-span black">Photography</span>
+				<span class="text-span black"><a href="#">Photography</a></span>
 			</div>
 			<div class="clear"></div>
 		</div>

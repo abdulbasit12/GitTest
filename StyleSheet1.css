@@ -615,12 +615,15 @@ li.drop {
 #Calendar {
     display:block;
     background-color: #fff;
-    width: 22%;
     float:right;
-    height: 250px;
     margin:20px 55px auto auto;
     box-shadow:0 0 10px 0 #767676;
+    padding:30px;
+    width:25%;
 }
+
+.alert{display:none; position:relative; width:auto; margin:20px auto 0 auto; width:80%;}
+#Calendar .alert .close{display:block!important;}
 
 .lawndate {
     width: 88%;
@@ -642,7 +645,7 @@ li.drop {
 
 .btn1 {
     height: 35px;
-    width: 60%;
+    width: 90%;
     background-color: darkorange;
     border:none;
     color: white;

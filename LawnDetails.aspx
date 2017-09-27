@@ -30,7 +30,7 @@
 
         .carousel-inner > .item > img, .carousel-inner > .item > a > img {
             opacity: 1;
-            width: 39%;
+            width: 72%;
             max-height: 100%;
         }
 
@@ -176,7 +176,10 @@
             <asp:Label runat="server" CssClass="name" Text="Check Availability"></asp:Label>
             <asp:TextBox ID="CheckAvailb" runat="server" CssClass="lawndate"  TextMode="Date" OnDataBinding="CheckAvailb_DataBinding"></asp:TextBox>
             <asp:Button runat="server" Text="Check Availability" CssClass="btn1" OnClick="Unnamed_Click" />
-            <asp:Button runat="server" Text="Book Lawn" CssClass="btn1 position" OnClick="Unnamed_Click1" />
+            <asp:Button runat="server" Text="Book Now" CssClass="btn1 position" OnClick="Unnamed_Click1" />
+            <asp:label id="booking_msg" runat="server" class="alert alert-dismissable fade in">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+            </asp:label>
         </div>
         <div class="lawn-info">
             <div class="more-detail">

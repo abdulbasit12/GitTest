@@ -13,11 +13,13 @@
         #form .btn {
             margin-bottom:15px;        
         }
+        .booking-alert{margin-top:50px; position:absolute; bottom:25px; left:50%; margin-left:-512px;}
+        #booking_confirm a{display:block;}
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="backdiv">
-        <h1 class="heading">Booking For</h1>
+        <h1 class="heading">Booking Form</h1>
         <div id="bookingform">
             <div id="form">
                 <div class="input-group">
@@ -51,5 +53,8 @@
             </div>
         </div>
     </div>
+    <asp:Label runat="server" ID="booking_confirm">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+    </asp:Label>
 </asp:Content>
 

@@ -4,7 +4,7 @@
     <style>
         #form {
             position: relative;
-            width: 50%;
+            width: 80%;
             margin: auto;
         }
 

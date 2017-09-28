@@ -150,13 +150,16 @@ li {
 
 
 .backdiv {
-    position: relative;
-    height: auto;
-    width: 30%;
+    position:absolute;
+    height:auto;
+    width:30%;
     /*left: 35%;
     top: 32%;*/
     background-color: rgba(0, 0, 0, 0.85);
-    margin: 60px auto;
+    top:50%;
+    left:50%;
+    margin-left:-192px;
+    margin-top:-221px;
     border-radius: 10px 10px;
     padding:15px 0;
     box-sizing:border-box;
@@ -612,12 +615,15 @@ li.drop {
 #Calendar {
     display:block;
     background-color: #fff;
-    width: 22%;
     float:right;
-    height: 250px;
     margin:20px 55px auto auto;
     box-shadow:0 0 10px 0 #767676;
+    padding:30px;
+    width:25%;
 }
+
+.alert{display:none; position:relative; width:auto; margin:20px auto 0 auto; width:80%;}
+#Calendar .alert .close{display:block!important;}
 
 .lawndate {
     width: 88%;
@@ -639,7 +645,7 @@ li.drop {
 
 .btn1 {
     height: 35px;
-    width: 60%;
+    width: 90%;
     background-color: darkorange;
     border:none;
     color: white;
@@ -710,15 +716,15 @@ font-family:Arial; color:black;
 .services h1{margin:50px auto 20px auto; display:block; text-align:center; font-size:55px; font-family:Arial;}
 .services .servies-content{display:block; margin:60px auto; width:95%; height:500px;}
 .services .servies-content .content-div{display:block; margin:0 auto; width:90%;}
-.services .servies-content .content-div .items{display:inline-block; margin:15px; width:30%; position:relative;}
-.services .servies-content .content-div .items label{display:block; font-size:25px; font-family:Arial; margin:120px auto 0 auto; width:100%; text-align:center; position:absolute; background:rgba(255,255,255,0.8);}
+.services .servies-content .content-div .items{display:inline-block; margin:15px; width:47%; position:relative;}
+.services .servies-content .content-div .items label{display:block; font-size:25px; font-family:Arial; top:50%; width:100%; text-align:center; position:absolute; background:rgba(255,255,255,0.8); margin-top:-17px;}
 .services .servies-content .content-div .items img{width:100%;height:100%;}
 
 /*catering css*/
 .catering{display:block; width:100%; height:auto;}
 .catering .catering-packages{display:block; margin:60px auto; width:95%; height:500px;}
 .catering .catering-packages .content-div{display:block; margin:0 auto; width:90%;}
-.catering .catering-packages .content-div .items{display:inline-block; margin:15px; width:45%; position:relative; height:400px; color:#000;}
+.catering .catering-packages .content-div .items{display:inline-block; margin:15px; width:47%; position:relative; height:400px; color:#000;}
 .catering .catering-packages .content-div .items label{display:block; font-size:25px; font-family:Arial; margin:185px auto 0 auto; width:100%; text-align:center; position:absolute; background:rgba(255,255,255,0.8);}
 .catering .catering-packages .content-div .items img{display:block; width:100%; height:100%;}
 

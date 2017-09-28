@@ -27,13 +27,18 @@ public partial class Booking : System.Web.UI.Page
 
             if (fffff < 0)
             {
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('You have selected OLD Date or Current Date. Please Select tomorrow or Onward Date');", true);
-            
+                //ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('You have selected OLD Date or Current Date. Please Select tomorrow or Onward Date');", true);
+                booking_confirm.Text = "You are selecting past date, Please try again.";
+                booking_confirm.Attributes.Add("class", "booking-alert alert-danger alert fade in alert-dismissable");
+                booking_confirm.Attributes.Add("style", "display:block");
             }
             
                         else if (checkdate != null )
             {
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('This Date Already has been taken');", true);
+                //ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('This Date Already has been taken');", true);
+                booking_confirm.Text = "We are already booked on this date, please try anthor.";
+                booking_confirm.Attributes.Add("class", "booking-alert alert alert-warning alert fade in alert-dismissable");
+                booking_confirm.Attributes.Add("style", "display:block");
             }
             
         }
@@ -99,7 +104,7 @@ public partial class Booking : System.Web.UI.Page
             msg.Bcc.Add("ahsannadeem54@yahoo.com");
             msg.Bcc.Add("abdulbasit12m@gmail.com");
             msg.To.Add(EmailID);
-            msg.Body = "Your banquet is booked on" + Convert.ToDateTime(txtDate.Text) + ". You will recieve Token Money in two Days";
+            msg.Body = "We confirm your booking for the date" + Convert.ToDateTime(txtDate.Text) + ", please pay 20% advance within 5 working days to A/C#:0101010101(Bank Name). ";
             msg.Subject = "IqraEventManagementSystem";
             msg.IsBodyHtml = true;
             SmtpClient smtp = new SmtpClient();
@@ -116,11 +121,10 @@ public partial class Booking : System.Web.UI.Page
             smtp.Port = 587;
 
             smtp.Send(msg);
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('Booking Completed');", true);
-
-
-
-
+            //ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('Booking Completed');", true);
+            booking_confirm.Text = "Booking successfully done, Please check your Email for payment Details";
+            booking_confirm.Attributes.Add("style", "display:block");
+            booking_confirm.Attributes.Add("class", "booking-alert alert alert-success alert fade in alert-dismissable");
         }
 
     }

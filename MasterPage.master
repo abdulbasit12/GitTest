@@ -109,7 +109,6 @@
         <a href="index.aspx">Home</a>
         <a href="Lawns.aspx">Lawns & Banquets</a>
         <a href="Services.aspx">Services</a>
-        <a href="#">Contact Us</a>
         <a href="UserSignin.aspx">SignIn</a>
         <a href="User.aspx">SignUp</a>
     </div>

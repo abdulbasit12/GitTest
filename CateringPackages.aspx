@@ -12,7 +12,7 @@
                     <img src="services1.png" />
                 </a>
                 <a href="catering.aspx?page=Valima" class="items">
-                    <label runat="server" id="AAA">Reception Menu</label>
+                    <label runat="server" id="AAA" >Reception Menu</label>
                     <img src="services2.png" />
                 </a>
                 <a href="catering.aspx?page=othe" class="items">

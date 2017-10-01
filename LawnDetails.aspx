@@ -38,14 +38,14 @@
             display: block;
             font-size: 35px;
             margin: 70px 0 0 65px;
-            color: #666666;
+            color: #000;
         }
 
         span.laddress {
             display: block;
             font-size: 20px;
             margin: 0 0 0 70px;
-            color: #666666;
+            color: #000;
         }
 
         .carousel-control.left, .carousel-control.right {
@@ -64,13 +64,13 @@
         }
 
         .h-details {
-            margin: 20px auto 5px 0;
+            margin: 20px auto 30px 0;
             width: 450px;
-            border-bottom: 1px solid #b7b7b7;
         }
 
             .h-details .active {
                 border-bottom: 2px solid #FF8C00;
+                padding-bottom:10px
             }
 
         .container .carousel {
@@ -131,7 +131,7 @@
             .seating-arrangment .lawn-details-SA .detail-table-SA{display: block;}
             .seating-arrangment .lawn-details-SA .detail-table-SA tbody{display:block;}
             .seating-arrangment .lawn-details-SA .detail-table-SA tbody tr{display:block;}
-            .seating-arrangment .lawn-details-SA .detail-table-SA tbody tr td{padding:20px 15px 20px 0; width:14%; display:inline-block;}
+            .seating-arrangment .lawn-details-SA .detail-table-SA tbody tr td{padding:20px 15px 20px 0; width:13.8%; display:inline-block;}
             .seating-arrangment .lawn-details-SA .detail-table-SA tbody tr td:first-child{margin-left:3px;}
             .seating-arrangment .lawn-details-SA .detail-table-SA tbody tr td input{margin-left:4px;}
             .seating-arrangment .lawn-details-SA .detail-table-SA tbody tr td span{display:inline-block;}
@@ -231,37 +231,37 @@
                 <table class="detail-table-SA">
                     <tr>
                         <td>
-                            <input type="radio" ID="RadioButton0" runat="server" name="radio" checked/>
+                            <input type="radio" id="RadioButton0" runat="server" name="radio" checked/>
                             <span>
                                 <img src="Seating/img1.png" class="seating-images" /></span>
                         </td>
                         <td>
-                            <input type="radio" ID="RadioButton1" runat="server" name="radio"/>
+                            <input type="radio" id="RadioButton1" runat="server" name="radio"/>
                             <span>
                                 <img src="Seating/img2.png" class="seating-images" /></span>
                         </td>
                         <td>
-                            <input type="radio" ID="RadioButton2" runat="server" name="radio"/>
+                            <input type="radio" id="RadioButton2" runat="server" name="radio"/>
                             <span>
                                 <img src="Seating/img3.png" class="seating-images" /></span>
                         </td>
                         <td>
-                            <input type="radio" ID="RadioButton3" runat="server" name="radio"/>
+                            <input type="radio" id="RadioButton3" runat="server" name="radio"/>
                             <span>
                                 <img src="Seating/img4.png" class="seating-images" /></span>
                         </td>
                         <td>
-                            <input type="radio" ID="RadioButton4" runat="server" name="radio"/>
+                            <input type="radio" id="RadioButton4" runat="server" name="radio"/>
                             <span>
                                 <img src="Seating/img5.png" class="seating-images" /></span>
                         </td>
                         <td>
-                            <input type="radio" ID="RadioButton5" runat="server" name="radio"/>
+                            <input type="radio" id="RadioButton5" runat="server" name="radio"/>
                             <span>
                                 <img src="Seating/img6.png" class="seating-images" /></span>
                         </td>
                         <td>
-                            <input type="radio" ID="RadioButton6" runat="server" name="radio"/>
+                            <input type="radio" id="RadioButton6" runat="server" name="radio"/>
                             <span>
                                 <img src="Seating/img7.png" class="seating-images" /></span>
                         </td>

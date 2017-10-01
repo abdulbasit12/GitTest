@@ -11,7 +11,13 @@ public partial class _Default : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (!Page.IsPostBack)
+        {
+            usersdiv.Visible = true;
+            Catering.Visible = false;
+            main.Visible = false;
+        }
+        
     }
     protected void Unnamed6_Click(object sender, EventArgs e)
     {
@@ -91,5 +97,28 @@ public partial class _Default : System.Web.UI.Page
             }
 
         }
+    }
+    protected void Unnamed_Click(object sender, EventArgs e)
+    {
+        usersdiv.Visible = false;
+        Catering.Visible = false;
+        main.Visible = true;
+    }
+    protected void Unnamed_Click1(object sender, EventArgs e)
+    {
+
+    }
+    protected void Unnamed_Click2(object sender, EventArgs e)
+    {
+        usersdiv.Visible = false;
+        Catering.Visible = true;
+        main.Visible = false;
+
+    }
+    protected void Unnamed_Click3(object sender, EventArgs e)
+    {
+        usersdiv.Visible = true;
+        Catering.Visible = false;
+        main.Visible = false;
     }
 }

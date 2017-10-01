@@ -3,16 +3,16 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <script src="jquery-3.1.1.min.js" type="text/javascript"></script>
 <script>
-$(document).ready(function(){
-	$(".img-box").mouseover(function(){
-		$(this).children("span").children("img").addClass("image-on");
-		$(this).children(".text-span").addClass("center");
-	});
-	$(".img-box").mouseout(function(){
-		$(this).children("span").children("img").removeClass("image-on");
-		$(this).children(".text-span").removeClass("center");
-	});
-});
+    $(document).ready(function () {
+        $(".img-box").mouseover(function () {
+            $(this).children("span").children("img").addClass("image-on");
+            $(this).children(".text-span").addClass("center");
+        });
+        $(".img-box").mouseout(function () {
+            $(this).children("span").children("img").removeClass("image-on");
+            $(this).children(".text-span").removeClass("center");
+        });
+    });
 </script>
 <style>
 body{overflow:scroll}

@@ -14,9 +14,9 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <div id="main">
+    <div id="main catering-reg">
         <div class="backdiv" id="backdiv">
-            <h1 class="heading">GET YOUR CATERING SERVICE REGISTER NOW</h1>
+            <h1 class="heading">GET YOUR CATERING SERVICES REGISTER NOW</h1>
             <hr />
             <div id="form">
                 <table>

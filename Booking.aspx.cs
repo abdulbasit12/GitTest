@@ -11,15 +11,16 @@ public partial class Booking : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (IsPostBack) {
-            FYPDataContext db=new FYPDataContext();
-            BookingInformation BookInf= new BookingInformation();
+        if (IsPostBack)
+        {
+            FYPDataContext db = new FYPDataContext();
+            BookingInformation BookInf = new BookingInformation();
             DateTime d = Convert.ToDateTime(txtDate.Text);
-            DateTime now1 = Convert.ToDateTime( txtDate.Text);
+            DateTime now1 = Convert.ToDateTime(txtDate.Text);
             var checkdate = (from x in db.BookingInformations
-                            where x.Date.Equals(d) & x.LawnName.Equals(txtOrgName.Text)
-                            select x).FirstOrDefault();
-           
+                             where x.Date.Equals(d) & x.LawnName.Equals(txtOrgName.Text)
+                             select x).FirstOrDefault();
+
             DateTime inn = DateTime.Now.Date.Date;
             TimeSpan ff = d - inn;
             int fffff = ff.Days;
@@ -32,29 +33,29 @@ public partial class Booking : System.Web.UI.Page
                 booking_confirm.Attributes.Add("class", "booking-alert alert-danger alert fade in alert-dismissable");
                 booking_confirm.Attributes.Add("style", "display:block");
             }
-            
-                        else if (checkdate != null )
+
+            else if (checkdate != null)
             {
                 //ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('This Date Already has been taken');", true);
                 booking_confirm.Text = "We are already booked on this date, please try anthor.";
                 booking_confirm.Attributes.Add("class", "booking-alert alert alert-warning alert fade in alert-dismissable");
                 booking_confirm.Attributes.Add("style", "display:block");
             }
-            
+
         }
         if (!IsPostBack)
         {
             if (Session["BookingUser"] == null)
             {
-              
 
-              Session["CurrentURL"] =""+  HttpContext.Current.Request.Url.AbsolutePath+"";
-              string ddddd = HttpContext.Current.Request.Url.AbsolutePath + HttpContext.Current.Request.Url.AbsolutePath;
-              ViewState["ReturnUrl"] = Request.QueryString["ReturnUrl"];
-              string Rurl = Request.QueryString["ReturnUrl"];
+
+                Session["CurrentURL"] = "" + HttpContext.Current.Request.Url.AbsolutePath + "";
+                string ddddd = HttpContext.Current.Request.Url.AbsolutePath + HttpContext.Current.Request.Url.AbsolutePath;
+                ViewState["ReturnUrl"] = Request.QueryString["ReturnUrl"];
+                string Rurl = Request.QueryString["ReturnUrl"];
 
                 // Response.Redirect(Session["CurrentURL"].ToString());
-               // Server.Transfer("UserSignIn.aspx");
+                // Server.Transfer("UserSignIn.aspx");
                 Response.Redirect("UserSignIn.aspx");
             }
             FYPDataContext db = new FYPDataContext();
@@ -129,6 +130,6 @@ public partial class Booking : System.Web.UI.Page
 
     }
 
-   
+
 
 }

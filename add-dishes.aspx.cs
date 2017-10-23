@@ -42,20 +42,25 @@ public partial class add_dishes : System.Web.UI.Page
 
     protected void Unnamed_Click(object sender, EventArgs e)
     {
-        foreach (GridViewRow row in Dishes.Rows)
-        {
-            if (row.RowType == DataControlRowType.DataRow)
+        FYPDataContext db = new FYPDataContext();
+                             
+                foreach (GridViewRow row in Dishes.Rows)
+                {
+                   if ((row.FindControl("DishName") as TextBox).Text != "" && (row.FindControl("dishPrice") as TextBox).Text != "" && (row.FindControl("MinPerson") as TextBox).Text !="")
             {
-                TextBox textBox = row.FindControl("DishName") as TextBox;
-                string DN = (row.FindControl("DishName") as TextBox).Text;
-                string DP = (row.FindControl("dishPrice") as TextBox).Text;
-                string DPP = (row.FindControl("MinPerson") as TextBox).Text;
-                // do somthing with the text box textBox
-            }
+                Item additem = new Item();          
+                            additem.Items = (row.FindControl("DishName") as TextBox).Text;
+                additem.Rate = Convert.ToInt16((row.FindControl("dishPrice") as TextBox).Text);
+                additem.Min_Person = Convert.ToInt16((row.FindControl("MinPerson") as TextBox).Text);
+                additem.Status = 1;
+                additem.CaterID = 1;
+                db.Items.InsertOnSubmit(additem);
+                db.SubmitChanges();
+             }
+
         }
-             //String tb = ((TextBox)Dishes.Rows[1].FindControl("DishName")).Text;
-
-
+             
+       
 
     }
     protected void Unnamed_Click1(object sender, EventArgs e)
@@ -84,10 +89,10 @@ public partial class add_dishes : System.Web.UI.Page
         {
             if ((row.FindControl("dishPrice") as TextBox).Text !="")
             {
-                int userid = Convert.ToInt16((row.FindControl("dishPrice") as TextBox).Text);
-                string productname = (row.FindControl("DishName") as TextBox).Text;
+                int DishP = Convert.ToInt16((row.FindControl("dishPrice") as TextBox).Text);
+                string Dishname = (row.FindControl("DishName") as TextBox).Text;
                 int price = Convert.ToInt16((row.FindControl("MinPerson") as TextBox).Text);
-                dtCustomers.Rows.Add(productname, userid, price);
+                dtCustomers.Rows.Add(Dishname, DishP, price);
             }
         }
 
@@ -109,4 +114,5 @@ public partial class add_dishes : System.Web.UI.Page
        
 
     }
+
 }

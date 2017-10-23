@@ -29,7 +29,7 @@ public partial class Booking : System.Web.UI.Page
             if (fffff < 0)
             {
                 //ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('You have selected OLD Date or Current Date. Please Select tomorrow or Onward Date');", true);
-                booking_confirm.Text = "You are selecting past date, Please try again.";
+                booking_confirm.Text = "You are selecting past date, Please try again."+booking_confirm.Text;
                 booking_confirm.Attributes.Add("class", "booking-alert alert-danger alert fade in alert-dismissable");
                 booking_confirm.Attributes.Add("style", "display:block");
             }
@@ -37,7 +37,7 @@ public partial class Booking : System.Web.UI.Page
             else if (checkdate != null)
             {
                 //ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('This Date Already has been taken');", true);
-                booking_confirm.Text = "We are already booked on this date, please try anthor.";
+                booking_confirm.Text = "We are already booked on this date, please try anthor."+booking_confirm.Text;
                 booking_confirm.Attributes.Add("class", "booking-alert alert alert-warning alert fade in alert-dismissable");
                 booking_confirm.Attributes.Add("style", "display:block");
             }
@@ -82,8 +82,10 @@ public partial class Booking : System.Web.UI.Page
 
         if (Page.IsValid)
         {
-            FYPDataContext db = new FYPDataContext();
+
+                        FYPDataContext db = new FYPDataContext();
             BookingInformation bookinfo = new BookingInformation();
+            
 
             //var info = (from x in db.LawnOwners
             //            where x.Address.Equals(Session["Booking"].ToString())
@@ -123,7 +125,7 @@ public partial class Booking : System.Web.UI.Page
 
             smtp.Send(msg);
             //ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('Booking Completed');", true);
-            booking_confirm.Text = "Booking successfully done, Please check your Email for payment Details";
+            booking_confirm.Text = "Booking successfully done, Please check your Email for payment Details"+booking_confirm.Text;
             booking_confirm.Attributes.Add("style", "display:block");
             booking_confirm.Attributes.Add("class", "booking-alert alert alert-success alert fade in alert-dismissable");
         }

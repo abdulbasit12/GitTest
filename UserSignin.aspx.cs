@@ -44,7 +44,10 @@ public partial class UserSignin : System.Web.UI.Page
 
             if (userresult == null || checkcode == null)
             {
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('UserName or Password is Incorrect');", true);
+                //ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('UserName or Password is Incorrect');", true);
+                Sign_in.Attributes.Add("style", "display:block");
+                Sign_in.Attributes.Add("class", "alert alert-success alert fade in alert-dismissable");
+                Sign_in.Text = "Sorry! User name or password did not matched."+Sign_in.Text;
 
             }
            

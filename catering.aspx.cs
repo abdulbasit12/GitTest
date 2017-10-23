@@ -30,13 +30,14 @@ public partial class catering : System.Web.UI.Page
             var userresult1 = (from x in db.Packages
                               where x.EventType.Contains(asd.ToString())
                               select new { x.PackageId, x.PackageRate }).First();
+            
             var itemresult = from x in db.PackagesItems
                              join y in db.Items on x.ItemID equals y.Id
                              where x.PackagesID.Equals(userresult1.PackageId.ToString())
                              select new { y.Items,x.PackagesID };
 
-         
 
+            Session["PackageID"] = (userresult1.PackageId.ToString());
 
 
             Repeater1.DataSource = userresult;
@@ -76,6 +77,7 @@ public partial class catering : System.Web.UI.Page
        
         RepeaterItem item = (sender as Button).Parent as RepeaterItem;
      string   ADD = (item.FindControl("PackageID") as Label).Text;
+     Session["PackageID"] = ADD.ToString();
         PackageInformation.Text = (item.FindControl("Package") as Button).Text;
         PackageInformation.Visible = true;
         FYPDataContext db = new FYPDataContext();
@@ -90,12 +92,11 @@ public partial class catering : System.Web.UI.Page
     protected void Unnamed_Click(object sender, EventArgs e)
     {
         string Pack = Session["PackageID"].ToString();
+
     }
+
     protected void repeater2_ItemDataBound(object sender, RepeaterItemEventArgs e)
     {
-        Label Packages = (Label)e.Item.FindControl("Label1");
-        Session["PackageID"] = Packages.Text;
-
 
     }
 }

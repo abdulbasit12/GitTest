@@ -15,7 +15,7 @@
     });
 </script>
 <style>
-body{overflow:scroll}
+body{overflow:hidden}
 	
 	.main{display:flex; height:100vh; align-items:center;}
 	.main .container{margin:0 auto;}

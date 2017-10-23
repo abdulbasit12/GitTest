@@ -20,8 +20,16 @@
                     <img src="services3.png" />
                 </span>
                 <span class="items">
+                    <label>Stage Decoration</label>
+                    <img src="services4.png" />
+                </span>
+                <span class="items">
                     <label>Sound & Lights</label>
                     <img src="services5.png" />
+                </span>
+                <span class="items">
+                    <label>Wedding Entrance</label>
+                    <img src="services6.png" />
                 </span>
             </div>
         </div>

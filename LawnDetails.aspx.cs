@@ -48,7 +48,7 @@ public partial class LawnDetails : System.Web.UI.Page
             //ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('Don not select old dates');", true);
             booking_msg.Attributes.Add("style", "display:block");
             booking_msg.Attributes.Add("class", "alert alert-danger alert fade in alert-dismissable");
-            booking_msg.Text = "Sorry, You choose past date";
+            booking_msg.Text = "Sorry, You choose past date"+booking_msg.Text;
         }
         else
         {
@@ -65,7 +65,7 @@ public partial class LawnDetails : System.Web.UI.Page
                 //ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('This Date is already taken. Choose Another');", true);
                 booking_msg.Attributes.Add("style", "display:block");
                 booking_msg.Attributes.Add("class", "alert alert-warning alert fade in alert-dismissable");
-                booking_msg.Text = "We are already booked on this Date, kindly try another date.";
+                booking_msg.Text = "We are already booked on this Date, kindly try another date."+booking_msg.Text;
 
             }
             else
@@ -73,7 +73,7 @@ public partial class LawnDetails : System.Web.UI.Page
                 //ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('This Date is Availible');", true);
                 booking_msg.Attributes.Add("style", "display:block");
                 booking_msg.Attributes.Add("class", "alert alert-success alert fade in alert-dismissable");
-                booking_msg.Text = "Congratulations, This Date is Available for booking, please click Book Now to proceed.";
+                booking_msg.Text = "Congratulations, This Date is Available for booking, please click Book Now to proceed."+booking_msg.Text;
             }
         }
     }

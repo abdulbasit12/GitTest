@@ -32,34 +32,34 @@
         <elementListCompartment Id="7dd83abe-1ffe-4b80-bf2f-50320eb83593" absoluteBounds="0.51500000000000057, 0.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="313c3a87-fe29-4811-b55b-514594f85764" absoluteBounds="7.625, 0.5, 2, 1.7708968098958331">
-      <DataClassMoniker Name="/FYPDataContext/Package" />
-      <nestedChildShapes>
-        <elementListCompartment Id="40bdf1f8-e8e5-464a-85cc-175f27af645b" absoluteBounds="7.6400000000000006, 0.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
     <classShape Id="1549e317-2bca-4ed7-a05b-b22f8a9c49f1" absoluteBounds="5.25, 4.625, 2, 1.3862939453125">
       <DataClassMoniker Name="/FYPDataContext/PackagesItem" />
       <nestedChildShapes>
         <elementListCompartment Id="c47ead0a-0a7b-495a-b320-1999a5b65737" absoluteBounds="5.265, 5.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="3e00a001-03de-4b26-8e7e-4575c878134c" absoluteBounds="7.5, 2.5, 2, 1.7708968098958331">
-      <DataClassMoniker Name="/FYPDataContext/Item" />
-      <nestedChildShapes>
-        <elementListCompartment Id="95519ef4-5ba4-4b2d-8396-eeb82b5f1283" absoluteBounds="7.5150000000000006, 2.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="1bd99e0c-7808-4eea-a45d-34c9d7b497f6" absoluteBounds="7.5, 4.5, 2, 1.7708968098958331">
-      <DataClassMoniker Name="/FYPDataContext/Caterer" />
-      <nestedChildShapes>
-        <elementListCompartment Id="bf4c6ae2-31c3-457a-b918-b0fd1b487746" absoluteBounds="7.5150000000000006, 4.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
     <classShape Id="fe3ea5c0-cdf1-4357-b373-966ca10d7013" absoluteBounds="5.25, 0.5, 2, 1.7708968098958331">
       <DataClassMoniker Name="/FYPDataContext/AllUser" />
       <nestedChildShapes>
         <elementListCompartment Id="23e858c9-67fe-4903-8bf4-a527b37bc85a" absoluteBounds="5.265, 0.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8442f95b-1568-4186-9c7b-049f50c435dd" absoluteBounds="7.5, 2.5, 2, 1.9631982421875">
+      <DataClassMoniker Name="/FYPDataContext/Item" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cdc62d19-052d-440a-8b55-b59d13543156" absoluteBounds="7.5150000000000006, 2.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="95e56f12-48bd-4d54-9573-ed8a4ea014ff" absoluteBounds="7.5, 4.625, 2, 1.9631982421875">
+      <DataClassMoniker Name="/FYPDataContext/Caterer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5c88449c-1271-4954-81c1-5ea55b124d5a" absoluteBounds="7.5150000000000006, 5.085, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="967b9929-68dc-41d6-a5a2-025dc061e6a2" absoluteBounds="7.75, 0.5, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/FYPDataContext/Package" />
+      <nestedChildShapes>
+        <elementListCompartment Id="68195213-0e66-4fc7-a079-189d98a5a6f0" absoluteBounds="7.7650000000000006, 0.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

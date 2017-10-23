@@ -21,16 +21,66 @@
         .backdiv #form input.btn {
             margin-top: 20px;
         }
-        .user-reg{width:50%; margin-left:-337.25px; margin-bottom:50px;}
-        .user-reg .form{width:80%;}
-        .lawn-reg > .backdiv{width:80%; margin-left:-546px;}
-        .lawn-reg > .backdiv .form{width:80%;}
-        .lawn-reg > .backdiv .form table, .lawn-reg > .backdiv .form table tbody, .lawn-reg > .backdiv .form table tbody tr{width:100%; display:block;}
-        .lawn-reg > .backdiv .form table tbody tr td{width:49%; display:inline-block;}
-        .lawn-reg > .backdiv .form table tbody tr td:last-child{float:right;}
-        .lawn-reg > .backdiv .type-lawn{text-align:center;}
-        .lawn-reg > .backdiv .type-lawn select{width:40%; margin:0 auto 15px auto; height:30px; border-radius:5px; text-align:center}
-        .lawn-reg > .backdiv .btn{width:50%; margin:0 auto;}
+
+        .user-reg {
+            width: 50%;
+            margin-left: -337.25px;
+            margin-bottom: 50px;
+        }
+
+        .user-reg .form {
+            width: 80%;
+        }
+
+        .lawn-reg > .backdiv {
+            width: 80%;
+            margin-left: -546px;
+        }
+
+        .lawn-reg > .backdiv .form {
+            width: 80%;
+        }
+
+        .lawn-reg > .backdiv .form table, .lawn-reg > .backdiv .form table tbody, .lawn-reg > .backdiv .form table tbody tr {
+            width: 100%;
+            display: block;
+        }
+        .catering-reg .backdiv #form table, .catering-reg  .backdiv #form table tbody, .catering-reg  .backdiv #form table tbody tr {
+            width: 100%;
+            display: block;
+        }
+        .catering-reg > .backdiv #form table tbody tr td {
+            width: 50%;
+            display: inline-block;
+            float:left;
+        }
+
+        .lawn-reg > .backdiv .form table tbody tr td {
+            width: 49%;
+            display: inline-block;
+        }
+
+                        .lawn-reg > .backdiv .form table tbody tr td:last-child {
+                            float: right;
+                        }
+
+            .lawn-reg > .backdiv .type-lawn {
+                text-align: center;
+            }
+
+                .lawn-reg > .backdiv .type-lawn select {
+                    width: 40%;
+                    margin: 0 auto 15px auto;
+                    height: 30px;
+                    border-radius: 5px;
+                    text-align: center;
+                }
+
+            .lawn-reg > .backdiv .btn {
+                width: 50%;
+                margin: 0 auto;
+            }
+            .backdiv-cat{width:50%; margin-left:-380px; margin-top:-231px;}
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -95,38 +145,38 @@
                 <table>
                     <tr>
                         <td>
-                            <asp:Label ID="Address_Error" runat="server" ForeColor="Red" Text="Address Already Exist" Visible="False" Font-Size="Small"></asp:Label>
+                            <asp:Label ID="Address_Error" runat="server" ForeColor="Red" Textre="Address Already Exist" Visible="False" Font-Size="Small"></asp:Label>
                             <div class="input-group left">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <asp:TextBox required="required"
+                                <asp:TextBox
                                     runat="server" class="form-control" placeholder="Lawn/Banquet Full Name"
                                     ID="txtLawnName"></asp:TextBox>
                             </div>
                             <br />
                             <div class="input-group left">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
-                                <asp:TextBox required="required"
+                                <asp:TextBox
                                     runat="server" class="form-control" placeholder="Seating Capacity"
                                     ID="txtSeating" TextMode="Number"></asp:TextBox>
                             </div>
                             <br />
                             <div class="input-group left">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-tag"></i></span>
-                                <asp:TextBox required="required"
+                                <asp:TextBox
                                     runat="server" class="form-control" placeholder="Address"
                                     ID="txtAddress"></asp:TextBox>
                             </div>
                             <br />
                             <div class="input-group left">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-credit-card"></i></span>
-                                <asp:TextBox required="required"
+                                <asp:TextBox
                                     runat="server" class="form-control" placeholder="Bank Account#"
                                     ID="txtAcc"></asp:TextBox>
                             </div>
                             <br />
                             <div class="input-group left">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
-                                <asp:TextBox required="required" runat="server" class="form-control" TextMode="Phone" placeholder="Phone Number"
+                                <asp:TextBox runat="server" class="form-control" TextMode="Phone" placeholder="Phone Number"
                                     ID="txtphone"></asp:TextBox>
                             </div>
                             <br />
@@ -134,31 +184,31 @@
                         <td>
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                                <asp:TextBox required="required" runat="server" class="form-control" placeholder="Lawn Rent"
+                                <asp:TextBox runat="server" class="form-control" placeholder="Lawn Rent"
                                     ID="txtRent"></asp:TextBox>
                             </div>
                             <br />
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                                <asp:TextBox required="required" runat="server" class="form-control" placeholder="Email"
+                                <asp:TextBox runat="server" class="form-control" placeholder="Email"
                                     ID="txtEmailL"></asp:TextBox>
                             </div>
                             <br />
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                                <asp:TextBox required="required" runat="server" class="form-control" TextMode="Password" placeholder="Password"
+                                <asp:TextBox runat="server" class="form-control" TextMode="Password" placeholder="Password"
                                     ID="txtPass"></asp:TextBox>
                             </div>
                             <br />
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                                <asp:TextBox required="required" runat="server" class="form-control" TextMode="Password" placeholder="Confirm Password"
+                                <asp:TextBox runat="server" class="form-control" TextMode="Password" placeholder="Confirm Password"
                                     ID="txtConfirmPass"></asp:TextBox>
                             </div>
                             <br />
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
-                                <asp:TextBox required="required" runat="server" class="form-control" placeholder="Area"></asp:TextBox>
+                                <asp:TextBox runat="server" class="form-control" placeholder="Area" ID="txtArea"></asp:TextBox>
                             </div>
                             <br />
                         </td>
@@ -178,7 +228,7 @@
         </div>
     </div>
     <div class="catering-reg" id="Catering" runat="server" visible="false">
-        <div class="backdiv" id="backdiv">
+        <div class="backdiv backdiv-cat" id="backdiv">
             <h1 class="heading">GET YOUR CATERING SERVICES REGISTER NOW</h1>
             <hr />
             <div id="form">
@@ -188,56 +238,56 @@
                             <asp:Label ID="Label1" runat="server" ForeColor="Red" Text="Address Already Exist" Visible="False" Font-Size="Small"></asp:Label>
                             <div class="input-group left">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <asp:TextBox required="required"
+                                <asp:TextBox
                                     runat="server" class="form-control" placeholder="Kitchen Name"
-                                    ID="TextBox1"></asp:TextBox>
+                                    ID="txt_kitchen_Name"></asp:TextBox>
                             </div>
                             <br />
                             <div class="input-group left">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-tag"></i></span>
-                                <asp:TextBox required="required"
+                                <asp:TextBox
                                     runat="server" class="form-control" placeholder="Address"
-                                    ID="TextBox3"></asp:TextBox>
+                                    ID="txt_kitchen_address"></asp:TextBox>
                             </div>
                             <br />
                             <div class="input-group left">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
-                                <asp:TextBox required="required" runat="server" class="form-control" TextMode="Phone" placeholder="Phone Number"
-                                    ID="TextBox5"></asp:TextBox>
+                                <asp:TextBox runat="server" class="form-control" TextMode="Phone" placeholder="Phone Number"
+                                    ID="txt_kitchen_phone"></asp:TextBox>
+                            </div>
+                            <br />
+                            <div class="input-group left">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+                                <asp:TextBox
+                                    runat="server" class="form-control" placeholder="Area"
+                                    ID="txt_kitchen_Area"></asp:TextBox>
                             </div>
                             <br />
                         </td>
                         <td>
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                                <asp:TextBox required="required" runat="server" class="form-control" placeholder="Email"
-                                    ID="TextBox7"></asp:TextBox>
+                                <asp:TextBox runat="server" class="form-control" placeholder="Email"
+                                    ID="txt_caterer_Mail"></asp:TextBox>
                             </div>
                             <br />
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                                <asp:TextBox required="required" runat="server" class="form-control" TextMode="Password" placeholder="Password"
-                                    ID="TextBox8"></asp:TextBox>
+                                <asp:TextBox runat="server" class="form-control" TextMode="Password" placeholder="Password"
+                                    ID="txt_Kitchen_Password"></asp:TextBox>
                             </div>
                             <br />
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                                <asp:TextBox required="required" runat="server" class="form-control" TextMode="Password" placeholder="Confirm Password"
+                                <asp:TextBox runat="server" class="form-control" TextMode="Password" placeholder="Confirm Password"
                                     ID="TextBox9"></asp:TextBox>
-                            </div>
-                            <br />
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
-                                <asp:TextBox required="required"
-                                    runat="server" class="form-control" placeholder="Area"
-                                    ID="txtArea"></asp:TextBox>
                             </div>
                             <br />
                         </td>
                     </tr>
                 </table>
                 <asp:Button class="btn btn-primary btn-block"
-                    runat="server" Text="Next" />
+                    runat="server" Text="Next" ID="btn_Catering" OnClick="btn_Catering_Click" />
                 <asp:CompareValidator ID="CompareValidator3" runat="server" ControlToCompare="txtPass" ControlToValidate="txtConfirmPass" EnableClientScript="False" ErrorMessage="Password Not Matched" Font-Size="X-Small" ForeColor="Red"></asp:CompareValidator>
             </div>
         </div>

@@ -38,16 +38,18 @@
             z-index:9999;
         }
 
-            .sidenav a {
+            .sidenav a ,.sidenav label{
                 padding: 8px 8px 8px 32px;
                 text-decoration: none;
                 font-size: 17px;
                 color: #818181;
                 display: block;
                 transition: 0.3s;
+                font-weight:normal;
+                margin-bottom:0;
             }
 
-                .sidenav a:hover, .offcanvas a:focus {
+                .sidenav a:hover, .offcanvas a:focus,.sidenav label:hover {
                     color: #f1f1f1;
                 }
 
@@ -77,13 +79,37 @@
         function openNav() {
             document.getElementById("mySidenav").style.width = "250px";
         }
-
+        function openNav1() {
+            document.getElementById("mySidenav2").style.width = "250px";
+        }
+        function openNav2() {
+            document.getElementById("mySidenav3").style.width = "250px";
+        }
         function closeNav() {
             document.getElementById("mySidenav").style.width = "0";
         }
+        function closeNav1() {
+            document.getElementById("mySidenav2").style.width = "0";
+        }
+        function closeNav2() {
+            document.getElementById("mySidenav3").style.width = "0";
+        }
+        
+        function test() {
+            //document.getElementById("clickonLabel").innerHTML = "Good day";
+            $('#btnHidden').trigger('click');
+            //document.getElementById('btnHidden').onclick();
+           // $('.btnHidden').trigger('click');
+
+        }
+            
+
+        
     </script>
 </head>
 <body>
+
+    
     <%--<div id="header">
         <img id="logo" src="logo.png" />
         <div id="menubar">
@@ -103,25 +129,53 @@
             </ul>
         </div>
     </div>--%>
-    <div id="mySidenav" class="sidenav">
+    <div id="mySidenav" class="sidenav" runat="server">
         <img src="logo.png" class="img-rounded" alt="Cinque Terre" width="240" height="250" />
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="index.aspx">Home</a>
         <a href="Lawns.aspx">Lawns & Banquets</a>
         <a href="Services.aspx">Services</a>
-        <a href="UserSignin.aspx">SignIn</a>
-        <a href="User.aspx">SignUp</a>
+        <a href="#">Contact Us</a>
+        <label>SignIn</label>
+        <label>SignUp</label>
+    </div>
+     <div id="mySidenav2" class="sidenav" runat="server" visible="false">
+        <img src="logo.png" class="img-rounded" alt="Cinque Terre" width="240" height="250" />
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav1()">&times;</a>
+        <a href="index.aspx">Home</a>
+        <a href="Lawns.aspx">Lawns & Banquets</a>
+        <a href="Services.aspx">Services</a>
+        <a href="#">Contact Us</a>
+        <label>SignIn</label>
+        <label>SignUp</label>
+    </div>
+    <div id="mySidenav3" class="sidenav" runat="server" visible="false">
+        <img src="logo.png" class="img-rounded" alt="Cinque Terre" width="240" height="250" />
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+        <a href="index.aspx">Home</a>
+        <a href="Lawns.aspx">Lawns & Banquets</a>
+        <a href="Services.aspx">Services</a>
+        <a href="#">Contact Us</a>
+        <label>SignIn</label>
+        <label>SignUp</label>
     </div>
     <div class="user-div">
         <span onclick="openNav()" class="fa fa-bars toggle"></span>
+        <span onclick="openNav1()" class="fa fa-bars toggle"></span>
+        <span onclick="openNav2()" class="fa fa-bars toggle"></span>
         <div class="userdiv-right">
             <span class="fa fa-user"></span>
             <label class="user-label" runat="server" id="UserName">Guests</label>
             <span class="fa fa-sign-out"></span>
-            <label class="user-label-logout">Logout</label>
+            <label class="user-label-logout" runat="server" onclick="test()" id="clickonLabel" >Signin</label>
+           
+           
+                
         </div>
     </div>
     <form id="form1" runat="server">
+        <div hidden="hidden">
+         <asp:Button runat="server" OnClick="Unnamed_Click" ID="btnHidden" /></div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">

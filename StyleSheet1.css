@@ -15,7 +15,7 @@
     top: 30%;
     left: 23%;
 }
-
+.clear{clear:both;}
 /*ul {
     list-style-type: none;
     margin: 0;
@@ -155,7 +155,7 @@ li {
     width:30%;
     /*left: 35%;
     top: 32%;*/
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: black;/*rgba(0, 0, 0, 0.85);*/
     top:50%;
     left:50%;
     margin-left:-192px;
@@ -622,7 +622,7 @@ li.drop {
     width:25%;
 }
 
-.alert{display:none; position:relative; width:auto; margin:20px auto 0 auto; width:80%;}
+.alert{display:none; position:relative; width:auto; margin:50px auto 0 auto; width:80%;}
 #Calendar .alert .close{display:block!important;}
 
 .lawndate {
@@ -753,3 +753,20 @@ font-family:Arial; color:black;
 
 .register-btn{display:block; width:100%; margin-top:40px; text-align:center}
 .register-btn input{width:20%; margin:10px; display:inline-block; height:35px; border:0; background:#000; color:#fff;}
+
+.grid-dishes table,.grid-dishes table tbody,.grid-dishes table tbody tr{display:block;}
+.grid-dishes table tbody tr th{display:inline-block; width:33.33%; color:#fff!important; text-align:center;}
+.grid-dishes table tbody tr td{display:inline-block; width:33.33%;}
+.grid-dishes table tbody tr th{padding:5px;}
+.grid-dishes table tbody tr td input{display:block; width:100%!important; padding:5px;}
+.grid-dishes table tbody tr td input::placeholder{color:#444}
+.catering-reg .backdiv .grid-dishes .btn{margin-top:10px!important;}
+
+.backdiv .policy table tbody tr td input{padding-left:5px;}
+.backdiv .policy table tbody tr td input, .backdiv .policy table tbody tr td .dd_chk_select,.backdiv .policy table tbody tr td select{height:30px;}
+.backdiv .policy table tbody tr td .dd_chk_select{width:50%!important; float:left;}
+.backdiv .policy table tbody tr td .dd_chk_select #caption{display:inline-block; width:80%; margin:0; padding-top:5px; overflow:visible; padding-left:5px;}
+.backdiv .policy .buttons{text-align:center; display:block; padding-left:15px; padding-right:15px;}
+.backdiv .policy .buttons .btn{display:inline-block; width:32%; float:left; margin-top:5px; margin-right:7px;}
+.backdiv .policy table tbody tr td .dd_chk_select .dd_chk_drop div span input{width:15px!important; height:15px;}
+.backdiv .policy table tbody tr td .dd_chk_select .dd_chk_drop div span label{color:#000!important; float:right!important;}

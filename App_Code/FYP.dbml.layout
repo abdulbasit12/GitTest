@@ -50,16 +50,16 @@
         <elementListCompartment Id="cdc62d19-052d-440a-8b55-b59d13543156" absoluteBounds="7.5150000000000006, 2.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="95e56f12-48bd-4d54-9573-ed8a4ea014ff" absoluteBounds="7.5, 4.625, 2, 1.9631982421875">
+    <classShape Id="95e56f12-48bd-4d54-9573-ed8a4ea014ff" absoluteBounds="7.625, 5.25, 2, 1.9631982421875">
       <DataClassMoniker Name="/FYPDataContext/Caterer" />
       <nestedChildShapes>
-        <elementListCompartment Id="5c88449c-1271-4954-81c1-5ea55b124d5a" absoluteBounds="7.5150000000000006, 5.085, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="5c88449c-1271-4954-81c1-5ea55b124d5a" absoluteBounds="7.6400000000000006, 5.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="967b9929-68dc-41d6-a5a2-025dc061e6a2" absoluteBounds="7.75, 0.5, 2, 2.3478011067708335">
+    <classShape Id="90b3d902-8a0e-44e6-82a5-62425fc24782" absoluteBounds="7.5, 0.5, 2, 2.3478011067708335">
       <DataClassMoniker Name="/FYPDataContext/Package" />
       <nestedChildShapes>
-        <elementListCompartment Id="68195213-0e66-4fc7-a079-189d98a5a6f0" absoluteBounds="7.7650000000000006, 0.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="f146c53d-4a86-4535-9af3-92b64bda97e8" absoluteBounds="7.5150000000000006, 0.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

@@ -38,42 +38,50 @@ public partial class LawnDetails : System.Web.UI.Page
     }
     protected void Unnamed_Click(object sender, EventArgs e)
     {
-        DateTime d = Convert.ToDateTime(CheckAvailb.Text);
-        FYPDataContext db = new FYPDataContext();//db.BookingInformations
-        DateTime inn = DateTime.Now.Date;
-        TimeSpan ff = d - inn;
-        int fffff = ff.Days;
-        if (fffff < 0)
-        {
-            //ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('Don not select old dates');", true);
+        if (CheckAvailb.Text == "") {
             booking_msg.Attributes.Add("style", "display:block");
             booking_msg.Attributes.Add("class", "alert alert-danger alert fade in alert-dismissable");
-            booking_msg.Text = "Sorry, You choose past date"+booking_msg.Text;
+            booking_msg.Text = "Please Select Date."+booking_msg.Text;
         }
         else
         {
-
-            var chkLawnID = (from x in db.LawnOwners
-                             where x.Address.Equals(Session["CheckAvail"].ToString())
-                             select x).FirstOrDefault();
-            int LID = chkLawnID.Id;
-            var checkavail = (from x in db.BookingInformations
-                              where x.Date.Equals(d) && x.LawnID.Equals(LID)
-                              select x).FirstOrDefault();
-            if (checkavail != null)
+            DateTime d = Convert.ToDateTime(CheckAvailb.Text);
+            FYPDataContext db = new FYPDataContext();//db.BookingInformations
+            DateTime inn = DateTime.Now.Date;
+            TimeSpan ff = d - inn;
+            int fffff = ff.Days;
+            if (fffff < 0)
             {
-                //ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('This Date is already taken. Choose Another');", true);
+                //ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('Don not select old dates');", true);
                 booking_msg.Attributes.Add("style", "display:block");
-                booking_msg.Attributes.Add("class", "alert alert-warning alert fade in alert-dismissable");
-                booking_msg.Text = "We are already booked on this Date, kindly try another date."+booking_msg.Text;
-
+                booking_msg.Attributes.Add("class", "alert alert-danger alert fade in alert-dismissable");
+                booking_msg.Text = "Sorry, You choose past date"+booking_msg.Text;
             }
             else
             {
-                //ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('This Date is Availible');", true);
-                booking_msg.Attributes.Add("style", "display:block");
-                booking_msg.Attributes.Add("class", "alert alert-success alert fade in alert-dismissable");
-                booking_msg.Text = "Congratulations, This Date is Available for booking, please click Book Now to proceed."+booking_msg.Text;
+
+                var chkLawnID = (from x in db.LawnOwners
+                                 where x.Address.Equals(Session["CheckAvail"].ToString())
+                                 select x).FirstOrDefault();
+                int LID = chkLawnID.Id;
+                var checkavail = (from x in db.BookingInformations
+                                  where x.Date.Equals(d) && x.LawnID.Equals(LID)
+                                  select x).FirstOrDefault();
+                if (checkavail != null)
+                {
+                    //ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('This Date is already taken. Choose Another');", true);
+                    booking_msg.Attributes.Add("style", "display:block");
+                    booking_msg.Attributes.Add("class", "alert alert-warning alert fade in alert-dismissable");
+                    booking_msg.Text = "We are already booked on this Date, kindly try another date."+booking_msg.Text;
+
+                }
+                else
+                {
+                    //ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('This Date is Availible');", true);
+                    booking_msg.Attributes.Add("style", "display:block");
+                    booking_msg.Attributes.Add("class", "alert alert-success alert fade in alert-dismissable");
+                    booking_msg.Text = "Congratulations, This Date is Available for booking, please click Book Now to proceed."+booking_msg.Text;
+                }
             }
         }
     }

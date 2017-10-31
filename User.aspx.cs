@@ -16,6 +16,7 @@ public partial class _Default : System.Web.UI.Page
             usersdiv.Visible = true;
             Catering.Visible = false;
             main.Visible = false;
+            one.Attributes.Add("style", "color:#ff4500");
         }
         
     }
@@ -101,69 +102,88 @@ public partial class _Default : System.Web.UI.Page
 
             }
         }
+
+     
+
     }
     protected void Unnamed_Click(object sender, EventArgs e)
     {
         usersdiv.Visible = false;
         Catering.Visible = false;
         main.Visible = true;
+        two.Attributes.Add("style", "color:#ff4500");
+        one.Attributes.Add("style", "color:#fff");
+        three.Attributes.Add("style", "color:#fff");
     }
-    protected void Unnamed_Click1(object sender, EventArgs e)
+    protected void LawnRegister_Click(object sender, EventArgs e)
     {
-        if (Page.IsValid)
-        {
-            FYPDataContext db = new FYPDataContext();
-            LawnOwner L = new LawnOwner();
-            AllUser all = new AllUser();
-
-
-            var checkVendor = (from x in db.AllUsers
-                               where x.Email_ID.Equals(txtEmailL.Text)
-                               select x).FirstOrDefault();
-            if (checkVendor == null)
+    if( main.Visible == true){
+            if (Page.IsValid)
             {
-                L.LawnName = txtLawnName.Text;
-                L.SeatingCapacity = txtSeating.Text;
-                L.Address = txtAddress.Text;
-                L.BankAcc = txtAcc.Text;
-                L.Phone = txtphone.Text;
-                //L.Email = txtEmailL.Text;
-                all.Email_ID = txtEmailL.Text;
-                all.Password = txtPass.Text;
-                all.User_Role = "Vendor";
-                //  L.Password = txtPass.Text;
-                //L.ConfirmPassword = txtConfirmPass.Text;
-                L.Area = txtArea.Text;
-                db.AllUsers.InsertOnSubmit(all);
-                db.LawnOwners.InsertOnSubmit(L);
-                db.SubmitChanges();
-                Session["Address"] = txtAddress.Text;
-                Session["Name"] = txtLawnName.Text;
+                FYPDataContext db = new FYPDataContext();
+                LawnOwner L = new LawnOwner();
+                AllUser all = new AllUser();
 
-                Response.Redirect("ImageUpload.aspx");
+
+                var checkVendor = (from y in db.LawnOwners
+                                  
+                                   where y.Email.Equals(txtEmailL.Text) || y.Address.Equals(txtAddress.Text) || y.BankAcc.Equals(txtAcc.Text) || y.Phone.Equals(txtphone.Text)
+                                   select y ).FirstOrDefault();
+                var checkinuser = (from x in db.AllUsers
+                                   where x.Email_ID.Equals(txtEmailL.Text)
+                                   select x).FirstOrDefault();
+
+                if (checkVendor == null && checkinuser==null)
+                {
+                    L.LawnName = txtLawnName.Text;
+                    L.SeatingCapacity = txtSeating.Text;
+                    L.Address = txtAddress.Text;
+                    L.BankAcc = txtAcc.Text;
+                    L.Phone = txtphone.Text;
+                    //L.Email = txtEmailL.Text;
+                    all.Email_ID = txtEmailL.Text;
+                    all.Password = txtPass.Text;
+                    all.User_Role = "Vendor";
+                    //  L.Password = txtPass.Text;
+                    //L.ConfirmPassword = txtConfirmPass.Text;
+                    L.Area = txtArea.Text;
+                    db.AllUsers.InsertOnSubmit(all);
+                    db.LawnOwners.InsertOnSubmit(L);
+                    db.SubmitChanges();
+                    Session["Address"] = txtAddress.Text;
+                    Session["Name"] = txtLawnName.Text;
+
+                    Response.Redirect("ImageUpload.aspx");
+                }
+                else
+                {
+
+                    Address_Error.Visible = true;
+
+                }
+                txtArea.Text = txtEmailL.Text = txtphone.Text = txtAcc.Text = txtAddress.Text = txtSeating.Text = txtLawnName.Text = "";
             }
-            else
-            {
-
-                Address_Error.Visible = true;
-
-            }
-            txtArea.Text = txtEmailL.Text = txtphone.Text = txtAcc.Text = txtAddress.Text = txtSeating.Text = txtLawnName.Text = "";
+        
+        
         }
     }
-
     protected void Unnamed_Click2(object sender, EventArgs e)
     {
         usersdiv.Visible = false;
         Catering.Visible = true;
         main.Visible = false;
-
+        three.Attributes.Add("style", "color:#ff4500");
+        one.Attributes.Add("style", "color:#fff");
+        two.Attributes.Add("style", "color:#fff");
     }
     protected void Unnamed_Click3(object sender, EventArgs e)
     {
         usersdiv.Visible = true;
         Catering.Visible = false;
         main.Visible = false;
+        one.Attributes.Add("style", "color:#ff4500");
+        two.Attributes.Add("style", "color:#fff");
+        three.Attributes.Add("style", "color:#fff");
     }
     protected void btn_Catering_Click(object sender, EventArgs e)
     {
@@ -188,6 +208,10 @@ public partial class _Default : System.Web.UI.Page
                 db.Caterers.InsertOnSubmit(cat);
                 db.AllUsers.InsertOnSubmit(au);
                 db.SubmitChanges();
+                var caterid = (from x in db.Caterers
+                               where x.Email.Equals(txt_caterer_Mail.Text)
+                               select x.Id).FirstOrDefault();
+                Session["CaterID"] = caterid.ToString();
                 Response.Redirect("add-dishes.aspx");
             
             

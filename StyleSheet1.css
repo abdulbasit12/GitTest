@@ -728,12 +728,12 @@ font-family:Arial; color:black;
 .catering .catering-packages .content-div .items label{display:block; font-size:25px; font-family:Arial; margin:185px auto 0 auto; width:100%; text-align:center; position:absolute; background:rgba(255,255,255,0.8);}
 .catering .catering-packages .content-div .items img{display:block; width:100%; height:100%;}
 
-#catering-packages{display:inline-block; width:25%; background:#000; height:auto; margin-top:38px; height:100vh; float:left;}
+#catering-packages{display:inline-block; width:25%; background:#000; height:auto; margin-top:0px; height:100vh; float:left;}
 #catering-packages .packages{display:block; margin:20px 0;}
 #catering-packages .packages table, #catering-packages .packages table tbody, #catering-packages .packages table tbody tr, #catering-packages .packages table tbody tr td, #catering-packages .packages table tbody tr input{display:block; width:100%;}
 #catering-packages .packages table tbody tr td{position:relative;}
 #catering-packages .packages table tbody tr td .btn-packg{padding:8px 10px; background:none; color:#fff; border:0; text-align:left; font-size:20px; border-top:1px solid #efefef; border-bottom:1px solid #efefef;}
-#catering-packages .packages table tbody tr td .lbl-price{position:absolute; color:#fff; top:17px; right:0;  padding-right:10px; font-size:11px; cursor:pointer;}
+#catering-packages .packages table tbody tr td .lbl-price{position:relative; color:#fff; top:-40px; right:0;  padding-right:10px; font-size:11px; cursor:pointer;display:inline-block;float:right;}
 .heading-package{position:relative; width:75%; float:right; margin-top:40px; text-align:center; font-size:35px; }
 .package-detail{display:inline-block; width:75%; margin-top:15px; float:left;}
 .package-detail h4{display:block; text-align:center; font-size:35px;}
@@ -770,3 +770,8 @@ font-family:Arial; color:black;
 .backdiv .policy .buttons .btn{display:inline-block; width:32%; float:left; margin-top:5px; margin-right:7px;}
 .backdiv .policy table tbody tr td .dd_chk_select .dd_chk_drop div span input{width:15px!important; height:15px;}
 .backdiv .policy table tbody tr td .dd_chk_select .dd_chk_drop div span label{color:#000!important; float:right!important;}
+
+
+.bookings-data h2{text-align:center;}
+.bookings-data{margin:85px auto;display:block;width:80%;}
+.bookings-data table tbody tr td,.bookings-data table tbody tr th{padding:5px 5px;}

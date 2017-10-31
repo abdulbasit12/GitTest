@@ -16,10 +16,10 @@ public partial class policy : System.Web.UI.Page
             AllUser au = new AllUser();
             int caterid = Convert.ToInt32(Session["CaterID"]);
             var checkuser = (from x in db.Items
-                             where x.CaterID == 8
+                             where x.CaterID == caterid
                              select x.Items);
             var checkuser1 = (from x in db.Items
-                              where x.CaterID == 8
+                              where x.CaterID == caterid
                               select new { x.Items, x.Id });
 
             DropDownCheckBoxes1.DataSource = checkuser1;

@@ -12,9 +12,12 @@ public partial class UserSignin : System.Web.UI.Page
         if (Session["SignInUSerCheck"] != null)
         {
             Code.Visible = true;
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('Please Enter the Code below for First Time Login to Verification');", true);
-
+            //ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('Please Enter the Code below for First Time Login to Verification');", true);
+            signin_error.Attributes.Add("style", "display:block");
+            signin_error.Attributes.Add("class", "alert alert-danger alert fade in alert-dismissable");
+            signin_error.Text = "Please Enter the Code below for First Time Login to Verification"+signin_error.Text;
         }
+       
     }
     protected void Unnamed3_Click(object sender, EventArgs e)
     {
@@ -45,9 +48,9 @@ public partial class UserSignin : System.Web.UI.Page
             if (userresult == null || checkcode == null)
             {
                 //ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('UserName or Password is Incorrect');", true);
-                Sign_in.Attributes.Add("style", "display:block");
-                Sign_in.Attributes.Add("class", "alert alert-success alert fade in alert-dismissable");
-                Sign_in.Text = "Sorry! User name or password did not matched."+Sign_in.Text;
+                signin_error.Attributes.Add("style", "display:block");
+                signin_error.Attributes.Add("class", "alert alert-danger alert fade in alert-dismissable");
+                signin_error.Text = "UserName or Password is Incorrect"+signin_error.Text;
 
             }
            
@@ -66,6 +69,13 @@ public partial class UserSignin : System.Web.UI.Page
                 Session["UserLogoName"] = 1;
 
                 Session["SignInUSerCheck"] = null;
+                if (Session["CurrentURL"] != null)
+                {
+
+                    string url = Session["CurrentURL"].ToString();
+                    Response.Redirect(url);
+                    return;
+                }
                 Response.Redirect("index.aspx");
 
             }

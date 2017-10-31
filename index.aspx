@@ -15,8 +15,7 @@
     });
 </script>
 <style>
-body{overflow:hidden}
-	
+    body{overflow:hidden;}
 	.main{display:flex; height:100vh; align-items:center;}
 	.main .container{margin:0 auto;}
 	.main .container .img-box{width:23.5%; display:inline-block; margin-right:2%; float:left; overflow:hidden;}

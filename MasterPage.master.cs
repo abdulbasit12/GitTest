@@ -15,9 +15,11 @@ public partial class MasterPage : System.Web.UI.MasterPage
 
             UserName.InnerText = Session["Username"].ToString();
             clickonLabel.InnerText = "LogOut";
-            mySidenav.Visible = false;
-            mySidenav2.Visible = true;
-
+            mySidenav.Visible=false;
+            mySidenav2.Visible=true;
+            openNavv.Visible = false;
+            openNavv1.Visible = true;
+           
         }
     }
     protected void Unnamed_Click(object sender, EventArgs e)
@@ -28,11 +30,22 @@ public partial class MasterPage : System.Web.UI.MasterPage
         }
         if (clickonLabel.InnerText == "LogOut")
         {
+            mySidenav.Visible = true;
+            mySidenav2.Visible = false;
+            openNavv.Visible = true;
+            openNavv1.Visible = false;
             Session.Clear();
             Session.Abandon();
             Session["Username"] = null;
             Response.Redirect("UserSignIn.aspx");
             
         }
+    }
+    protected void Booking_Click(object sender, EventArgs e)
+    {
+
+
+
+
     }
 }

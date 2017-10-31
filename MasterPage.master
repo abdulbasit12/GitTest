@@ -85,6 +85,7 @@
         function openNav2() {
             document.getElementById("mySidenav3").style.width = "250px";
         }
+
         function closeNav() {
             document.getElementById("mySidenav").style.width = "0";
         }
@@ -98,10 +99,20 @@
         function test() {
             //document.getElementById("clickonLabel").innerHTML = "Good day";
             $('#btnHidden').trigger('click');
+            //if (UserName.innerText == "Guest") {
+            //    document.getElementById("openNavv1").style.display = "none";
+            //    document.getElementById("openNavv2").style.display = "none";
+                
+            //}
             //document.getElementById('btnHidden').onclick();
            // $('.btnHidden').trigger('click');
 
         }
+        function Booking() {
+            $('#btn_booking').trigger('click');
+
+        }
+
             
 
         
@@ -136,18 +147,18 @@
         <a href="Lawns.aspx">Lawns & Banquets</a>
         <a href="Services.aspx">Services</a>
         <a href="#">Contact Us</a>
-        <label>SignIn</label>
-        <label>SignUp</label>
+        <label onclick="test()">SignIn</label>
+        <a href="User.aspx">Sign Up</a>
     </div>
      <div id="mySidenav2" class="sidenav" runat="server" visible="false">
         <img src="logo.png" class="img-rounded" alt="Cinque Terre" width="240" height="250" />
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav1()">&times;</a>
-        <a href="index.aspx">Home</a>
-        <a href="Lawns.aspx">Lawns & Banquets</a>
-        <a href="Services.aspx">Services</a>
-        <a href="#">Contact Us</a>
-        <label>SignIn</label>
-        <label>SignUp</label>
+        <label>Home </label>
+         <label>Profile </label>
+       <label>Manage your place</label>
+      <a href="BookingStatus.aspx">Bookings </a>
+        <label onclick="test()">SignOut</label>
+        
     </div>
     <div id="mySidenav3" class="sidenav" runat="server" visible="false">
         <img src="logo.png" class="img-rounded" alt="Cinque Terre" width="240" height="250" />
@@ -160,9 +171,9 @@
         <label>SignUp</label>
     </div>
     <div class="user-div">
-        <span onclick="openNav()" class="fa fa-bars toggle"></span>
-        <span onclick="openNav1()" class="fa fa-bars toggle"></span>
-        <span onclick="openNav2()" class="fa fa-bars toggle"></span>
+        <span onclick="openNav()" class="fa fa-bars toggle" id="openNavv" runat="server" ></span>
+        <span onclick="openNav1()" class="fa fa-bars toggle" id="openNavv1" runat="server" visible="false"></span>
+        <span onclick="openNav2()" class="fa fa-bars toggle" id="openNavv2" runat="server" visible="false"></span>
         <div class="userdiv-right">
             <span class="fa fa-user"></span>
             <label class="user-label" runat="server" id="UserName">Guests</label>
@@ -175,7 +186,10 @@
     </div>
     <form id="form1" runat="server">
         <div hidden="hidden">
-         <asp:Button runat="server" OnClick="Unnamed_Click" ID="btnHidden" /></div>
+         <asp:Button runat="server" OnClick="Unnamed_Click" ID="btnHidden" />
+            <asp:Button runat="server" OnClick="Booking_Click" ID="btn_booking" />
+
+        </div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">

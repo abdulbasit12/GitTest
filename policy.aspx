@@ -34,6 +34,7 @@
                 .backdiv #form table tbody tr td {
                     margin-bottom: 10px;
                 }
+                .search{position:relative;margin-top:38px;}
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">

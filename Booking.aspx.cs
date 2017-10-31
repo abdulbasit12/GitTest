@@ -37,7 +37,7 @@ public partial class Booking : System.Web.UI.Page
             else if (checkdate != null)
             {
                 //ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "alert('This Date Already has been taken');", true);
-                booking_confirm.Text = "We are already booked on this date, please try anthor."+booking_confirm.Text;
+                booking_confirm.Text = "We are already booked on this date, please try anthor." + booking_confirm.Text;
                 booking_confirm.Attributes.Add("class", "booking-alert alert alert-warning alert fade in alert-dismissable");
                 booking_confirm.Attributes.Add("style", "display:block");
             }

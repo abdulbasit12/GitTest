@@ -60,7 +60,7 @@ public partial class Lawns : System.Web.UI.Page
                          where Laww.Contains(Convert.ToInt32(x.LawnID)) &&
                              //where x.Name.Equals(Convert.ToInt32("Cover".ToString()))
                       CoverImage.Contains(x.Id)
-                         select new { x.Uimg, y.LawnName, y.SeatingCapacity, y.Address });
+                         select new { x.Uimg, y.LawnName, y.SeatingCapacity, y.Address,y.Rent });
 
 
 
@@ -180,8 +180,19 @@ public partial class Lawns : System.Web.UI.Page
                          where Laww.Contains(Convert.ToInt32(x.LawnID)) &&
                              //where x.Name.Equals(Convert.ToInt32("Cover".ToString()))
                       CoverImage.Contains(x.Id)
-                         select new { x.Uimg, y.LawnName, y.SeatingCapacity, y.Address });
+                         select new { x.Uimg, y.LawnName, y.SeatingCapacity, y.Address,y.Rent });
 
+           
+            if (Imggg.Count() < 1)
+            {
+
+                NoData.Visible = true;
+
+            }
+            else
+            {
+                NoData.Visible = false;
+            }
 
 
 
@@ -202,5 +213,9 @@ public partial class Lawns : System.Web.UI.Page
         Session["CheckAvail"] = ADD.ToString();
         Response.Redirect("LawnDetails.aspx");
     }
+
+
+
+
 
 }

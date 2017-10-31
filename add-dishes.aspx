@@ -48,9 +48,11 @@
             float: right;
             margin-top: 0 !important;
         }
+        .error{margin-top:45px;display:block;width:100%;text-align:center;padding:10px;}
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <asp:Label Text="NoDatatoShow" runat="server" visible="false"   ID="lbl_error"   forecolor="Red" class="error"/>
     <div class="catering-reg" id="Catering" runat="server">
         <div class="backdiv" id="backdiv">
             <h1 class="heading">Add Your Kitchen Menu</h1>

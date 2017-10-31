@@ -123,8 +123,8 @@
         </div>
     </div>
     <div id="datagrid">
-
-        <asp:Repeater ID="Repeater1" runat="server" OnItemCommand="Repeater1_ItemCommand">
+         <asp:Label ID="NoData" runat="server" Text="No Data To Show" Visible="false" ForeColor="Red" Font-Bold="true"></asp:Label>
+        <asp:Repeater ID="Repeater1" runat="server" OnItemCommand="Repeater1_ItemCommand" >
             <ItemTemplate>
                 <table id="Repeater">
                     <tr>
@@ -158,12 +158,12 @@
                                 <tr>
                                     <td>
                                         <i class="fa fa-money" style="font-size: 15px;"></i>
-                                        <asp:Label runat="server" Text="Lawn Rent" Font-Size="18px"></asp:Label>
+                                        <asp:Label runat="server" Text='<%# Eval("Rent") %>' Font-Size="18px"></asp:Label>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td id="btn_avlble">
-                                        <asp:Button runat="server" CssClass="btn_avlble" Text="Check Availbility" OnClick="SSLAwn_Click"></asp:Button>
+                                        <asp:Button runat="server" CssClass="btn_avlble" Text="Explore Place" OnClick="SSLAwn_Click"></asp:Button>
                                     </td>
                                 </tr>
                             </table>
@@ -171,8 +171,12 @@
                     </tr>
                 </table>
                 <br />
+               
+
             </ItemTemplate>
         </asp:Repeater>
+
+       
     </div>
     <div>
     </div>

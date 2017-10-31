@@ -44,8 +44,8 @@
         </div>
         <p class="sign-up">Do not have an account?<a href="User.aspx"><b> Create One!</b></a></p>
     </div>
-    <asp:Label ID="Sign_in" runat="server" class="alert alert-dismissable fade in">
+    <asp:label id="signin_error" runat="server" class="alert alert-dismissable fade in">
         <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
-    </asp:Label>
+    </asp:label>
 </asp:Content>
 
